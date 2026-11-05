@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <title>About Gulf Books Publisher | Self-Publishing for Gulf Authors</title>
+    <meta name="description" content="Meet the team behind Gulf Books Publisher: a self-publishing company for authors across the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman, in Arabic and English.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============ HEADER (MODERN NAVBAR) ============ -->
+    <header>
+        <div class="w nav-wrap">
+            <a class="logo" href="index.html" aria-label="Gulf Books Publisher home">
+                <img src="images/logo.webp" width="358" height="150" alt="Gulf Books Publisher">
+            </a>
+
+            <nav class="nav-links" id="navLinks" aria-label="Primary">
+                <div class="dd">
+                    <button class="dd-t" type="button" aria-expanded="false" aria-haspopup="true">Services <span class="cv-a">&#9662;</span></button>
+                    <div class="dd-m" role="menu">
+                        <a href="services/book-publishing-amazon-kdp-service.html" role="menuitem">Book Publishing &amp; Amazon KDP</a>
+                        <a href="services/editing-proofreading.html" role="menuitem">Editing &amp; Proofreading</a>
+                        <a href="services/book-cover-design-formatting.html" role="menuitem">Book Cover Design &amp; Formatting</a>
+                        <a href="services/ghostwriting.html" role="menuitem">Book Writing &amp; Ghostwriting</a>
+                        <a href="services/book-printing.html" role="menuitem">Book Printing</a>
+                        <a href="services/book-marketing-author-websites.html" role="menuitem">Book Marketing &amp; Author Websites</a>
+                        <a href="services/audiobook-production.html" role="menuitem">Audiobook Production</a>
+                        <a href="services/childrens-book-publishing.html" role="menuitem">Children&rsquo;s Book Publishing</a>
+                        <a href="services/corporate-book-publishing.html" role="menuitem">Corporate &amp; Institutional Books</a>
+                    </div>
+                </div>
+
+                <div class="dd">
+                    <button class="dd-t" type="button" aria-expanded="false" aria-haspopup="true">Countries <span class="cv-a">&#9662;</span></button>
+                    <div class="dd-m" role="menu">
+                        <a href="book-publishing-and-printing-uae.html" role="menuitem">UAE</a>
+                        <a href="book-publishing-and-printing-saudi-arabia.html" role="menuitem">Saudi Arabia</a>
+                        <a href="book-publishing-and-printing-qatar.html" role="menuitem">Qatar</a>
+                        <a href="book-publishing-and-printing-kuwait.html" role="menuitem">Kuwait</a>
+                        <a href="book-publishing-and-printing-bahrain.html" role="menuitem">Bahrain</a>
+                        <a href="book-publishing-and-printing-oman.html" role="menuitem">Oman</a>
+                    </div>
+                </div>
+
+                <a class="l" href="about.html">About Us</a>
+                <a class="l" href="become-an-author.html">Become an Author</a>
+                <a class="l" href="reviews.html">Reviews</a>
+                <a class="l" href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a class="btn nav-cta" href="free-quote.html">Get Free Quote</a>
+                <button class="menu" id="menu" type="button" aria-expanded="false" aria-label="Toggle menu" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ QUOTE VIEW (hidden) ============ -->
+    <div id="qv" hidden>
+        <section class="qh">
+            <div class="w">
+                <a class="small" href="#top">&larr; Back to home</a>
+                <div class="qg">
+                    <div>
+                        <h1>Get Your Free, Itemised Quote</h1>
+                        <p>Tell us about your book and we will send a clear written quote before any work begins. No payment and no obligation.</p>
+                        <ul class="tk">
+                            <li>Free consultation by video call or phone</li>
+                            <li>Free cover concept for your book</li>
+                            <li>Short sample edit of your opening pages</li>
+                            <li>Prices from AED 1,500, itemised service by service</li>
+                            <li>You keep your rights and approve every stage</li>
+                        </ul>
+                        <div class="card">
+                            <h3>Prefer to talk first?</h3>
+                            <p>Message us on WhatsApp, or write to <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a>.</p><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                    </div>
+                    <div class="card form">
+                        <h3>Tell us about your book</h3>
+                        <form id="qq" novalidate>
+                            <div class="g2">
+                                <div><input id="qn" placeholder="Full name" aria-label="Full name" autocomplete="name">
+                                    <div class="err" id="qen"></div>
+                                </div>
+                                <div><input id="qe" type="email" placeholder="Email address" aria-label="Email" autocomplete="email">
+                                    <div class="err" id="qee"></div>
+                                </div>
+                            </div>
+                            <div class="pfp">
+                                <div class="cc"><button type="button" id="qcb" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>
+                                    <ul id="qcl" role="listbox" hidden></ul>
+                                </div><input id="qp" type="tel" placeholder="Phone number" aria-label="Phone number" autocomplete="tel-national"></div>
+                            <div class="err" id="qep"></div>
+                            <div class="g2"><select id="qc" aria-label="Country"></select><select id="qg" aria-label="Genre"></select></div>
+                            <div class="lb">Services you need</div>
+                            <div class="chs" id="qs">
+                                <button type="button" aria-pressed="false">Book Publishing &amp; Amazon KDP</button>
+                                <button type="button" aria-pressed="false">Editing &amp; Proofreading</button>
+                                <button type="button" aria-pressed="false">Book Cover Design &amp; Formatting</button>
+                                <button type="button" aria-pressed="false">Book Writing &amp; Ghostwriting</button>
+                                <button type="button" aria-pressed="false">Book Printing</button>
+                                <button type="button" aria-pressed="false">Book Marketing &amp; Author Websites</button>
+                                <button type="button" aria-pressed="false">Audiobook Production</button>
+                                <button type="button" aria-pressed="false">Children’s Book Publishing</button>
+                                <button type="button" aria-pressed="false">Corporate &amp; Institutional Books</button>
+                            </div>
+                            <div class="g2"><select id="qw" aria-label="Word count"></select><select id="qm" aria-label="Manuscript status"></select></div>
+                            <label class="dz" id="dz"><input id="qfi" type="file" accept=".doc,.docx,.pdf,.txt,.rtf,.odt"><b>Drop your manuscript here or click to upload</b><span id="qfn">Word, PDF or text file. Optional.</span></label>
+                            <input id="qb" placeholder="Book title" aria-label="Book title">
+                            <textarea id="qd" rows="3" placeholder="Anything else we should know?" aria-label="Details"></textarea>
+                            <button class="btn" type="submit" style="width:100%;margin-top:14px">Get My Free Quote</button>
+                            <p class="small" style="text-align:center;margin:10px 0 0">Free consultation. No obligation.</p>
+                        </form>
+                        <div class="ok" id="qok" role="status"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="band">
+            <div class="w">
+                <h2>What Happens After You Submit</h2>
+                <ol class="steps qs">
+                    <li data-ic="doc"><b>Tell us about your book</b>Share your genre, word count and the services you need.</li>
+                    <li data-ic="up"><b>Upload your manuscript</b>Optional. Attach a Word, PDF or text file now, or send it later.</li>
+                    <li data-ic="chat"><b>Talk to our team</b>We review your details and arrange a free consultation by video call or phone.</li>
+                    <li data-ic="check"><b>Receive your itemised quote</b>A written quote with every service priced and a timeline, before any work begins.</li>
+                </ol>
+                <p style="text-align:center;margin:36px auto 0">Prefer email? Write to <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a> with a short cover letter and your manuscript.</p>
+            </div>
+        </section>
+    </div>
+
+    <main id="top">
+        <section>
+            <div class="w hero">
+                <div>
+                    <p class="small">UAE · Saudi Arabia · Qatar · Kuwait · Bahrain · Oman</p>
+                    <h1>About Gulf Books Publisher: A Self-Publishing Company Built for Gulf Authors</h1>
+                    <p>Gulf Books Publisher is a self-publishing company for authors across the Gulf Cooperation Council. We take your manuscript from first draft to a professionally published book, in print, as an eBook and on Amazon, in Arabic, English or both. Our work covers editing, cover design, formatting, ISBN registration, printing, distribution, audiobooks and marketing, with a written quote before any work begins.</p>
+                    <p><b>Start with a free consultation and an itemised quote.</b></p>
+                    <div class="row"><a class="btn" href="#get-quote">Get My Itemised Quote</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                    <!-- <div class="hv"><img src="images/home-before-info-section-img.webp" width="1100" height="619" alt="Gulf Books Publisher office with a reception wall, bookshelves and a meeting room" loading="lazy"></div> -->
+                </div>
+                <div>
+                    <div class="hv"><img src="images/hero-img.webp" width="900" height="985" alt="Authors from across the six GCC countries holding books"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="band">
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/before-service-img.webp" width="1100" height="733" alt="An author writing in a notebook in front of the Gulf Books Publisher logo" loading="lazy">
+                <h2>Why We Started</h2>
+                <p>Authors in the region kept telling us the same three things. Nobody would state a price. Many publishers worked only in English. And it was often impossible to check who was really behind the company. We built Gulf Books Publisher to fix all three: prices you can see, Arabic and English handled with equal care, and a company you can verify.</p>
+            </div>
+        </section>
+
+        <section id="why">
+            <div class="w">
+                <h2>What We Believe</h2>
+                <p>These are the four commitments we hold ourselves to on every book we publish, in every country we work in.</p>
+                <div class="grid">
+                    <div class="card">
+                        <h3>You should know what you are paying for</h3>
+                        <p>Our starting prices are published, and every quote is itemised. You pay for the services your book needs, not a bundle you did not ask for.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Arabic is a first-class language</h3>
+                        <p>Native Arabic writers and editors work in-house. Cover design, interior formatting and metadata are done for each language, including right-to-left layouts for print and eBook.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Your book stays yours</h3>
+                        <p>You keep your rights. Your ISBNs are registered with you as the publisher, and your Amazon KDP account stays in your name. Every file, cover and proof needs your approval before it goes live.</p>
+                    </div>
+                    <div class="card">
+                        <h3>We make honest claims</h3>
+                        <p>No invented awards, no unverifiable numbers and no reviews we cannot trace. If we cannot prove it, we do not say it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="w cs">
+            <div class="cb">
+                <div><strong>Ready to publish your book?</strong><span>Get an itemised quote before any work begins.</span></div>
+                <div class="row"><a class="btn" href="#get-quote">Get My Itemised Quote</a></div>
+            </div>
+        </aside>
+
+        <section class="band">
+            <div class="w">
+                <h2>What We Do</h2>
+                <p>We cover each stage of the journey, so you are not coordinating five freelancers. You can choose the full package or only the services your book needs.</p>
+                <ul class="chips">
+                    <li>Book publishing and Amazon KDP</li>
+                    <li>Editing and proofreading in English and Arabic</li>
+                    <li>Book cover design and formatting</li>
+                    <li>Book writing and ghostwriting</li>
+                    <li>Book printing</li>
+                    <li>Book marketing and author websites</li>
+                    <li>Audiobook production</li>
+                    <li>Children’s book publishing</li>
+                    <li>Corporate and institutional books</li>
+                </ul>
+                <div class="row" style="margin:0"><a class="btn" href="#get-quote">Start My Publishing Plan</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+            </div>
+        </section>
+
+        <section>
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-global-img.webp" width="1000" height="563" alt="Author working on a laptop with the Gulf Books Publisher logo and a world map connecting countries to the Gulf" loading="lazy">
+                <h2>Who We Work With</h2>
+                <p>We work with first-time and established authors in the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman, and with authors in other countries who want to reach Gulf readers. Our clients include novelists, memoir writers, professionals publishing a first book, children’s authors, academics, and companies and schools producing books under their own brand. Everything can be done online, by video, phone or WhatsApp, with secure manuscript upload.</p>
+            </div>
+        </section>
+
+        <aside class="w cs">
+            <div class="cb">
+                <div><strong>Not sure which package fits your book?</strong><span>Tell us about your book and we will recommend the right services.</span></div>
+                <div class="row"><a class="btn" href="#get-quote">Book a Free Consultation</a></div>
+            </div>
+        </aside>
+
+        <section class="band" id="verify">
+            <div class="w">
+                <h2>A Publisher You Can Verify</h2>
+                <p>We put the checkable facts where you can see them.</p>
+                <div class="card">
+                    <dl>
+                        <dt>Registered business</dt>
+                        <dd><span class="ph">[Company name, licence number and issuing authority. Add once registration is complete]</span></dd>
+                        <dt>Office and local contact</dt>
+                        <dd><span class="ph">[Office address, local phone number and WhatsApp number]</span></dd>
+                        <dt>Named team</dt>
+                        <dd>Every project has a named project manager, and the people who work on your book are listed below.</dd>
+                        <dt>Written contract</dt>
+                        <dd>Plain-language terms, your rights stated clearly and a 100% refund policy. <span class="ph">[Link to refund policy page]</span></dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="w">
+                <h2>Meet the Team</h2>
+                <div class="card">
+                    <p><span class="ph">[Add real team profiles: name, role, languages, and a short, truthful bio for each. Include the project managers, the Arabic editors, the English editors, the designers and the sales or customer-support lead. Use real photos only, and do not list anyone who does not work on client projects. Do not add credentials, awards or years of experience that cannot be shown.]</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="band">
+            <div class="w">
+                <h2>Not Affiliated With Similar Names</h2>
+                <p>Gulf Books Publisher operates only from gulfbookspublisher.com and is not affiliated with other companies that have similar names. Always check a publisher’s registration before you pay anyone, including us.</p>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="w">
+                <img src="images/logo.webp" width="358" height="150" alt="Gulf Books Publisher logo" style="display:block;margin:0 auto 20px;height:100px;width:auto;background:#fff;border-radius:8px;padding:4px 8px">
+                <h2>Start With a Free Consultation</h2>
+                <p>Tell us about your book and where you want it read. We will book a free 30-minute consultation, with no obligation, and send an itemised quote with a written timeline.</p>
+                <div class="row"><a class="btn" href="#get-quote">Get My Itemised Quote</a><a class="btn o" href="#get-quote">Book a Free Consultation</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="w">
+            <div class="fg">
+                <div class="fb">
+                    <img class="flogo" src="images/footer-logo.webp" width="436" height="180" alt="Gulf Books Publisher">
+
+                    <p class="ft"><b>Gulf Books Publisher</b> — self-publishing for authors across the GCC. Clear AED prices, Arabic and English, a written quote before any work begins, and you keep your rights.</p>
+
+                    <div class="soc">
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+                        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v1.5A5 5 0 0 1 16 8z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="become-an-author.html">Become an Author</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="free-quote.html">Get Free Quote</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/book-publishing-amazon-kdp-service.html">Book Publishing &amp; Amazon KDP</a></li>
+                        <li><a href="services/editing-proofreading.html">Editing &amp; Proofreading</a></li>
+                        <li><a href="services/book-cover-design-formatting.html">Book Cover Design &amp; Formatting</a></li>
+                        <li><a href="services/ghostwriting.html">Book Writing &amp; Ghostwriting</a></li>
+                        <li><a href="services/book-printing.html">Book Printing</a></li>
+                        <li><a href="services/book-marketing-author-websites.html">Book Marketing &amp; Author Websites</a></li>
+                        <li><a href="services/audiobook-production.html">Audiobook Production</a></li>
+                        <li><a href="services/childrens-book-publishing.html">Children’s Book Publishing</a></li>
+                        <li><a href="services/corporate-book-publishing.html">Corporate &amp; Institutional Books</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Countries</h4>
+                    <ul>
+                        <li><a href="book-publishing-and-printing-uae.html">UAE</a></li>
+                        <li><a href="book-publishing-and-printing-saudi-arabia.html">Saudi Arabia</a></li>
+                        <li><a href="book-publishing-and-printing-qatar.html">Qatar</a></li>
+                        <li><a href="book-publishing-and-printing-kuwait.html">Kuwait</a></li>
+                        <li><a href="book-publishing-and-printing-bahrain.html">Bahrain</a></li>
+                        <li><a href="book-publishing-and-printing-oman.html">Oman</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="fc">
+                        <li>Business Bay, Dubai, UAE</li>
+                        <li><a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a></li>
+                        <li><a href="tel:+971581969313">+971 58 196 9313</a></li>
+                        <li><a href="https://wa.me/971581969313" target="_blank" rel="noopener">WhatsApp: +971 58 196 9313</a></li>
+                        <li>Mon – Fri, 9:00 AM – 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fbot">© Gulf Books Publisher. gulfbookspublisher.com</div>
+        </div>
+    </footer>
+
+
+    <div id="pu" class="pu" role="dialog" aria-modal="true" aria-labelledby="put" hidden>
+        <div class="pb">
+            <button class="px" id="px" type="button" aria-label="Close">&times;</button>
+            <h2 class="pt" id="put">Launch Your Book with Us</h2>
+            <div class="off">30% OFF</div>
+            <p>Get expert, author-friendly publishing with a written quote before any work begins. Share your details and claim your discount.</p>
+            <form id="pf" novalidate>
+                <input id="pn" placeholder="Enter Your Name" aria-label="Name" autocomplete="name">
+                <div class="err" id="pen"></div>
+                <input id="pe" type="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email">
+                <div class="err" id="pee"></div>
+                <input id="pc" placeholder="Enter Your Country" aria-label="Country" autocomplete="country-name">
+                <div class="pfp">
+                    <div class="cc"><button type="button" id="ccb" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>
+                        <ul id="ccl" role="listbox" hidden></ul>
+                    </div><input id="pp" type="tel" placeholder="Enter Your Phone Number" aria-label="Phone number" autocomplete="tel-national"></div>
+                <div class="err" id="pep"></div>
+                <button class="btn" type="submit" style="margin-top:16px;padding:13px 40px">Submit</button>
+            </form>
+            <div class="ok" id="pok" role="status"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        (function() {
+            /* ---------- Fix WhatsApp numbers ---------- */
+            function fixWhatsAppHref() {
+                document.querySelectorAll('a[href*="wa.me/971500000000"]').forEach(function(a) {
+                    a.href = a.href.replace('971500000000', '971581969313');
+                });
+            }
+
+            /* ---------- Dropdowns ---------- */
+            function initDropdowns() {
+                document.querySelectorAll('.dd-t').forEach(function(btn) {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        var dd = this.closest('.dd');
+                        var wasOpen = dd.classList.contains('open');
+                        document.querySelectorAll('.dd.open').forEach(function(d) {
+                            d.classList.remove('open');
+                            var t = d.querySelector('.dd-t');
+                            if (t) t.setAttribute('aria-expanded', 'false');
+                        });
+                        if (!wasOpen) {
+                            dd.classList.add('open');
+                            this.setAttribute('aria-expanded', 'true');
+                        }
+                    });
+                });
+                document.addEventListener('click', function() {
+                    document.querySelectorAll('.dd.open').forEach(function(d) {
+                        d.classList.remove('open');
+                        var t = d.querySelector('.dd-t');
+                        if (t) t.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            /* ---------- Mobile menu ---------- */
+            function initNav() {
+                var menu = document.getElementById('menu');
+                var navLinks = document.getElementById('navLinks');
+                if (!menu || !navLinks) return;
+
+                menu.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var isOpen = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', String(!isOpen));
+                    navLinks.classList.toggle('open', !isOpen);
+                });
+
+                /* Close panel when a real link is clicked (mobile only) */
+                navLinks.querySelectorAll('a').forEach(function(a) {
+                    a.addEventListener('click', function() {
+                        if (window.innerWidth <= 900) {
+                            menu.setAttribute('aria-expanded', 'false');
+                            navLinks.classList.remove('open');
+                        }
+                    });
+                });
+
+                /* Close panel on outside click */
+                document.addEventListener('click', function(e) {
+                    if (!navLinks.classList.contains('open')) return;
+                    if (e.target.closest('header')) return;
+                    menu.setAttribute('aria-expanded', 'false');
+                    navLinks.classList.remove('open');
+                });
+
+                /* Reset on resize */
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth > 900) {
+                        menu.setAttribute('aria-expanded', 'false');
+                        navLinks.classList.remove('open');
+                    }
+                });
+            }
+
+            /* ---------- Boot ---------- */
+            function boot() {
+                fixWhatsAppHref();
+                initDropdowns();
+                initNav();
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', boot);
+            } else {
+                boot();
+            }
+        })();
+    </script>
+</body>
+
+</html>
