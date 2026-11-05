@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <title>Gulf Books Publisher | Book Publishing Services for Authors Across the Gulf</title>
+    <meta name="description" content="Self-publishing for authors across the GCC. Clear AED prices, Arabic and English, a written quote before any work begins.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============ HEADER (MODERN NAVBAR) ============ -->
+    <header>
+        <div class="w nav-wrap">
+            <a class="logo" href="index.html" aria-label="Gulf Books Publisher home">
+                <img src="images/logo.webp" width="358" height="150" alt="Gulf Books Publisher">
+            </a>
+
+            <nav class="nav-links" id="navLinks" aria-label="Primary">
+                <div class="dd">
+                    <button class="dd-t" type="button" aria-expanded="false" aria-haspopup="true">Services <span class="cv-a">&#9662;</span></button>
+                    <div class="dd-m" role="menu">
+                        <a href="services/book-publishing-amazon-kdp-service.html" role="menuitem">Book Publishing &amp; Amazon KDP</a>
+                        <a href="services/editing-proofreading.html" role="menuitem">Editing &amp; Proofreading</a>
+                        <a href="services/book-cover-design-formatting.html" role="menuitem">Book Cover Design &amp; Formatting</a>
+                        <a href="services/ghostwriting.html" role="menuitem">Book Writing &amp; Ghostwriting</a>
+                        <a href="services/book-printing.html" role="menuitem">Book Printing</a>
+                        <a href="services/book-marketing-author-websites.html" role="menuitem">Book Marketing &amp; Author Websites</a>
+                        <a href="services/audiobook-production.html" role="menuitem">Audiobook Production</a>
+                        <a href="services/childrens-book-publishing.html" role="menuitem">Children&rsquo;s Book Publishing</a>
+                        <a href="services/corporate-book-publishing.html" role="menuitem">Corporate &amp; Institutional Books</a>
+                    </div>
+                </div>
+
+                <div class="dd">
+                    <button class="dd-t" type="button" aria-expanded="false" aria-haspopup="true">Countries <span class="cv-a">&#9662;</span></button>
+                    <div class="dd-m" role="menu">
+                        <a href="book-publishing-and-printing-uae.html" role="menuitem">UAE</a>
+                        <a href="book-publishing-and-printing-saudi-arabia.html" role="menuitem">Saudi Arabia</a>
+                        <a href="book-publishing-and-printing-qatar.html" role="menuitem">Qatar</a>
+                        <a href="book-publishing-and-printing-kuwait.html" role="menuitem">Kuwait</a>
+                        <a href="book-publishing-and-printing-bahrain.html" role="menuitem">Bahrain</a>
+                        <a href="book-publishing-and-printing-oman.html" role="menuitem">Oman</a>
+                    </div>
+                </div>
+
+                <a class="l" href="#">About Us</a>
+                <a class="l" href="#">Become an Author</a>
+                <a class="l" href="#">Reviews</a>
+                <a class="l" href="#">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a class="btn nav-cta" href="#">Get Free Quote</a>
+                <button class="menu" id="menu" type="button" aria-expanded="false" aria-label="Toggle menu" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ QUOTE VIEW (hidden) ============ -->
+    <div id="qv" hidden>
+        <section class="qh">
+            <div class="w">
+                <a class="small" href="#top">&larr; Back to home</a>
+                <div class="qg">
+                    <div>
+                        <h1>Get Your Free, Itemised Quote</h1>
+                        <p>Tell us about your book and we will send a clear written quote before any work begins. No payment and no obligation.</p>
+                        <ul class="tk">
+                            <li>Free consultation by video call or phone</li>
+                            <li>Free cover concept for your book</li>
+                            <li>Short sample edit of your opening pages</li>
+                            <li>Prices from AED 1,500, itemised service by service</li>
+                            <li>You keep your rights and approve every stage</li>
+                        </ul>
+                        <div class="card">
+                            <h3>Prefer to talk first?</h3>
+                            <p>Message us on WhatsApp, or write to <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a>.</p><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                    </div>
+                    <div class="card form">
+                        <h3>Tell us about your book</h3>
+                        <form id="qq" novalidate>
+                            <div class="g2">
+                                <div><input id="qn" placeholder="Full name" aria-label="Full name" autocomplete="name">
+                                    <div class="err" id="qen"></div>
+                                </div>
+                                <div><input id="qe" type="email" placeholder="Email address" aria-label="Email" autocomplete="email">
+                                    <div class="err" id="qee"></div>
+                                </div>
+                            </div>
+                            <div class="pfp">
+                                <div class="cc"><button type="button" id="qcb" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>
+                                    <ul id="qcl" role="listbox" hidden></ul>
+                                </div><input id="qp" type="tel" placeholder="Phone number" aria-label="Phone number" autocomplete="tel-national"></div>
+                            <div class="err" id="qep"></div>
+                            <div class="g2"><select id="qc" aria-label="Country"></select><select id="qg" aria-label="Genre"></select></div>
+                            <div class="lb">Services you need</div>
+                            <div class="chs" id="qs">
+                                <button type="button" aria-pressed="false">Book Publishing &amp; Amazon KDP</button>
+                                <button type="button" aria-pressed="false">Editing &amp; Proofreading</button>
+                                <button type="button" aria-pressed="false">Book Cover Design &amp; Formatting</button>
+                                <button type="button" aria-pressed="false">Book Writing &amp; Ghostwriting</button>
+                                <button type="button" aria-pressed="false">Book Printing</button>
+                                <button type="button" aria-pressed="false">Book Marketing &amp; Author Websites</button>
+                                <button type="button" aria-pressed="false">Audiobook Production</button>
+                                <button type="button" aria-pressed="false">Children’s Book Publishing</button>
+                                <button type="button" aria-pressed="false">Corporate &amp; Institutional Books</button>
+                            </div>
+                            <div class="g2"><select id="qw" aria-label="Word count"></select><select id="qm" aria-label="Manuscript status"></select></div>
+                            <label class="dz" id="dz"><input id="qfi" type="file" accept=".doc,.docx,.pdf,.txt,.rtf,.odt"><b>Drop your manuscript here or click to upload</b><span id="qfn">Word, PDF or text file. Optional.</span></label>
+                            <input id="qb" placeholder="Book title" aria-label="Book title">
+                            <textarea id="qd" rows="3" placeholder="Anything else we should know?" aria-label="Details"></textarea>
+                            <button class="btn" type="submit" style="width:100%;margin-top:14px">Get My Free Quote</button>
+                            <p class="small" style="text-align:center;margin:10px 0 0">Free consultation. No obligation.</p>
+                        </form>
+                        <div class="ok" id="qok" role="status"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="band">
+            <div class="w">
+                <h2>What Happens After You Submit</h2>
+                <ol class="steps qs">
+                    <li data-ic="doc"><b>Tell us about your book</b>Share your genre, word count and the services you need.</li>
+                    <li data-ic="up"><b>Upload your manuscript</b>Optional. Attach a Word, PDF or text file now, or send it later.</li>
+                    <li data-ic="chat"><b>Talk to our team</b>We review your details and arrange a free consultation by video call or phone.</li>
+                    <li data-ic="check"><b>Receive your itemised quote</b>A written quote with every service priced and a timeline, before any work begins.</li>
+                </ol>
+                <p style="text-align:center;margin:36px auto 0">Prefer email? Write to <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a> with a short cover letter and your manuscript.</p>
+            </div>
+        </section>
+    </div>
+
+    <main id="top">
+        <section>
+            <div class="w hero">
+                <div>
+                    <p class="small">UAE · Saudi Arabia · Qatar · Kuwait · Bahrain · Oman</p>
+                    <h1>Book Publishing Services for Authors Across the Gulf: Clear Prices, Arabic &amp; English, Real People</h1>
+                    <p>Gulf Books Publisher is a self-publishing company for authors across the GCC. We take your manuscript from first draft to a professionally published book, in print, as an eBook and on Amazon, with a written quote before any work begins.
+                        Whether you are writing in Dubai, Riyadh, Doha, Kuwait City, Manama or Muscat, you get one team for editing, cover design, formatting, ISBN registration, printing and distribution.</p>
+                    <p>Authors across the region tell us the same three frustrations: prices nobody will state, publishers who only work in English, and companies they cannot verify. We built Gulf Books Publisher to fix all three. You keep your rights, you
+                        are listed as the publisher, and you approve every stage.</p>
+                    <p><b>Start with a free consultation and an itemised quote.</b></p>
+                    <div class="row"><a class="btn" href="#get-quote">Publish My Book</a><a class="btn o" href="#get-quote">Get My Itemised Quote</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                    <div class="hv"><img src="images/after-hero-img.webp" width="1100" height="619" alt="Gulf Books Publisher stand in a Gulf shopping mall with visitors browsing books" loading="lazy"></div>
+                </div>
+                <div>
+                    <div class="hv"><img src="images/hero-img.webp" width="900" height="985" alt="Authors from across the six GCC countries holding books"></div>
+                    <div class="card form" id="quote">
+                        <h3 class="oh">Publish Your Book with Confidence<span>Typical Timeline: About 2 Weeks</span></h3>
+                        <p class="oi">Upload your manuscript and tell us about your book, even if you are not sure where to begin. We will send an itemised quote, and you also get a</p>
+                        <p class="oo">free consultation + free cover concept + short sample edit of your opening pages.</p>
+                        <form id="qf" novalidate>
+                            <input id="n" placeholder="Enter your Full Name" aria-label="Full name" autocomplete="name">
+                            <div class="err" id="en"></div>
+                            <input id="e" type="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email">
+                            <div class="err" id="ee"></div>
+                            <input id="p" type="tel" placeholder="Enter Your Phone No." aria-label="Phone number" autocomplete="tel">
+                            <div class="err" id="ep"></div>
+                            <select id="c" aria-label="Country"></select>
+                            <select id="g" aria-label="Genre"></select>
+                            <input id="f" type="file" accept=".doc,.docx,.pdf,.txt,.rtf,.odt" aria-label="Upload your manuscript">
+                            <input id="t" placeholder="Write Your Book Title" aria-label="Book title">
+                            <textarea id="d" rows="3" placeholder="Details" aria-label="Details"></textarea>
+                            <button class="btn" type="submit" style="width:100%;margin-top:14px">Get My Itemised Quote</button>
+                        </form>
+                        <div class="ok" id="ok" role="status"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="band" id="why">
+            <div class="w">
+                <h2>Why Authors Choose Gulf Books Publisher</h2>
+                <p>Plenty of companies promise to publish your book. These are the four things we think a Gulf author should be able to expect from any publisher, and the ones we hold ourselves to.</p>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Prices you can see</h3>
+                        <p>Our starting prices are published from AED 1,500, and we send an itemised quote before work starts. You pay for the services your book needs, not a bundle you did not ask for.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Arabic and English publishing</h3>
+                        <p>Write in Arabic, English or both. Our native Arabic writers and editors work in-house, and cover design and interior formatting are done for each language, including right-to-left layouts for print and eBook.</p>
+                    </div>
+                    <div class="card">
+                        <h3>A team you can verify</h3>
+                        <p>Your project manager is a named person. Our business details, address and local phone number are on the About page, so you know exactly who you are paying. <span class="ph">[Add company name, licence number and address once registration is complete]</span></p>
+                    </div>
+                    <div class="card">
+                        <h3>You keep control</h3>
+                        <p>You own your rights. Your ISBNs are registered with you as the publisher, and your Amazon KDP account stays in your name. Every file, cover and proof needs your approval before it goes live.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="w cs">
+            <div class="cb">
+                <div><strong>Ready to publish your book?</strong><span>Get an itemised quote before any work begins.</span></div>
+                <div class="row"><a class="btn" href="#get-quote">Get My Itemised Quote</a></div>
+            </div>
+        </aside>
+
+        <section style="padding:40px 0 0">
+            <div class="w"><img class="mk" style="max-width:900px" src="images/before-service-img.webp" width="1100" height="733" alt="An author writing in a notebook in front of the Gulf Books Publisher logo" loading="lazy"></div>
+        </section>
+
+        <section id="services">
+            <div class="w">
+                <h2>Complete Book Publishing Services Under One Roof</h2>
+                <p>As Gulf Book Publishers working with first-time and established authors, we cover each stage of the journey so you are not juggling a separate specialist for every task. Choose the full package or only the services your book needs.</p>
+                <div class="grid" id="sv">
+                    <div class="card">
+                        <h3>Book Publishing &amp; Amazon KDP</h3>
+                        <p>ISBN registration, eBook conversion, print-on-demand set-up and Amazon KDP publishing, with category and keyword research. Wide distribution to Amazon, Apple Books, Kobo, Google Play Books and IngramSpark.</p>
+                        <button class="go" data-s="Book Publishing &amp; Amazon KDP">Visit Page to Learn More ➜</button>
+                    </div>
+                    <div class="card">
+                        <h3>Editing &amp; Proofreading</h3>
+                        <p>Developmental editing, line editing, copy editing and proofreading in English and Arabic, with tracked changes so you see every improvement.</p>
+                        <button class="go" data-s="Editing &amp; Proofreading">Visit Page to Learn More ➜</button>
+                    </div>
+                    <div class="card">
+                        <h3>Book Cover Design &amp; Formatting</h3>
+                        <p>Custom covers for your genre and a clean interior layout for print and eBook, with right-to-left formatting for Arabic titles.</p>
+                        <button class="go" data-s="Book Cover Design &amp; Formatting">Visit Page to Learn More ➜</button>
+                    </div>
+                    <div class="card">
+                        <h3>Book Writing &amp; Ghostwriting</h3>
+                        <p>Professional writers who capture your voice, from non-fiction and memoir to fiction. You keep full credit and full ownership, and we will sign a confidentiality agreement if you ask.</p>
+                        <button class="go" data-s="Book Writing &amp; Ghostwriting">Visit Page to Learn More ➜</button>
+                    </div>
+                    <div class="card">
+                        <h3>Book Printing</h3>
+                        <p>Print-on-demand and short runs in paperback and hardcover for authors across the GCC, with printed proofs before you approve. <span class="ph">[Confirm delivery coverage by country]</span></p>
+                        <button class="go" data-s="Book Printing">Visit Page to Learn More ➜</button>
+                    </div>
+                    <div class="card">
+                        <h3>Book Marketing &amp; Author Websites</h3>
+                        <p>Launch plans, Amazon ads, review outreach, email lists and an author website that sends readers to your books.</p>
+                        <button class="go" data-s="Book Marketing &amp; Author Websites">Visit Page to Learn More ➜</button>
+                    </div>
+                    <div class="card">
+                        <h3>Audiobook Production</h3>
+                        <p>Professional narration, editing and mastering, delivered in the formats audiobook platforms require, so your book reaches listeners as well as readers.</p>
+                        <button class="go" data-s="Audiobook Production">Visit Page to Learn More ➜</button>
+                    </div>
+                    <div class="card">
+                        <h3>Children’s Book Publishing</h3>
+                        <p>Illustration, layout and publishing for picture books and early readers, in Arabic, English or bilingual editions.</p>
+                        <button class="go" data-s="Children’s Book Publishing">Visit Page to Learn More ➜</button>
+                    </div>
+                    <div class="card">
+                        <h3>Corporate &amp; Institutional Books</h3>
+                        <p>Company histories, anniversary books, reports and institutional publications for businesses, schools and organisations, produced to your brand guidelines with print runs and distribution.</p>
+                        <button class="go" data-s="Corporate &amp; Institutional Books">Visit Page to Learn More ➜</button>
+                    </div>
+                </div>
+                <div class="row"><a class="btn" href="#get-quote">Start My Publishing Plan</a></div>
+            </div>
+        </section>
+
+        <section style="padding:40px 0">
+            <div class="w"><img class="mk" src="images/after-service-img.webp" width="1000" height="1053" alt="Mockup of six sample book covers across fiction and inspirational genres" loading="lazy"></div>
+        </section>
+
+        <section class="band">
+            <div class="w">
+                <h2>Genres We Publish: Fiction, <br>Non-Fiction, Children’s Books and More</h2>
+                <p>Every genre has its own readers and its own rules. We match editors and designers to your book’s genre, and we work in Arabic, English or both.</p>
+                <p>Fiction writers come to us with novels, short story collections and fantasy, and we edit with a developmental and line-by-line approach that respects their voice. Non-fiction authors bring how-to books, guides and thought-leadership titles,
+                    which we structure so readers can follow the argument from the first chapter to the last. Memoirs and biographies, whether personal or family stories, are shaped with care and published in a form you are proud to share, and poetry
+                    collections in Arabic, English or both are typeset so that line breaks and rhythm stay intact.</p>
+                <p>We also publish children’s and educational books, from picture books and early readers to school titles, including illustrated and bilingual Arabic and English editions. Business and corporate books for founders, executives and organisations
+                    are written to build credibility and open doors, while religious and Islamic titles reach readers in the region and beyond as devotional, reflective and educational works. Academic and self-help authors receive consistent referencing
+                    and a clear chapter structure, so research-led and practical books are easy to follow.</p>
+            </div>
+        </section>
+
+        <aside class="w cs">
+            <div class="cb">
+                <div><strong>Not sure which package fits your genre?</strong><span>Tell us about your book and we will recommend the right services.</span></div>
+                <div class="row"><a class="btn" href="#get-quote">Book a Free Consultation</a></div>
+            </div>
+        </aside>
+
+        <section id="covers">
+            <div class="w">
+                <!-- <p class="pw">See our published work</p> -->
+                <div class="cv" id="cv"></div>
+                <a class="btn" href="#get-quote">Get a Free Cover Concept</a>
+            </div>
+        </section>
+
+        <div id="lb" role="dialog" aria-label="Cover preview"><img alt=""></div>
+
+        <section>
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/how-section-img.webp" width="1000" height="563" alt="Author at a desk looking at the Dubai skyline with icons for writing, design, publishing, printing and distribution" loading="lazy">
+                <h2>How to Publish a Book in the UAE and Across the Gulf: <br> 5 Clear Steps</h2>
+                <p>A good self publishing company explains the road before you start walking it. Here is ours, from first call to launch day.</p>
+                <ol class="steps">
+                    <li><b>Free consultation and quote</b>Share your manuscript in whatever format it is in today. We talk through your goals, look at length, genre and condition, and return an itemised quote with a written timeline. The consultation is free,
+                        with no payment and no obligation. We also include a free cover concept and a short sample edit of your opening pages, so you can see our work before you commit.</li>
+                    <li><b>Editing</b>Our editors improve clarity, structure and consistency. Every change is marked for you to review, and you also get a clean version to read straight through. Nothing is final until you approve it.</li>
+                    <li><b>Cover, formatting and ISBN</b>We design the cover, format the interior for print and eBook, and register your ISBNs with you as the publisher. You approve proofs at each step.</li>
+                    <li><b>Platform set-up and print proof</b>We set up Amazon KDP and your other retailers, write the metadata, and order a printed proof so you can hold the book before it is released.</li>
+                    <li><b>Launch and support</b>Your book goes live with a launch plan, and we stay available for marketing questions, reprints and your next title.</li>
+                </ol>
+                <h3 style="margin-top:72px">How long does it take?</h3>
+                <p>Our typical timeline is about 2 weeks. Longer manuscripts, heavier editing, illustrations or printed proofs can add time, so we agree the schedule in writing before work begins. We do not promise to publish in a few days, because good
+                    editing takes time.</p>
+            </div>
+        </section>
+
+        <aside class="w cs">
+            <div class="cb">
+                <div><strong>Start with step one</strong><span>A free consultation, a cover concept and a sample edit of your opening pages.</span></div>
+                <div class="row"><a class="btn" href="#get-quote">Book a Free Consultation</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+            </div>
+        </aside>
+
+        <section style="padding:36px 0">
+            <div class="w">
+                <h2>Platforms We Publish To</h2>
+                <p>Your book is set up on the retailers and print networks readers already use.</p>
+                <div class="mq">
+                    <div class="mt" id="mt"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="band" id="cost">
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/what-section-img.webp" width="1000" height="563" alt="Illustration of books, a calculator, coins and a price tag with the Dubai skyline" loading="lazy">
+                <h2>What Does It Cost to Publish a Book in the UAE and the Gulf?</h2>
+                <p>Cost is usually what authors want to know before anything else, and it is rarely answered plainly. Here is our answer. The final price depends on word count, how much editing the manuscript needs, cover complexity, illustrations, print
+                    format and marketing. Starting prices are below, and your quote itemises everything.</p>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Publish my eBook</h3>
+                        <div class="price">From AED 1,500</div>
+                        <p>Formatting, cover, ISBN and Amazon KDP set-up.</p><button class="go" data-s="Publish my eBook">Get this quote</button></div>
+                    <div class="card">
+                        <h3>Edit, design and publish</h3>
+                        <div class="price">From AED 2,000</div>
+                        <p>Editing, cover design, print and eBook formatting, ISBN and distribution.</p><button class="go" data-s="Edit, design and publish">Get this quote</button></div>
+                    <div class="card">
+                        <h3>Full publishing and launch</h3>
+                        <div class="price">From AED 3,500</div>
+                        <p>Everything in the previous tier plus a printed proof, marketing plan and author website.</p><button class="go" data-s="Full publishing and launch">Get this quote</button></div>
+                </div>
+                <p style="margin-top:18px">Prices are also shown in SAR, QAR, KWD, BHD and OMR on the pricing page. Every package is covered by our 100% refund policy. <span class="ph">[Confirm refund conditions and link to the refund policy page]</span> You only pay for services
+                    you choose, and there are no hidden fees.</p>
+            </div>
+        </section>
+
+        <aside class="w cs">
+            <div class="cb">
+                <div><strong>See what your book will cost</strong><span>Starting prices from AED 1,500, itemised in your quote.</span></div>
+                <div class="row"><a class="btn" href="#get-quote">Get My Itemised Quote</a> <a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+            </div>
+        </aside>
+
+        <section id="countries">
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-ggc-section-img.webp" width="1000" height="563" alt="Illustration of the GCC map with the six country flags, books and a laptop" loading="lazy">
+                <h2>Gulf Book Publishers for Every Country in the GCC</h2>
+                <p>Looking for a book publisher in the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain or Oman? Publishing in Riyadh is not the same as publishing in Dubai or Muscat. ISBN and legal deposit steps, readers, events and printing options differ, so
+                    each country has its own page. Authors can work with us entirely online, through video or phone consultations, wherever they live in the GCC.</p>
+                <div class="grid" id="gc">
+                    <div class="card">
+                        <span class="fl" data-flag="UAE"></span>
+                        <h3>Book Publisher UAE: Dubai, Abu Dhabi and Sharjah</h3>
+                        <p>Writing in the Emirates? We take care of your ISBN application with the National Library and Archives and the deposit copies that follow, then build your launch around the Sharjah and Abu Dhabi International Book Fairs.</p>
+                        <p><b>Emirates we work with: Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah and Fujairah.</b></p>
+                        <a href="book-publishing-and-printing-uae.html"> <button class="go">Publish in UAE</button></a>
+                    </div>
+                    <div class="card">
+                        <span class="fl" data-flag="Saudi Arabia"></span>
+                        <h3>Saudi Arabia: Arabic-First, Print-Ready</h3>
+                        <p>Looking for a book publisher Saudi Arabia authors can work with from Riyadh, Jeddah or Dammam? We lead with Arabic editing and print on demand, guide you through the deposit number and legal deposit at King Fahd National Library,
+                            and plan your launch around the Riyadh International Book Fair.</p>
+                        <a href="book-publishing-and-printing-saudi-arabia.html"> <button class="go">Publish in Saudi Arabia</button></a>
+                    </div>
+                    <div class="card">
+                        <span class="fl" data-flag="Qatar"></span>
+                        <h3>Qatar: Arabic and English from Doha</h3>
+                        <p>Authors in Doha, Al Khor and Al Wakrah can publish in either language, or both. We handle your ISBN and legal deposit with Qatar National Library, then time the launch around the Doha International Book Fair.</p>
+                        <a href="book-publishing-and-printing-qatar.html"> <button class="go">Publish in Qatar</button></a>
+                    </div>
+                    <div class="card">
+                        <span class="fl" data-flag="Kuwait"></span>
+                        <h3>Kuwait: From Edit to Print in One Place</h3>
+                        <p>From Kuwait City to Al Ahmadi, one team handles editing, design, printing and distribution. We walk you through ISBN and deposit with the National Library of Kuwait and plan around the Kuwait International Book Fair.</p>
+                        <a href="book-publishing-and-printing-kuwait.html"> <button class="go">Publish in Kuwait</button></a>
+                    </div>
+                    <div class="card">
+                        <span class="fl" data-flag="Bahrain"></span>
+                        <h3>Children’s and Educational Titles: Book Publisher Bahrain</h3>
+                        <p>We support authors in Manama and across the Kingdom, and we explain Bahrain’s legal deposit requirements before you go to print so nothing surprises you after launch.</p>
+                        <a href="book-publishing-and-printing-bahrain.html"> <button class="go">Publish in Bahrain</button></a>
+                    </div>
+                    <div class="card">
+                        <span class="fl" data-flag="Oman"></span>
+                        <h3>Oman: Muscat, Salalah and Sohar</h3>
+                        <p>Authors across Oman get editing, design, ISBN and distribution from a Gulf-based team, with guidance on legal deposit under Oman’s publishing law and a launch planned around the Muscat International Book Fair.</p>
+                        <a href="book-publishing-and-printing-oman.html"> <button class="go">Publish in Oman</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="band">
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-global-img.webp" width="1000" height="563" alt="Author working on a laptop with the Gulf Books Publisher logo and a world map connecting countries to the Gulf" loading="lazy">
+                <h2>Publishing from Outside the Gulf: Reach Gulf Readers from Anywhere</h2>
+                <p>You do not have to live in the Gulf to publish with a Gulf-based publishing house. Authors in other regions work with Gulf Books Publisher to publish their books professionally and to reach readers in the UAE, Saudi Arabia, Qatar, Kuwait,
+                    Bahrain and Oman. Everything is handled online, with video, phone or WhatsApp consultations, secure manuscript upload and the same itemised quote as every other author. You keep your rights and approve every stage.</p>
+                <ul class="chips" id="oc">
+                    <li><span class="fl" data-flag="Jordan"></span>Jordan</li>
+                    <li><span class="fl" data-flag="India"></span>India</li>
+                    <li><span class="fl" data-flag="Egypt"></span>Egypt</li>
+                    <li><span class="fl" data-flag="Nigeria"></span>Nigeria</li>
+                    <li><span class="fl" data-flag="Bangladesh"></span>Bangladesh</li>
+                    <li><span class="fl" data-flag="Iraq"></span>Iraq</li>
+                    <li><span class="fl" data-flag="Other country"></span>Other country</li>
+                </ul>
+                <p>Writing from another country? We welcome authors from every region. Tell us where you are and where you want your book to be read, and we will recommend the right route.</p>
+                <div class="row" style="margin:0"><a class="btn" href="#get-quote">Check My Country</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+            </div>
+        </section>
+
+        <aside class="w cs">
+            <div class="cb">
+                <div><strong>Writing from outside the Gulf?</strong><span>Tell us where you are and where you want your book to be read.</span></div>
+                <div class="row"><a class="btn" href="#get-quote">Check My Country</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+            </div>
+        </aside>
+
+        <section id="arabic">
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-arabic-section-img.webp" width="1000" height="563" alt="Illustration of an open book with Arabic and English pages and the Dubai skyline" loading="lazy">
+                <h2>Arabic and English Publishing <br> نشر الكتب بالعربية والإنجليزية</h2>
+                <p>Most Gulf authors write in Arabic, English or both, yet few Gulf book publishers offer proper Arabic production. We treat Arabic as a first-class language: native-speaking writers and editors in-house, typography chosen for Arabic readability,
+                    right-to-left interior layouts for print and eBook, and metadata written for Arabic search. A bilingual edition of the same book can be published side by side.</p>
+                <div class="ar">
+                    <p>نشر كتابك بالعربية أو الإنجليزية أو بهما معاً: تحرير لغوي، تصميم غلاف، تنسيق داخلي من اليمين إلى اليسار، تسجيل رقم ISBN، وتوزيع على المتاجر الإلكترونية في الخليج والعالم.</p>
+                    <p>اطلب استشارة مجانية وعرض سعر مفصّل لنشر كتابك في الإمارات والسعودية وقطر والكويت والبحرين وعُمان.</p>
+                    <p><b>كم تكلفة نشر كتاب؟</b> تبدأ باقاتنا من 1500 درهم إماراتي، ويحدد عرض السعر المفصل التكلفة النهائية حسب حجم الكتاب ومستوى التحرير والتصميم وخيارات الطباعة.</p>
+                </div>
+                <div class="row"><span class="btn o" aria-disabled="true">Publish my Book</span></div>
+            </div>
+        </section>
+
+        <section class="band" id="verify">
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-before-info-section-img.webp" width="1100" height="619" alt="Gulf Books Publisher office with a reception wall, bookshelves and a meeting room" loading="lazy">
+                <h3 style="margin-top:32px">Company details</h3>
+                <div class="cd">
+                    <div class="card">
+                        <dl>
+                            <dt>Office</dt>
+                            <dd><span class="ph">Sharjah Publishing City, Gulf Books Publisher, Sharjah, UAE.</span></dd>
+                            <dt>Official email</dt>
+                            <dd><a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a></dd>
+                            <dt>Phone and WhatsApp</dt>
+                            <dd><span class="ph">+971 58 196 9313</span></dd>
+                            <dt>Working hours</dt>
+                            <dd><span class="ph">Monday to Friday, 9:00 AM to 6:00 PM</span></dd>
+                            <dt>Consultations</dt>
+                            <dd>Via WhatsApp, Phone or by Appointment.</dd>
+                        </dl>
+                    </div>
+                    <div class="card mp"><iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1803.2844772203935!2d55.45729078846761!3d25.318682368974986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sSharjah%20Publishing%20City%2C%20Gulf%20Books%20Publisher%2C%20Sharjah%2C%20UAE.!5e0!3m2!1sen!2s!4v1793621425241!5m2!1sen!2s"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="w cs">
+            <div class="cb">
+                <div><strong>Questions before you commit?</strong><span>Talk to our team by video, phone or WhatsApp.</span></div>
+                <div class="row"><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a><a class="btn" href="#get-quote">Get a Quote</a></div>
+            </div>
+        </aside>
+
+        <section>
+            <div class="w">
+                <h2 id="guides">Free Publishing Guides for Gulf Authors</h2>
+                <p>Straight answers to the questions authors in the region ask most. Written for the Gulf, not copied from a UK or US guide.</p>
+                <div id="gd">
+                    <ul class="rs">
+                        <li><a href="#guides">How Much Does It Cost to Publish a Book in the UAE?</a><span>A guide in AED with real cost factors</span></li>
+                        <li><a href="#guides">Do You Need an ISBN to Publish a Book in the Gulf?</a><span>What it is, who issues it and what it costs</span></li>
+                        <li><a href="#guides">How to Publish on Amazon KDP from the UAE, Saudi Arabia or Qatar</a><span>Accounts, tax forms and payouts</span></li>
+                        <li><a href="#guides">Self-Publishing vs Traditional Publishing in the Gulf</a><span>Which route fits your book</span></li>
+                        <li><a href="#guides">How to Choose a Book Publisher in the Gulf, and the Warning Signs to Avoid</a><span>A checklist before you pay anyone</span></li>
+                        <li><a href="#guides">How to Publish an Arabic Book</a><span>Editing, right-to-left formatting and distribution</span></li>
+                        <li><a href="#guides">Legal Deposit and Book Registration in the GCC</a><span>What each country requires after you publish</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="band" id="faq">
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-faq-img.webp" width="1000" height="563" alt="FAQ illustration with common author questions, books and a laptop" loading="lazy">
+                <h2>Frequently Asked Questions About Gulf Books Publisher</h2>
+                <div id="fq">
+                    <details>
+                        <summary>How do I publish a book in the UAE?</summary>
+                        <p>Start with a free consultation, then editing, cover design, formatting and ISBN registration, followed by platform set-up on Amazon KDP and other retailers and a printed proof. A full-service publisher such as Gulf Books Publisher
+                            manages each step and sends a written quote and timeline first. You keep your rights throughout.</p>
+                    </details>
+                    <details>
+                        <summary>How much does it cost to publish a book in the UAE or Saudi Arabia?</summary>
+                        <p>Cost depends on word count, editing depth, cover and interior complexity, illustrations, print format and marketing. Our starting prices are AED 1,500 to publish an eBook, AED 2,000 to edit, design and publish, and AED 3,500 for
+                            full publishing and launch. Your quote itemises every service, so you only pay for what your book needs. See our cost guide for a full breakdown.</p>
+                    </details>
+                    <details>
+                        <summary>Do I need an ISBN to publish my book?</summary>
+                        <p>An ISBN is how bookstores, libraries and most online retailers identify your book, so you will need one for those channels. If you are selling only an eBook on Amazon, its own ASIN may be sufficient. We register your ISBNs under
+                            your name as publisher and explain the steps for your country.</p>
+                    </details>
+                    <details>
+                        <summary>Do I have to deposit copies of my book with a national library?</summary>
+                        <p>Legal deposit rules exist across the GCC, usually requiring a small number of free copies to go to the national library, and in several countries the deposit is linked to ISBN registration. The receiving body and the rules differ
+                            by country: for example, the UAE uses the National Library and Archives and Saudi Arabia uses King Fahd National Library. We tell you what applies to your book and guide you through the paperwork.</p>
+                    </details>
+                    <details>
+                        <summary>How long does it take to publish a book?</summary>
+                        <p>Our typical timeline is about 2 weeks. It depends on your manuscript and the services you choose, and longer books, heavier editing, illustrations or printed proofs can add time. We agree a schedule in writing before work begins,
+                            and we do not promise unrealistic turnaround times.</p>
+                    </details>
+                    <details>
+                        <summary>Can you publish my book on Amazon KDP and let me keep my rights?</summary>
+                        <p>Yes. The KDP account is opened in your name, so the rights and the royalties remain yours. Our part is the hands-on work: formatting, metadata, categories and price set-up.</p>
+                    </details>
+                    <details>
+                        <summary>Do you publish Arabic books?</summary>
+                        <p>Yes, in Arabic, English or both, with native Arabic writers and editors in-house and right-to-left formatting for print and eBook. See the Arabic and English section above or visit the Arabic site.</p>
+                    </details>
+                    <details>
+                        <summary>Can authors outside the UAE use your services?</summary>
+                        <p>Yes. We work with authors in the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman. You can speak to us by video call or phone, send your manuscript through a secure upload, and receive your quote in your local currency.</p>
+                    </details>
+                    <details>
+                        <summary>Can I publish with a Gulf-based publisher if I live outside the Gulf?</summary>
+                        <p>Yes. Authors in Jordan, India, Egypt, Nigeria, Bangladesh, Iraq and other countries publish with us entirely online. We handle editing, design, formatting and platform set-up, explain which ISBN and registration route suits your
+                            country, and plan your launch so your book can reach readers in the Gulf as well as at home.</p>
+                    </details>
+                    <details>
+                        <summary>Is the consultation really free?</summary>
+                        <p>Yes. The first half-hour call costs nothing and carries no obligation. We go through your manuscript and goals, send you an itemised quote, and you pay only if you choose to proceed. A free cover concept and a short sample edit
+                            of your opening pages are included, so you can judge our work first.</p>
+                    </details>
+                    <details>
+                        <summary>What is your refund policy?</summary>
+                        <p>Our packages are covered by a 100% refund policy. <span class="ph">[Add the exact conditions: stage, timeframe and how to claim]</span> The full terms are on the refund policy page. <span class="ph">[Link]</span></p>
+                    </details>
+                    <details>
+                        <summary>Is Gulf Books Publisher the same company as Gulf Book Publishers, Gulf Publisher or other similar names?</summary>
+                        <p>No. Gulf Books Publisher operates only from gulfbookspublisher.com and is not affiliated with other companies that have similar names. Our registered details are on the About page: <span class="ph">[company name and licence number]</span>.
+                            Always check a publisher’s registration before you pay.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="w">
+                <img src="images/logo.webp" width="358" height="150" alt="Gulf Books Publisher logo" style="display:block;margin:0 auto 20px;height:100px;width:auto;background:#fff;border-radius:8px;padding:4px 8px">
+                <h2>Start Your Publishing Journey with Gulf Books Publisher</h2>
+                <p>Your story deserves to be read, and finishing the manuscript is the hardest part. Let us handle the rest.</p>
+                <p>Book a free 30-minute consultation. We will look at your manuscript, answer your questions about cost, timelines and platforms, and send an itemised quote with no obligation. You also receive a free cover concept and a sample edit of your
+                    opening pages. Authors in every GCC country are welcome.</p>
+                <div class="row"><a class="btn" href="#get-quote">Get My Itemised Quote</a><a class="btn o" href="#get-quote">Book a Free Consultation</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="w">
+            <div class="fg">
+                <div class="fb">
+                    <img class="flogo" src="images/footer-logo.webp" width="436" height="180" alt="Gulf Books Publisher">
+
+                    <p class="ft"><b>Gulf Books Publisher</b> — self-publishing for authors across the GCC. Clear AED prices, Arabic and English, a written quote before any work begins, and you keep your rights.</p>
+
+                    <div class="soc">
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+                        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v1.5A5 5 0 0 1 16 8z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Become an Author</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Get Free Quote</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/book-publishing-amazon-kdp-service.html">Book Publishing &amp; Amazon KDP</a></li>
+                        <li><a href="services/editing-proofreading.html">Editing &amp; Proofreading</a></li>
+                        <li><a href="services/book-cover-design-formatting.html">Book Cover Design &amp; Formatting</a></li>
+                        <li><a href="services/ghostwriting.html">Book Writing &amp; Ghostwriting</a></li>
+                        <li><a href="services/book-printing.html">Book Printing</a></li>
+                        <li><a href="services/book-marketing-author-websites.html">Book Marketing &amp; Author Websites</a></li>
+                        <li><a href="services/audiobook-production.html">Audiobook Production</a></li>
+                        <li><a href="services/childrens-book-publishing.html">Children’s Book Publishing</a></li>
+                        <li><a href="services/corporate-book-publishing.html">Corporate &amp; Institutional Books</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Countries</h4>
+                    <ul>
+                        <li><a href="book-publishing-and-printing-uae.html">UAE</a></li>
+                        <li><a href="book-publishing-and-printing-saudi-arabia.html">Saudi Arabia</a></li>
+                        <li><a href="book-publishing-and-printing-qatar.html">Qatar</a></li>
+                        <li><a href="book-publishing-and-printing-kuwait.html">Kuwait</a></li>
+                        <li><a href="book-publishing-and-printing-bahrain.html">Bahrain</a></li>
+                        <li><a href="book-publishing-and-printing-oman.html">Oman</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="fc">
+                        <li>Business Bay, Dubai, UAE</li>
+                        <li><a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a></li>
+                        <li><a href="tel:+971581969313">+971 58 196 9313</a></li>
+                        <li><a href="https://wa.me/971581969313" target="_blank" rel="noopener">WhatsApp: +971 58 196 9313</a></li>
+                        <li>Mon – Fri, 9:00 AM – 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fbot">© Gulf Books Publisher. gulfbookspublisher.com</div>
+        </div>
+    </footer>
+
+
+    <div id="pu" class="pu" role="dialog" aria-modal="true" aria-labelledby="put" hidden>
+        <div class="pb">
+            <button class="px" id="px" type="button" aria-label="Close">&times;</button>
+            <h2 class="pt" id="put">Launch Your Book with Us</h2>
+            <div class="off">30% OFF</div>
+            <p>Get expert, author-friendly publishing with a written quote before any work begins. Share your details and claim your discount.</p>
+            <form id="pf" novalidate>
+                <input id="pn" placeholder="Enter Your Name" aria-label="Name" autocomplete="name">
+                <div class="err" id="pen"></div>
+                <input id="pe" type="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email">
+                <div class="err" id="pee"></div>
+                <input id="pc" placeholder="Enter Your Country" aria-label="Country" autocomplete="country-name">
+                <div class="pfp">
+                    <div class="cc"><button type="button" id="ccb" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>
+                        <ul id="ccl" role="listbox" hidden></ul>
+                    </div><input id="pp" type="tel" placeholder="Enter Your Phone Number" aria-label="Phone number" autocomplete="tel-national"></div>
+                <div class="err" id="pep"></div>
+                <button class="btn" type="submit" style="margin-top:16px;padding:13px 40px">Submit</button>
+            </form>
+            <div class="ok" id="pok" role="status"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        (function() {
+            /* ---------- Fix WhatsApp numbers ---------- */
+            function fixWhatsAppHref() {
+                document.querySelectorAll('a[href*="wa.me/971500000000"]').forEach(function(a) {
+                    a.href = a.href.replace('971500000000', '971581969313');
+                });
+            }
+
+            /* ---------- Dropdowns ---------- */
+            function initDropdowns() {
+                document.querySelectorAll('.dd-t').forEach(function(btn) {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        var dd = this.closest('.dd');
+                        var wasOpen = dd.classList.contains('open');
+                        document.querySelectorAll('.dd.open').forEach(function(d) {
+                            d.classList.remove('open');
+                            var t = d.querySelector('.dd-t');
+                            if (t) t.setAttribute('aria-expanded', 'false');
+                        });
+                        if (!wasOpen) {
+                            dd.classList.add('open');
+                            this.setAttribute('aria-expanded', 'true');
+                        }
+                    });
+                });
+                document.addEventListener('click', function() {
+                    document.querySelectorAll('.dd.open').forEach(function(d) {
+                        d.classList.remove('open');
+                        var t = d.querySelector('.dd-t');
+                        if (t) t.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            /* ---------- Mobile menu ---------- */
+            function initNav() {
+                var menu = document.getElementById('menu');
+                var navLinks = document.getElementById('navLinks');
+                if (!menu || !navLinks) return;
+
+                menu.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var isOpen = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', String(!isOpen));
+                    navLinks.classList.toggle('open', !isOpen);
+                });
+
+                /* Close panel when a real link is clicked (mobile only) */
+                navLinks.querySelectorAll('a').forEach(function(a) {
+                    a.addEventListener('click', function() {
+                        if (window.innerWidth <= 900) {
+                            menu.setAttribute('aria-expanded', 'false');
+                            navLinks.classList.remove('open');
+                        }
+                    });
+                });
+
+                /* Close panel on outside click */
+                document.addEventListener('click', function(e) {
+                    if (!navLinks.classList.contains('open')) return;
+                    if (e.target.closest('header')) return;
+                    menu.setAttribute('aria-expanded', 'false');
+                    navLinks.classList.remove('open');
+                });
+
+                /* Reset on resize */
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth > 900) {
+                        menu.setAttribute('aria-expanded', 'false');
+                        navLinks.classList.remove('open');
+                    }
+                });
+            }
+
+            /* ---------- Boot ---------- */
+            function boot() {
+                fixWhatsAppHref();
+                initDropdowns();
+                initNav();
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', boot);
+            } else {
+                boot();
+            }
+        })();
+    </script>
+</body>
+
+</html>

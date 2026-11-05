@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <title>Book Publisher Bahrain | Publish, Print &amp; eBook Services</title>
+    <meta name="description" content="Publish, print or release an eBook in Bahrain with Gulf Books Publisher. Arabic &amp; English editing, design, ISBN guidance and Amazon KDP from AED 1,500.">
+    <link rel="canonical" href="https://gulfbookspublisher.com/book-publishing-bahrain/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header>
+        <div class="w nav-wrap">
+            <a class="logo" href="index.html" aria-label="Gulf Books Publisher home">
+                <img src="images/logo.webp" width="358" height="150" alt="Gulf Books Publisher">
+            </a>
+
+            <nav class="nav-links" id="navLinks" aria-label="Primary">
+                <div class="dd">
+                    <button class="dd-t" type="button" aria-expanded="false" aria-haspopup="true">Services <span class="cv-a">&#9662;</span></button>
+                    <div class="dd-m" role="menu">
+                        <a href="services/book-publishing-amazon-kdp-service.html" role="menuitem">Book Publishing &amp; Amazon KDP</a>
+                        <a href="services/editing-proofreading.html" role="menuitem">Editing &amp; Proofreading</a>
+                        <a href="services/book-cover-design-formatting.html" role="menuitem">Book Cover Design &amp; Formatting</a>
+                        <a href="services/ghostwriting.html" role="menuitem">Book Writing &amp; Ghostwriting</a>
+                        <a href="services/book-printing.html" role="menuitem">Book Printing</a>
+                        <a href="services/book-marketing-author-websites.html" role="menuitem">Book Marketing &amp; Author Websites</a>
+                        <a href="services/audiobook-production.html" role="menuitem">Audiobook Production</a>
+                        <a href="services/childrens-book-publishing.html" role="menuitem">Children&rsquo;s Book Publishing</a>
+                        <a href="services/corporate-book-publishing.html" role="menuitem">Corporate &amp; Institutional Books</a>
+                    </div>
+                </div>
+
+                <div class="dd">
+                    <button class="dd-t" type="button" aria-expanded="false" aria-haspopup="true">Countries <span class="cv-a">&#9662;</span></button>
+                    <div class="dd-m" role="menu">
+                        <a href="book-publishing-and-printing-uae.html" role="menuitem">UAE</a>
+                        <a href="book-publishing-and-printing-saudi-arabia.html" role="menuitem">Saudi Arabia</a>
+                        <a href="book-publishing-and-printing-qatar.html" role="menuitem">Qatar</a>
+                        <a href="book-publishing-and-printing-kuwait.html" role="menuitem">Kuwait</a>
+                        <a href="book-publishing-and-printing-bahrain.html" role="menuitem">Bahrain</a>
+                        <a href="book-publishing-and-printing-oman.html" role="menuitem">Oman</a>
+                    </div>
+                </div>
+
+                <a class="l" href="#">About Us</a>
+                <a class="l" href="#">Become an Author</a>
+                <a class="l" href="#">Reviews</a>
+                <a class="l" href="#">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a class="btn nav-cta" href="#">Get Free Quote</a>
+                <button class="menu" id="menu" type="button" aria-expanded="false" aria-label="Toggle menu" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ QUOTE VIEW (hidden) ============ -->
+    <div id="qv" hidden>
+        <section class="qh">
+            <div class="w">
+                <a class="small" href="#top">&larr; Back to home</a>
+                <div class="qg">
+                    <div>
+                        <h1>Get Your Free, Itemised Bahrain Quote</h1>
+                        <p>Tell us about your book and we will send a clear written quote before any work begins. No payment and no obligation.</p>
+                        <ul class="tk">
+                            <li>Free 30-minute consultation by video call or phone</li>
+                            <li>Free cover concept for your book</li>
+                            <li>Short sample edit of your opening pages</li>
+                            <li>Packages from AED 1,500, itemised service by service</li>
+                            <li>You keep your rights and approve every stage</li>
+                        </ul>
+                        <div class="card">
+                            <h3>Prefer to talk first?</h3>
+                            <p>Message us on WhatsApp, or write to <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a>.</p><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                    </div>
+                    <div class="card form">
+                        <h3>Tell us about your book</h3>
+                        <form id="qq" novalidate>
+                            <div class="g2">
+                                <div><input id="qn" placeholder="Full name" aria-label="Full name" autocomplete="name">
+                                    <div class="err" id="qen"></div>
+                                </div>
+                                <div><input id="qe" type="email" placeholder="Email address" aria-label="Email" autocomplete="email">
+                                    <div class="err" id="qee"></div>
+                                </div>
+                            </div>
+                            <div class="pfp">
+                                <div class="cc"><button type="button" id="qcb" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>
+                                    <ul id="qcl" role="listbox" hidden></ul>
+                                </div><input id="qp" type="tel" placeholder="Phone number" aria-label="Phone number" autocomplete="tel-national"></div>
+                            <div class="err" id="qep"></div>
+                            <div class="g2"><select id="qc" aria-label="Country"></select><select id="qg" aria-label="Genre"></select></div>
+                            <div class="lb">Services you need</div>
+                            <div class="chs" id="qs">
+                                <button type="button" aria-pressed="false">Book Publishing &amp; Amazon KDP</button>
+                                <button type="button" aria-pressed="false">Editing &amp; Proofreading</button>
+                                <button type="button" aria-pressed="false">Book Cover Design &amp; Formatting</button>
+                                <button type="button" aria-pressed="false">Book Writing &amp; Ghostwriting</button>
+                                <button type="button" aria-pressed="false">Book Printing</button>
+                                <button type="button" aria-pressed="false">Book Marketing &amp; Author Websites</button>
+                                <button type="button" aria-pressed="false">Audiobook Production</button>
+                                <button type="button" aria-pressed="false">Children’s Book Publishing</button>
+                                <button type="button" aria-pressed="false">Corporate &amp; Institutional Books</button>
+                            </div>
+                            <div class="g2"><select id="qw" aria-label="Word count"></select><select id="qm" aria-label="Manuscript status"></select></div>
+                            <label class="dz" id="dz"><input id="qfi" type="file" accept=".doc,.docx,.pdf,.txt,.rtf,.odt"><b>Drop your manuscript here or click to upload</b><span id="qfn">Word, PDF or text file. Optional.</span></label>
+                            <input id="qb" placeholder="Book title" aria-label="Book title">
+                            <textarea id="qd" rows="3" placeholder="Anything else we should know?" aria-label="Details"></textarea>
+                            <button class="btn" type="submit" style="width:100%;margin-top:14px">Get My Bahrain Quote</button>
+                            <p class="small" style="text-align:center;margin:10px 0 0">Free consultation. No obligation.</p>
+                        </form>
+                        <div class="ok" id="qok" role="status"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="band">
+            <div class="w">
+                <h2>What Happens After You Submit</h2>
+                <ol class="steps qs">
+                    <li data-ic="doc"><b>Tell us about your book</b>Share your genre, word count and the services you need.</li>
+                    <li data-ic="up"><b>Upload your manuscript</b>Optional. Attach a Word, PDF or text file now, or send it later.</li>
+                    <li data-ic="chat"><b>Talk to our team</b>We review your details and arrange a free consultation by video call or phone.</li>
+                    <li data-ic="check"><b>Receive your itemised quote</b>A written quote with every service priced and a timeline, before any work begins.</li>
+                </ol>
+                <p style="text-align:center;margin:36px auto 0">Prefer email? Write to <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a> with a short cover letter and your manuscript.</p>
+            </div>
+        </section>
+    </div>
+
+    <main id="top">
+
+        <!-- ============ HERO ============ -->
+        <section>
+            <div class="w hero">
+                <div>
+                    <p class="small">Manama · Muharraq · Riffa · Isa Town · Hamad Town</p>
+                    <h1>Book Publisher Bahrain: Your Book, Published in Print and eBook</h1>
+                    <p>A print shop can bind your pages. It cannot register your ISBN, design a cover that sells, format an Arabic eBook or put your book on Amazon. Gulf Books Publisher does all of that, and arranges the printing as well, so a manuscript
+                        from Manama, Muharraq or Riffa ends up as a real book that readers can buy.</p>
+                    <p>Write in Arabic, English or both. We quote before we start, and you stay in charge of every decision.</p>
+                    <p class="small">Arabic, English or bilingual · From AED 1,500, itemised in writing · About 2 weeks · Free 30-minute consultation · 100% refund policy <span class="ph">[confirm conditions]</span></p>
+                    <div class="row"><a class="btn" href="#get-quote">Start My Bahrain Quote</a><a class="btn o" href="#get-quote">Book a Free Call</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">WhatsApp Us</a></div>
+                </div>
+                <div>
+                    <div class="hv"><img src="images/hero-img.webp" width="900" height="985" alt="Authors from across the Gulf holding their published books"></div>
+                    <div class="card form" id="quote">
+                        <h3 class="oh">Publish Your Book in Bahrain with Confidence<span>Typical Timeline: About 2 Weeks</span></h3>
+                        <p class="oi">Upload your manuscript and tell us about your book, even if you are not sure where to begin. We will send an itemised quote, and you also get a</p>
+                        <p class="oo">free consultation + free cover concept + short sample edit of your opening pages.</p>
+                        <form id="qf" novalidate>
+                            <input id="n" placeholder="Enter your Full Name" aria-label="Full name" autocomplete="name">
+                            <div class="err" id="en"></div>
+                            <input id="e" type="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email">
+                            <div class="err" id="ee"></div>
+                            <input id="p" type="tel" placeholder="Enter Your Phone No." aria-label="Phone number" autocomplete="tel">
+                            <div class="err" id="ep"></div>
+                            <select id="c" aria-label="Country"></select>
+                            <select id="g" aria-label="Genre"></select>
+                            <input id="f" type="file" accept=".doc,.docx,.pdf,.txt,.rtf,.odt" aria-label="Upload your manuscript">
+                            <input id="t" placeholder="Write Your Book Title" aria-label="Book title">
+                            <textarea id="d" rows="3" placeholder="Details" aria-label="Details"></textarea>
+                            <button class="btn" type="submit" style="width:100%;margin-top:14px">Get My Bahrain Quote</button>
+                        </form>
+                        <div class="ok" id="ok" role="status"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ WHY BAHRAIN AUTHORS ============ -->
+        <section class="band" id="why">
+            <div class="w">
+                <h2>Why a Small Market Can Feel Like a Big Obstacle</h2>
+                <p>You may be searching for the wrong thing. Many people looking for a printing press in Bahrain only need copies made. If you are producing a book, a printer is one step out of eight. The others, from editing to ISBN to distribution, are
+                    where first-time authors lose weeks.</p>
+                <div class="grid">
+                    <div class="card">
+                        <h3>A printer is one step of eight</h3>
+                        <p>A print shop can bind your pages. It cannot register your ISBN, design a cover that sells, format an Arabic eBook or put your book on Amazon. The other seven steps are where first-time authors lose weeks.</p>
+                    </div>
+                    <div class="card">
+                        <h3>No big home-ground fair</h3>
+                        <p>There is no big home-ground fair to build a launch around. The Bahrain International Book Fair was last held in 2018, and later editions have been postponed. <span class="ph">[Confirm current status]</span> A launch that depends
+                            on one local event is a launch at risk.</p>
+                    </div>
+                    <div class="card">
+                        <h3>eBooks need more than a PDF</h3>
+                        <p>Readers searching for an Arabic eBook expect text that flows right to left, reflows on a phone and opens in the major reading apps. A PDF exported from a word processor rarely does that.</p>
+                    </div>
+                    <div class="card">
+                        <h3>The rules are easy to miss</h3>
+                        <p>Bahrain has a mandatory legal deposit system, and it is not always clear what you must submit, to whom, or when. We tell you what applies to your book and guide you through the steps.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="w cs">
+            <div class="cb">
+                <div><strong>Ready to publish your book in Bahrain?</strong><span>Get an itemised quote before any work begins.</span></div>
+                <div class="row"><a class="btn" href="#get-quote">Start My Bahrain Quote</a></div>
+            </div>
+        </aside>
+
+        <section id="covers">
+            <div class="w">
+                <!-- <p class="pw">See our published work</p> -->
+                <div class="cv" id="cv"></div>
+                <a class="btn" href="#get-quote">Get a Free Cover Concept</a>
+            </div>
+        </section>
+        <!-- ============ SERVICES ============ -->
+        <section id="services">
+            <div class="w">
+                <h2>The Services Behind a Finished Book</h2>
+                <p>Take them one at a time or all together. This is what each service covers and who it helps most.</p>
+                <div class="grid" id="uae-services">
+                    <div class="card">
+                        <h3>Book Publishing &amp; Amazon KDP</h3>
+                        <p>ISBN registration, eBook conversion, print-on-demand set-up, Amazon KDP and wider distribution. <em>Helps most if you want your book on sale online this month.</em></p>
+                    </div>
+                    <div class="card">
+                        <h3>Editing &amp; Proofreading</h3>
+                        <p>Developmental, line and copy editing and proofreading, in Arabic and English. <em>Helps most if you are unsure the manuscript is ready.</em></p>
+                    </div>
+                    <div class="card">
+                        <h3>Cover Design &amp; Formatting</h3>
+                        <p>Custom cover, print interior and eBook layout, including right-to-left Arabic. <em>Helps most if you need the book to look professional on a shelf and on a screen.</em></p>
+                    </div>
+                    <div class="card">
+                        <h3>Book Printing</h3>
+                        <p>Paperback and hardcover, print-on-demand or short runs, with binding choices and a printed proof. <span class="ph">[Confirm printing and delivery coverage in Bahrain]</span> <em>Helps most if you want physical copies for gifts, events
+                            or sale.</em></p>
+                    </div>
+                    <div class="card">
+                        <h3>Ghostwriting</h3>
+                        <p>A writer develops your notes or interviews into a manuscript in your voice. NDA on request. <em>Helps most if you have the story but not the time to write it.</em></p>
+                    </div>
+                    <div class="card">
+                        <h3>Marketing &amp; Author Websites</h3>
+                        <p>Launch plan, Amazon ads, review outreach, email list and an author website. <em>Helps most if you want readers to actually find the book.</em></p>
+                    </div>
+                    <div class="card">
+                        <h3>Audiobook Production</h3>
+                        <p>Narration, editing and mastering for the main audiobook platforms. <em>Helps most if you want listeners as well as readers.</em></p>
+                    </div>
+                    <div class="card">
+                        <h3>Children’s Book Publishing</h3>
+                        <p>Illustration, layout and publishing, in Arabic, English or bilingual editions. <em>Helps most if you are writing for young readers.</em></p>
+                    </div>
+                    <div class="card">
+                        <h3>Corporate &amp; Institutional Books</h3>
+                        <p>Company histories, reports, educational and training publications to your brand guidelines. <em>Helps most if you represent a business, school or organisation.</em></p>
+                    </div>
+                </div>
+                <div class="row"><a class="btn" href="#get-quote">Start My Bahrain Publishing Plan</a></div>
+            </div>
+        </section>
+
+
+        <section style="padding:36px 0">
+            <div class="w">
+                <h2>Platforms We Publish To</h2>
+                <p>Your book is set up on the retailers and print networks readers already use.</p>
+                <div class="mq">
+                    <div class="mt" id="mt"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ BAHRAIN PAPERWORK ============ -->
+        <section class="band">
+            <div class="w">
+                <h2>The Bahrain Paperwork, Explained</h2>
+                <p>General self-publishing guides skip the local steps. We do not.</p>
+                <div class="grid">
+                    <div class="card">
+                        <span class="ib"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8zM7.5 8.5h.01"/></svg></span>
+                        <h3>ISBN</h3>
+                        <p>An ISBN identifies your book to bookstores, libraries and online retailers. We guide you through the application and check the number appears correctly on your copyright page and back cover. <span class="ph">[Confirm ISBN process for Bahrain authors]</span></p>
+                    </div>
+                    <div class="card">
+                        <span class="ib"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg></span>
+                        <h3>Legal deposit</h3>
+                        <p>Bahrain has a mandatory legal deposit system under its 1975 law. We tell you what applies to your book and guide you through the steps. <span class="ph">[Confirm receiving body and copy count with the relevant authority]</span></p>
+                    </div>
+                    <div class="card">
+                        <span class="ib"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6zM8.5 12l2.5 2.5 5-5"/></svg></span>
+                        <h3>Arabic eBooks</h3>
+                        <p>Readers searching for an Arabic eBook expect right-to-left text that reflows on a phone and opens in the major reading apps. We format Arabic eBooks properly and publish them through Amazon KDP and other retailers.</p>
+                    </div>
+                    <div class="card">
+                        <span class="ib"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4zM8 9h8M8 12.5h5"/></svg></span>
+                        <h3>Amazon’s tax interview</h3>
+                        <p>Amazon asks authors outside the US to complete a tax interview before paying royalties. We walk you through each question, and you submit it yourself in your own account. For advice on your own tax position, speak to an accountant.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ARABIC ============ -->
+        <section id="arabic">
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-arabic-section-img.webp" width="1000" height="563" alt="Illustration of an open book with Arabic and English pages and the Manama skyline" loading="lazy">
+                <h2>Publish in Arabic, English or Both <br> نشر كتاب بالعربية والإنجليزية</h2>
+                <p>Readers searching for an Arabic eBook expect text that flows right to left, reflows on a phone and opens in the major reading apps. Our native Arabic writers and editors work in-house, our designers set Arabic typography properly, and
+                    interiors are laid out right to left for print and eBook. A bilingual edition can be published side by side.</p>
+                <div class="ar">
+                    <p>طباعة كتب ونشر كتب إلكترونية في البحرين بالعربية والإنجليزية: اطلب استشارة مجانية وعرض سعر مفصّل اليوم.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ COST ============ -->
+        <section class="band" id="cost">
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/what-section-img.webp" width="1000" height="563" alt="Illustration of books, a calculator, coins and a price tag with the Manama skyline" loading="lazy">
+                <h2>Start Small or Go Full Launch: You Choose the Track</h2>
+                <p>Every project begins with a free call and an itemised quote. From there, most Bahrain authors choose one of three tracks.</p>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Track 1: Digital First</h3>
+                        <div class="price">From AED 1,500</div>
+                        <p>For a finished manuscript that mainly needs to become an eBook. We format the book, design the cover, sort the ISBN and set up your Amazon KDP listing.</p><button class="go" data-s="Digital First">Get this quote</button></div>
+                    <div class="card">
+                        <h3>Track 2: Print and Digital</h3>
+                        <div class="price">From AED 2,000</div>
+                        <p>Add professional editing and a print-ready interior, and the book goes out as both a paperback and an eBook through wider distribution.</p><button class="go" data-s="Print and Digital">Get this quote</button></div>
+                    <div class="card">
+                        <h3>Track 3: Full Launch</h3>
+                        <div class="price">From AED 3,500</div>
+                        <p>Everything in Track 2, plus a printed proof copy, a marketing plan and an author website, so you launch with a plan.</p><button class="go" data-s="Full Launch">Get this quote</button></div>
+                </div>
+                <p style="margin-top:18px">Final prices depend on word count, editing depth, illustrations, print format and quantity. A BHD quote is available on request. <span class="ph">[confirm]</span> Every package comes with our 100% refund policy. <span class="ph">[confirm conditions]</span></p>
+                <h3 style="margin-top:32px">What comes off your to-do list</h3>
+                <p>Finding and briefing an editor. Commissioning a cover. Checking trim size and spine width. Applying for an ISBN. Formatting a right-to-left eBook. Setting up Amazon KDP. Ordering a proof. Working out what Bahrain requires after publication.
+                    Your quote lists each task separately, so you see what it costs and can drop any line you do not need.</p>
+            </div>
+        </section>
+
+        <aside class="w cs">
+            <div class="cb">
+                <div><strong>See what your book will cost</strong><span>Starting prices from AED 1,500, itemised in your quote.</span></div>
+                <div class="row"><a class="btn" href="#get-quote">Start My Bahrain Quote</a> <a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+            </div>
+        </aside>
+
+        <!-- ============ 6 STEPS ============ -->
+        <section>
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/after-hero-img.webp" width="1000" height="563" alt="Author at a desk looking at the Manama skyline with icons for writing, design, publishing, printing and distribution" loading="lazy">
+                <h2>How It Works: What You Do and What We Do</h2>
+                <ol class="steps">
+                    <li><b>Talk</b>You send your manuscript, or just describe it, and book a free 30-minute call. We understand your goals and what the book needs.</li>
+                    <li><b>Quote</b>You review the itemised quote and choose your track. We send a written quote and schedule, with no obligation.</li>
+                    <li><b>Edit</b>You review changes and approve the text. We edit in Arabic or English.</li>
+                    <li><b>Build</b>You approve the cover, interior and proofs. We design, typeset and register your ISBN.</li>
+                    <li><b>Print and publish</b>You approve the printed proof. We order the proof, set up Amazon KDP and retailers, and guide you through Bahrain’s deposit steps.</li>
+                    <li><b>Launch</b>You share your book. We go live with your launch plan; printed copies delivered <span class="ph">[confirm delivery to Bahrain]</span>.</li>
+                </ol>
+                <p style="margin-top:28px">A typical project takes about 2 weeks. Longer books, illustrations, heavier editing and printed proofs add time, and we agree the schedule in writing first.</p>
+            </div>
+        </section>
+
+        <aside class="w cs">
+            <div class="cb">
+                <div><strong>Start with step one</strong><span>A free 30-minute consultation, a cover concept and a sample edit of your opening pages.</span></div>
+                <div class="row"><a class="btn" href="#get-quote">Book My Free Call</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">WhatsApp Us</a></div>
+            </div>
+        </aside>
+
+
+
+        <!-- ============ BAHRAIN TO GCC ============ -->
+        <section class="band">
+            <div class="w">
+                <!-- <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-ggc-section-img.webp" width="1000" height="563" alt="Illustration of the GCC map with the six country flags, books and a laptop" loading="lazy"> -->
+                <h2>Built Around Online Channels and Gulf Fairs</h2>
+                <p>We work with authors in Manama, Muharraq, Riffa, Isa Town and Hamad Town, and we are a self-publishing company serving the wider GCC. Consultations are by video call or phone and manuscripts are uploaded securely, so you never need to
+                    travel to meet us. With no major fair at home, we build your launch around Amazon and online retailers, and add Gulf book fairs such as Riyadh, Sharjah and Muscat where they suit your book. <span class="ph">[Confirm fairs to feature]</span></p>
+            </div>
+        </section>
+
+        <section style="padding:40px 0">
+            <div class="w"><img class="mk" src="images/after-service-img.webp" width="1000" height="1053" alt="Mockup of six sample book covers across fiction and inspirational genres" loading="lazy"></div>
+        </section>
+        <!-- ============ FIVE PROMISES ============ -->
+        <section>
+            <div class="w">
+                <h2>Five Promises We Make to Bahrain Authors</h2>
+                <p>Every project begins with a free call and an itemised quote. These are the commitments behind it.</p>
+                <div class="grid" style="margin-top:28px">
+                    <div class="card">
+                        <span class="ib"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM8 12l3 3 5-6"/></svg></span>
+                        <h3>1. You will see the price before we start</h3>
+                        <p>An itemised written quote comes first, every time.</p>
+                    </div>
+                    <div class="card">
+                        <span class="ib"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM4 9h16M9 9v11"/></svg></span>
+                        <h3>2. Your Arabic will be treated as Arabic</h3>
+                        <p>Native Arabic writers and editors work in-house, and right-to-left layout is part of the build, not an afterthought.</p>
+                    </div>
+                    <div class="card">
+                        <span class="ib"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"/></svg></span>
+                        <h3>3. You approve everything</h3>
+                        <p>No file, cover or proof goes live without your sign-off.</p>
+                    </div>
+                    <div class="card">
+                        <span class="ib"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg></span>
+                        <h3>4. The book stays yours</h3>
+                        <p>Your rights, your ISBN and your Amazon KDP account remain in your name. <span class="ph">[Confirm ISBN process for Bahrain authors]</span></p>
+                    </div>
+                    <div class="card">
+                        <span class="ib"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4zM8 9h8M8 12.5h5"/></svg></span>
+                        <h3>5. You will always know who is on your project</h3>
+                        <p>Every project has a named manager reachable by phone or WhatsApp. Our address, email and phone are published on the site. <span class="ph">[Add company name and licence number once registration is complete]</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ VERIFY / ABOUT ============ -->
+        <section class="band" id="verify">
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-before-info-section-img.webp" width="1100" height="619" alt="Gulf Books Publisher office with a reception wall, bookshelves and a meeting room" loading="lazy">
+                <h2>Check Any Publishing Company in Bahrain Before You Pay</h2>
+                <p>Ask for a trade licence number, a real office address, a named project manager, a written contract that says you keep your rights, and reviews you can trace on an independent site. Ours are on our About page. <span class="ph">[Add company name, licence number and address once registration is complete]</span></p>
+                <h3 style="margin-top:32px">Company details</h3>
+                <div class="cd">
+                    <div class="card">
+                        <dl>
+                            <dt>Office</dt>
+                            <dd>Sharjah Publishing City, Sharjah, UAE</dd>
+                            <dt>Official email</dt>
+                            <dd><a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a></dd>
+                            <dt>Phone and WhatsApp</dt>
+                            <dd><a href="tel:+971581969313">+971 58 196 9313</a></dd>
+                            <dt>Working hours</dt>
+                            <dd>Monday to Friday, 9:00 AM to 6:00 PM</dd>
+                            <dt>Consultations</dt>
+                            <dd>Via WhatsApp, Phone or by Appointment.</dd>
+                        </dl>
+                    </div>
+                    <div class="card mp"><iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1803.2844772203935!2d55.45729078846761!3d25.318682368974986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBusiness%20Bay%2C%20Dubai%2C%20UAE.!5e0!3m2!1sen!2s!4v1793621425241!5m2!1sen!2s"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="w cs">
+            <div class="cb">
+                <div><strong>Questions before you commit?</strong><span>Talk to our team by video, phone or WhatsApp.</span></div>
+                <div class="row"><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a><a class="btn" href="#get-quote">Get a Quote</a></div>
+            </div>
+        </aside>
+
+        <!-- ============ FAQ ============ -->
+        <section class="band" id="faq">
+            <div class="w">
+                <h2>Frequently Asked Questions</h2>
+                <div id="uae-faq">
+                    <details>
+                        <summary>Can you make an Arabic eBook, not just a PDF?</summary>
+                        <p>Yes. We format Arabic eBooks with right-to-left text that reflows on phones and tablets, and publish them through Amazon KDP and other retailers.</p>
+                    </details>
+                    <details>
+                        <summary>Can I order just a few printed copies?</summary>
+                        <p>Yes. We offer short runs and print-on-demand in paperback and hardcover, with a printed proof before you approve. <span class="ph">[Confirm printing and delivery coverage in Bahrain]</span></p>
+                    </details>
+                    <details>
+                        <summary>Do I have to deposit copies of my book in Bahrain?</summary>
+                        <p>Bahrain has a mandatory legal deposit system under its 1975 law. We tell you what applies to your book and guide you through the steps.</p>
+                    </details>
+                    <details>
+                        <summary>What does it cost to publish a book in Bahrain?</summary>
+                        <p>Our packages start at AED 1,500 for an eBook, AED 2,000 for editing, design and publishing, and AED 3,500 for the full launch. Your itemised quote confirms the exact cost before work starts.</p>
+                    </details>
+                    <details>
+                        <summary>Do I keep the rights to my book?</summary>
+                        <p>Yes. Your rights remain yours, and your ISBN and Amazon KDP account are in your name.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FINAL CTA ============ -->
+        <section class="cta">
+            <div class="w">
+                <img src="images/logo.webp" width="358" height="150" alt="Gulf Books Publisher logo" style="display:block;margin:0 auto 20px;height:100px;width:auto;background:#fff;border-radius:8px;padding:4px 8px">
+                <h2>Two Ways to Begin</h2>
+                <p>Ready now? Send your manuscript and request an itemised quote. You will have a written plan and price from us. Still deciding? Book a free 30-minute call. Ask about cost, timing, printing or Arabic eBooks, with no obligation.</p>
+                <div class="row"><a class="btn" href="#get-quote">Request My Bahrain Quote</a><a class="btn o" href="#get-quote">Book My Free Call</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">WhatsApp Us</a></div>
+                <div class="ar">
+                    <p>طباعة كتب ونشر كتب إلكترونية في البحرين بالعربية والإنجليزية: اطلب استشارة مجانية وعرض سعر مفصّل اليوم.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ HIDDEN CONTAINERS (required by script.js) ============ -->
+        <div id="sv" hidden></div>
+        <div id="gc" hidden></div>
+        <div id="oc" hidden></div>
+        <div id="gd" hidden></div>
+        <div id="fq" hidden></div>
+        <div id="cv" hidden></div>
+        <div id="mt" hidden></div>
+        <div id="lb" role="dialog" aria-label="Cover preview" hidden><img alt=""></div>
+    </main>
+
+    <footer>
+        <div class="w">
+            <div class="fg">
+                <div class="fb">
+                    <img class="flogo" src="images/footer-logo.webp" width="436" height="180" alt="Gulf Books Publisher">
+
+                    <p class="ft"><b>Gulf Books Publisher</b> — self-publishing for authors across the GCC. Clear AED prices, Arabic and English, a written quote before any work begins, and you keep your rights.</p>
+
+                    <div class="soc">
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+                        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v1.5A5 5 0 0 1 16 8z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Become an Author</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Get Free Quote</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/book-publishing-amazon-kdp-service.html">Book Publishing &amp; Amazon KDP</a></li>
+                        <li><a href="services/editing-proofreading.html">Editing &amp; Proofreading</a></li>
+                        <li><a href="services/book-cover-design-formatting.html">Book Cover Design &amp; Formatting</a></li>
+                        <li><a href="services/ghostwriting.html">Book Writing &amp; Ghostwriting</a></li>
+                        <li><a href="services/book-printing.html">Book Printing</a></li>
+                        <li><a href="services/book-marketing-author-websites.html">Book Marketing &amp; Author Websites</a></li>
+                        <li><a href="services/audiobook-production.html">Audiobook Production</a></li>
+                        <li><a href="services/childrens-book-publishing.html">Children’s Book Publishing</a></li>
+                        <li><a href="services/corporate-book-publishing.html">Corporate &amp; Institutional Books</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Countries</h4>
+                    <ul>
+                        <li><a href="book-publishing-and-printing-uae.html">UAE</a></li>
+                        <li><a href="book-publishing-and-printing-saudi-arabia.html">Saudi Arabia</a></li>
+                        <li><a href="book-publishing-and-printing-qatar.html">Qatar</a></li>
+                        <li><a href="book-publishing-and-printing-kuwait.html">Kuwait</a></li>
+                        <li><a href="book-publishing-and-printing-bahrain.html">Bahrain</a></li>
+                        <li><a href="book-publishing-and-printing-oman.html">Oman</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="fc">
+                        <li>Business Bay, Dubai, UAE</li>
+                        <li><a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a></li>
+                        <li><a href="tel:+971581969313">+971 58 196 9313</a></li>
+                        <li><a href="https://wa.me/971581969313" target="_blank" rel="noopener">WhatsApp: +971 58 196 9313</a></li>
+                        <li>Mon – Fri, 9:00 AM – 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fbot">© Gulf Books Publisher. gulfbookspublisher.com</div>
+        </div>
+    </footer>
+
+
+    <div id="pu" class="pu" role="dialog" aria-modal="true" aria-labelledby="put" hidden>
+        <div class="pb">
+            <button class="px" id="px" type="button" aria-label="Close">&times;</button>
+            <h2 class="pt" id="put">Launch Your Book with Us</h2>
+            <div class="off">30% OFF</div>
+            <p>Get expert, author-friendly publishing with a written quote before any work begins. Share your details and claim your discount.</p>
+            <form id="pf" novalidate>
+                <input id="pn" placeholder="Enter Your Name" aria-label="Name" autocomplete="name">
+                <div class="err" id="pen"></div>
+                <input id="pe" type="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email">
+                <div class="err" id="pee"></div>
+                <input id="pc" placeholder="Enter Your Country" aria-label="Country" autocomplete="country-name">
+                <div class="pfp">
+                    <div class="cc"><button type="button" id="ccb" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>
+                        <ul id="ccl" role="listbox" hidden></ul>
+                    </div><input id="pp" type="tel" placeholder="Enter Your Phone Number" aria-label="Phone number" autocomplete="tel-national"></div>
+                <div class="err" id="pep"></div>
+                <button class="btn" type="submit" style="margin-top:16px;padding:13px 40px">Submit</button>
+            </form>
+            <div class="ok" id="pok" role="status"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        (function() {
+            /* ---------- Fix WhatsApp numbers ---------- */
+            function fixWhatsAppHref() {
+                document.querySelectorAll('a[href*="wa.me/971500000000"]').forEach(function(a) {
+                    a.href = a.href.replace('971500000000', '971581969313');
+                });
+            }
+
+            /* ---------- Dropdowns ---------- */
+            function initDropdowns() {
+                document.querySelectorAll('.dd-t').forEach(function(btn) {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        var dd = this.closest('.dd');
+                        var wasOpen = dd.classList.contains('open');
+                        document.querySelectorAll('.dd.open').forEach(function(d) {
+                            d.classList.remove('open');
+                            var t = d.querySelector('.dd-t');
+                            if (t) t.setAttribute('aria-expanded', 'false');
+                        });
+                        if (!wasOpen) {
+                            dd.classList.add('open');
+                            this.setAttribute('aria-expanded', 'true');
+                        }
+                    });
+                });
+                document.addEventListener('click', function() {
+                    document.querySelectorAll('.dd.open').forEach(function(d) {
+                        d.classList.remove('open');
+                        var t = d.querySelector('.dd-t');
+                        if (t) t.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            /* ---------- Mobile menu ---------- */
+            function initNav() {
+                var menu = document.getElementById('menu');
+                var navLinks = document.getElementById('navLinks');
+                if (!menu || !navLinks) return;
+
+                menu.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var isOpen = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', String(!isOpen));
+                    navLinks.classList.toggle('open', !isOpen);
+                });
+
+                navLinks.querySelectorAll('a').forEach(function(a) {
+                    a.addEventListener('click', function() {
+                        if (window.innerWidth <= 900) {
+                            menu.setAttribute('aria-expanded', 'false');
+                            navLinks.classList.remove('open');
+                        }
+                    });
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!navLinks.classList.contains('open')) return;
+                    if (e.target.closest('header')) return;
+                    menu.setAttribute('aria-expanded', 'false');
+                    navLinks.classList.remove('open');
+                });
+
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth > 900) {
+                        menu.setAttribute('aria-expanded', 'false');
+                        navLinks.classList.remove('open');
+                    }
+                });
+            }
+
+            /* ---------- Boot ---------- */
+            function boot() {
+                fixWhatsAppHref();
+                initDropdowns();
+                initNav();
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', boot);
+            } else {
+                boot();
+            }
+        })();
+    </script>
+</body>
+
+</html>

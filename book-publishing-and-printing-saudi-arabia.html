@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <title>Book Publishing in Saudi Arabia | Gulf Books Publisher</title>
+    <meta name="description" content="Publish and print your book in Saudi Arabia in Arabic or English: editing, ISBN guidance, hardcover and paperback printing, and clear SAR prices.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header>
+        <div class="w nav-wrap">
+            <a class="logo" href="index.html" aria-label="Gulf Books Publisher home">
+                <img src="images/logo.webp" width="358" height="150" alt="Gulf Books Publisher">
+            </a>
+
+            <nav class="nav-links" id="navLinks" aria-label="Primary">
+                <div class="dd">
+                    <button class="dd-t" type="button" aria-expanded="false" aria-haspopup="true">Services <span class="cv-a">&#9662;</span></button>
+                    <div class="dd-m" role="menu">
+                        <a href="services/book-publishing-amazon-kdp-service.html" role="menuitem">Book Publishing &amp; Amazon KDP</a>
+                        <a href="services/editing-proofreading.html" role="menuitem">Editing &amp; Proofreading</a>
+                        <a href="services/book-cover-design-formatting.html" role="menuitem">Book Cover Design &amp; Formatting</a>
+                        <a href="services/ghostwriting.html" role="menuitem">Book Writing &amp; Ghostwriting</a>
+                        <a href="services/book-printing.html" role="menuitem">Book Printing</a>
+                        <a href="services/book-marketing-author-websites.html" role="menuitem">Book Marketing &amp; Author Websites</a>
+                        <a href="services/audiobook-production.html" role="menuitem">Audiobook Production</a>
+                        <a href="services/childrens-book-publishing.html" role="menuitem">Children&rsquo;s Book Publishing</a>
+                        <a href="services/corporate-book-publishing.html" role="menuitem">Corporate &amp; Institutional Books</a>
+                    </div>
+                </div>
+
+                <div class="dd">
+                    <button class="dd-t" type="button" aria-expanded="false" aria-haspopup="true">Countries <span class="cv-a">&#9662;</span></button>
+                    <div class="dd-m" role="menu">
+                        <a href="book-publishing-and-printing-uae.html" role="menuitem">UAE</a>
+                        <a href="book-publishing-and-printing-saudi-arabia.html" role="menuitem">Saudi Arabia</a>
+                        <a href="book-publishing-and-printing-qatar.html" role="menuitem">Qatar</a>
+                        <a href="book-publishing-and-printing-kuwait.html" role="menuitem">Kuwait</a>
+                        <a href="book-publishing-and-printing-bahrain.html" role="menuitem">Bahrain</a>
+                        <a href="book-publishing-and-printing-oman.html" role="menuitem">Oman</a>
+                    </div>
+                </div>
+
+                <a class="l" href="#">About Us</a>
+                <a class="l" href="#">Become an Author</a>
+                <a class="l" href="#">Reviews</a>
+                <a class="l" href="#">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a class="btn nav-cta" href="#">Get Free Quote</a>
+                <button class="menu" id="menu" type="button" aria-expanded="false" aria-label="Toggle menu" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ QUOTE VIEW (hidden) ============ -->
+    <div id="qv" hidden>
+        <section class="qh">
+            <div class="w">
+                <a class="small" href="#top">&larr; Back to home</a>
+                <div class="qg">
+                    <div>
+                        <h1>Get Your Free, Itemised Quote</h1>
+                        <p>Tell us about your book and we will send a clear written quote before any work begins. No payment and no obligation.</p>
+                        <ul class="tk">
+                            <li>Free consultation by video call or phone</li>
+                            <li>Free cover concept for your book</li>
+                            <li>Short sample edit of your opening pages</li>
+                            <li>Prices from AED 1,500, itemised service by service</li>
+                            <li>You keep your rights and approve every stage</li>
+                        </ul>
+                        <div class="card">
+                            <h3>Prefer to talk first?</h3>
+                            <p>Message us on WhatsApp, or write to <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a>.</p><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                    </div>
+                    <div class="card form">
+                        <h3>Tell us about your book</h3>
+                        <form id="qq" novalidate>
+                            <div class="g2">
+                                <div><input id="qn" placeholder="Full name" aria-label="Full name" autocomplete="name">
+                                    <div class="err" id="qen"></div>
+                                </div>
+                                <div><input id="qe" type="email" placeholder="Email address" aria-label="Email" autocomplete="email">
+                                    <div class="err" id="qee"></div>
+                                </div>
+                            </div>
+                            <div class="pfp">
+                                <div class="cc"><button type="button" id="qcb" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>
+                                    <ul id="qcl" role="listbox" hidden></ul>
+                                </div><input id="qp" type="tel" placeholder="Phone number" aria-label="Phone number" autocomplete="tel-national"></div>
+                            <div class="err" id="qep"></div>
+                            <div class="g2"><select id="qc" aria-label="Country"></select><select id="qg" aria-label="Genre"></select></div>
+                            <div class="lb">Services you need</div>
+                            <div class="chs" id="qs">
+                                <button type="button" aria-pressed="false">Book Publishing &amp; Amazon KDP</button>
+                                <button type="button" aria-pressed="false">Editing &amp; Proofreading</button>
+                                <button type="button" aria-pressed="false">Book Cover Design &amp; Formatting</button>
+                                <button type="button" aria-pressed="false">Book Writing &amp; Ghostwriting</button>
+                                <button type="button" aria-pressed="false">Book Printing</button>
+                                <button type="button" aria-pressed="false">Book Marketing &amp; Author Websites</button>
+                                <button type="button" aria-pressed="false">Audiobook Production</button>
+                                <button type="button" aria-pressed="false">Children’s Book Publishing</button>
+                                <button type="button" aria-pressed="false">Corporate &amp; Institutional Books</button>
+                            </div>
+                            <div class="g2"><select id="qw" aria-label="Word count"></select><select id="qm" aria-label="Manuscript status"></select></div>
+                            <label class="dz" id="dz"><input id="qfi" type="file" accept=".doc,.docx,.pdf,.txt,.rtf,.odt"><b>Drop your manuscript here or click to upload</b><span id="qfn">Word, PDF or text file. Optional.</span></label>
+                            <input id="qb" placeholder="Book title" aria-label="Book title">
+                            <textarea id="qd" rows="3" placeholder="Anything else we should know?" aria-label="Details"></textarea>
+                            <button class="btn" type="submit" style="width:100%;margin-top:14px">Get My Free Quote</button>
+                            <p class="small" style="text-align:center;margin:10px 0 0">Free consultation. No obligation.</p>
+                        </form>
+                        <div class="ok" id="qok" role="status"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="band">
+            <div class="w">
+                <h2>What Happens After You Submit</h2>
+                <ol class="steps qs">
+                    <li data-ic="doc"><b>Tell us about your book</b>Share your genre, word count and the services you need.</li>
+                    <li data-ic="up"><b>Upload your manuscript</b>Optional. Attach a Word, PDF or text file now, or send it later.</li>
+                    <li data-ic="chat"><b>Talk to our team</b>We review your details and arrange a free consultation by video call or phone.</li>
+                    <li data-ic="check"><b>Receive your itemised quote</b>A written quote with every service priced and a timeline, before any work begins.</li>
+                </ol>
+                <p style="text-align:center;margin:36px auto 0">Prefer email? Write to <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a> with a short cover letter and your manuscript.</p>
+            </div>
+        </section>
+    </div>
+
+    <main id="top">
+
+        <!-- ============ HERO ============ -->
+        <section>
+            <div class="w hero">
+                <div>
+                    <p class="small">Riyadh · Jeddah · Dammam · Khobar · Madinah · Makkah · Taif · Abha</p>
+                    <h1>Book Publishing in Saudi Arabia: Arabic First, Printed Properly</h1>
+                    <p>A Monsha'at report counts more than 500 publishing houses in the Kingdom. Choosing between them is a project in itself, and signing with one often means handing over control of your book. There is another route: publish under your
+                        own name and let a team do the work. Gulf Books Publisher helps authors from Riyadh to Jeddah edit, design, publish and print their books in Arabic, English or both, while you stay the publisher and approve every stage.</p>
+                    <p>Begin with a free consultation. You receive an itemised written quote, a free cover concept and a short sample edit of your opening pages, before you pay anything.</p>
+                    <div class="row"><a class="btn" href="#get-quote">Get My Itemised Quote</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                </div>
+                <div>
+                    <div class="hv"><img src="images/hero-img.webp" width="900" height="985" alt="Authors from across the six GCC countries holding books"></div>
+                    <div class="card form" id="quote">
+                        <h3 class="oh">Publish Your Book with Confidence<span>Typical Timeline: About 2 Weeks</span></h3>
+                        <p class="oi">Upload your manuscript and tell us about your book, even if you are not sure where to begin. We will send an itemised quote, and you also get a</p>
+                        <p class="oo">free consultation + free cover concept + short sample edit of your opening pages.</p>
+                        <form id="qf" novalidate>
+                            <input id="n" placeholder="Enter your Full Name" aria-label="Full name" autocomplete="name">
+                            <div class="err" id="en"></div>
+                            <input id="e" type="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email">
+                            <div class="err" id="ee"></div>
+                            <input id="p" type="tel" placeholder="Enter Your Phone No." aria-label="Phone number" autocomplete="tel">
+                            <div class="err" id="ep"></div>
+                            <select id="c" aria-label="Country"></select>
+                            <select id="g" aria-label="Genre"></select>
+                            <input id="f" type="file" accept=".doc,.docx,.pdf,.txt,.rtf,.odt" aria-label="Upload your manuscript">
+                            <input id="t" placeholder="Write Your Book Title" aria-label="Book title">
+                            <textarea id="d" rows="3" placeholder="Details" aria-label="Details"></textarea>
+                            <button class="btn" type="submit" style="width:100%;margin-top:14px">Get My Itemised Quote</button>
+                        </form>
+                        <div class="ok" id="ok" role="status"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ BEFORE YOU PRINT ============ -->
+        <section class="band">
+            <div class="w">
+                <h2>Before You Print: The Saudi Steps, in Order</h2>
+                <p>In Saudi Arabia the order matters, because some numbers must exist before your book goes to the printer.</p>
+                <ol class="steps">
+                    <li><b>Permit.</b> Printed books need the relevant authority's permit before printing. <span class="ph">[Confirm the current permit authority and steps]</span></li>
+                    <li><b>Deposit number.</b> King Fahd National Library issues a deposit number before publication, and it must appear in your book. Under the library's rules, the number lapses after six months unless the work is printed and two copies
+                        are deposited. <span class="ph">[Confirm current rules]</span></li>
+                    <li><b>ISBN.</b> The library also acts as the national ISBN centre, so we apply for your ISBN with you as the publisher.</li>
+                    <li><b>Print, then deposit.</b> Only then do files go to print, and the copies go to the library.</li>
+                </ol>
+                <p style="margin-top:28px">We prepare each step, tell you what is needed and when, and place the numbers correctly on your copyright page and back cover.</p>
+            </div>
+        </section>
+
+        <!-- ============ WHICH KIND OF AUTHOR ============ -->
+        <section>
+            <div class="w">
+                <h2>Which Kind of Author Are You?</h2>
+                <div class="grid">
+                    <div class="card">
+                        <span class="ib"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H19v15H5.5A1.5 1.5 0 0 0 4 19.5zM4 19.5A1.5 1.5 0 0 0 5.5 21H19v-3"/></svg></span>
+                        <h3>First-time storytellers</h3>
+                        <p>Novels, short stories and poetry get editing in Arabic or English, a cover that holds its own on a bookshop shelf, and KDP set-up in your own account.</p>
+                    </div>
+                    <div class="card">
+                        <span class="ib"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"/></svg></span>
+                        <h3>Experts and professionals</h3>
+                        <p>If you have the knowledge but not the hours, our ghostwriters write in your voice, you keep full credit, and we sign a confidentiality agreement if you ask. An author website completes the picture.</p>
+                    </div>
+                    <div class="card">
+                        <span class="ib"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.3l6.1-.7z"/></svg></span>
+                        <h3>Parents and educators</h3>
+                        <p>Illustrated children's books, with audiobook versions if you want them, for families and schools.</p>
+                    </div>
+                    <div class="card">
+                        <span class="ib"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4h9v17M14 9h5v12M3 21h18M8 8h3M8 12h3M8 16h3"/></svg></span>
+                        <h3>Companies and institutions</h3>
+                        <p>Corporate histories, anniversary books and institutional publications, produced to your brand guidelines.</p>
+                    </div>
+                    <div class="card">
+                        <span class="ib"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h7"/></svg></span>
+                        <h3>Everyone else</h3>
+                        <p>Memoir, faith, self-help, academic work: if it is a book, we can edit it, format it and publish it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ BOOK PRINTING ============ -->
+        <section class="band">
+            <div class="w">
+                <h2>Book Printing in Saudi Arabia: Hardcover and Paperback</h2>
+                <p>Print your book as a paperback for readers or a hardcover for gifts, launches and libraries. We arrange a printed proof first, so you hold the finished book before you approve it. After that you can print only what readers order, or order
+                    a run for an event. Your quote shows the cost per copy, which depends on page count, trim size and paper. <span class="ph">[Confirm printing partner, whether printing happens inside the Kingdom, and delivery within Saudi Arabia]</span></p>
+            </div>
+        </section>
+
+        <!-- ============ GETTING YOUR BOOK TO SAUDI READERS ============ -->
+        <section>
+            <div class="w">
+                <h2>Getting Your Book to Saudi Readers</h2>
+                <p>Each year the Literature, Publishing and Translation Commission runs the Riyadh International Book Fair, and its Saudi Authors' Corner is aimed at self-published writers who hold the rights to their work. <span class="ph">[Confirm current eligibility and application window]</span>                    Online, we distribute through Amazon KDP, IngramSpark, Draft2Digital, Lulu and PublishDrive. For bookshop shelves, local distribution depends on approvals, so we plan it with you early rather than after the print run.</p>
+            </div>
+        </section>
+
+        <!-- ============ ARABIC ============ -->
+        <section id="arabic">
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-arabic-section-img.webp" width="1000" height="563" alt="Illustration of an open book with Arabic and English pages" loading="lazy">
+                <h2>الكتاب العربي أولاً | Arabic First</h2>
+                <p>Our native Arabic writers and editors work in-house, and interiors are laid out right to left for print and eBook. A bilingual edition can sit side by side in one book.</p>
+                <div class="ar">
+                    <p>هل تبحث عن نشر كتاب في السعودية أو طباعة كتب بجودة عالية؟ نحرر ونصمم وننشر ونطبع كتابك بالعربية أو الإنجليزية أو بهما معاً، ونرتب معك خطوات رقم الإيداع والرقم الدولي قبل الطباعة، مع عرض سعر مفصل بالريال السعودي.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FROM RIYADH TO JEDDAH ============ -->
+        <section class="band">
+            <div class="w">
+                <h2>From Riyadh to Jeddah and Beyond</h2>
+                <p>We work with authors in Riyadh, Jeddah, Dammam, Khobar, Madinah, Makkah, Taif and Abha. Everything happens online: consultations by video call or phone, manuscripts uploaded securely, files approved on screen. You never need to travel
+                    to meet us.</p>
+            </div>
+        </section>
+
+        <!-- ============ COST ============ -->
+        <section id="cost">
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/what-section-img.webp" width="1000" height="563" alt="Illustration of books, a calculator, coins and a price tag" loading="lazy">
+                <h2>What It Costs, in Riyals</h2>
+                <p>We show prices instead of hiding them behind a form, converted from our dirham prices and rounded to the nearest SAR 10.</p>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Publish my eBook</h3>
+                        <div class="price">From SAR 1,530</div>
+                        <p>Formatting, cover, ISBN and Amazon KDP set-up.</p><button class="go" data-s="Publish my eBook">Get this quote</button></div>
+                    <div class="card">
+                        <h3>Edit, design and publish</h3>
+                        <div class="price">From SAR 2,040</div>
+                        <p>Editing, cover design, print and eBook formatting, ISBN and distribution.</p><button class="go" data-s="Edit, design and publish">Get this quote</button></div>
+                    <div class="card">
+                        <h3>Full publishing and launch</h3>
+                        <div class="price">From SAR 3,570</div>
+                        <p>Everything in the previous tier plus a printed proof, marketing plan and author website.</p><button class="go" data-s="Full publishing and launch">Get this quote</button></div>
+                </div>
+                <p style="margin-top:18px">Your final price depends on word count, editing depth, cover complexity, illustrations and print format, and printing is quoted per copy. Every package is covered by our 100% refund policy. <span class="ph">[Confirm conditions and link to the policy page]</span></p>
+            </div>
+        </section>
+
+        <!-- ============ HOW WE WORK ============ -->
+        <section>
+            <div class="w">
+                <h2>How We Work</h2>
+                <ol class="steps">
+                    <li><b>Talk.</b> A free consultation by video call or phone, in Arabic or English, wherever you live in the Kingdom.</li>
+                    <li><b>Build.</b> Editing, cover, interior, ISBN and a printed proof. Nothing moves forward without your approval.</li>
+                    <li><b>Launch.</b> Your book goes live, and we stay available for reprints, fair preparation and your next title.</li>
+                </ol>
+                <p style="margin-top:28px">Our typical publishing timeline is about 2 weeks. Printing and any permit or deposit steps add time, so we agree the schedule in writing first.</p>
+            </div>
+        </section>
+
+        <!-- ============ FAQ ============ -->
+        <section class="band" id="faq">
+            <div class="w">
+                <h2>Questions Saudi Authors Ask</h2>
+                <div>
+                    <details>
+                        <summary>Do I need a deposit number before printing?</summary>
+                        <p>Yes, deposit numbers are issued before publication. We prepare the application with you. <span class="ph">[Confirm current process]</span></p>
+                    </details>
+                    <details>
+                        <summary>Can I join the Saudi Authors' Corner?</summary>
+                        <p>It is open to self-published Saudi authors who hold the rights to their book, subject to the Commission's current rules. We prepare your book so you are ready to apply.</p>
+                    </details>
+                    <details>
+                        <summary>Can I print my book in Saudi Arabia?</summary>
+                        <p>We arrange printed proofs and hardcover or paperback copies, and we tell you early whether your route needs printing inside the Kingdom. <span class="ph">[Confirm printing partner and delivery]</span></p>
+                    </details>
+                    <details>
+                        <summary>Can you publish my Arabic book?</summary>
+                        <p>Yes. Editing, typography and right-to-left formatting are done in-house.</p>
+                    </details>
+                    <details>
+                        <summary>Do I keep my rights?</summary>
+                        <p>Yes. You own your rights and are listed as the publisher, and your KDP account stays in your name.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CHECK ANY PUBLISHER ============ -->
+        <section id="verify">
+            <div class="w">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-before-info-section-img.webp" width="1100" height="619" alt="Gulf Books Publisher office with a reception wall, bookshelves and a meeting room" loading="lazy">
+                <h2>Check Any Publisher Before You Pay</h2>
+                <p>Ask for a trade licence number, a real office address, a named project manager and a contract that keeps your rights with you. Ours are on our About page. <span class="ph">[Add company name, licence number and address once registration is complete]</span></p>
+                <h3 style="margin-top:32px">Company details</h3>
+                <div class="cd">
+                    <div class="card">
+                        <dl>
+                            <dt>Office</dt>
+                            <dd>Business Bay, Dubai, UAE</dd>
+                            <dt>Official email</dt>
+                            <dd><a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a></dd>
+                            <dt>Phone and WhatsApp</dt>
+                            <dd><a href="tel:+971581969313">+971 58 196 9313</a></dd>
+                            <dt>Working hours</dt>
+                            <dd>Monday to Friday, 9:00 AM to 6:00 PM</dd>
+                            <dt>Consultations</dt>
+                            <dd>Via WhatsApp, Phone or by Appointment.</dd>
+                        </dl>
+                    </div>
+                    <div class="card mp"><iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1803.2844772203935!2d55.45729078846761!3d25.318682368974986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBusiness%20Bay%2C%20Dubai%2C%20UAE.!5e0!3m2!1sen!2s!4v1793621425241!5m2!1sen!2s"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FINAL CTA ============ -->
+        <section class="cta">
+            <div class="w">
+                <img src="images/logo.webp" width="358" height="150" alt="Gulf Books Publisher logo" style="display:block;margin:0 auto 20px;height:100px;width:auto;background:#fff;border-radius:8px;padding:4px 8px">
+                <h2>Start Your Saudi Publishing Journey</h2>
+                <p>Finishing the manuscript is the hardest part. Book a free consultation and we will answer your questions about permits, printing, timelines and cost, then send an itemised quote with no obligation.</p>
+                <div class="row"><a class="btn" href="#get-quote">Get My Itemised Quote</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+            </div>
+        </section>
+
+        <!-- ============ HIDDEN CONTAINERS (required by script.js) ============ -->
+        <div id="sv" hidden></div>
+        <div id="gc" hidden></div>
+        <div id="oc" hidden></div>
+        <div id="gd" hidden></div>
+        <div id="fq" hidden></div>
+        <div id="cv" hidden></div>
+        <div id="mt" hidden></div>
+        <div id="lb" role="dialog" aria-label="Cover preview" hidden><img alt=""></div>
+    </main>
+
+    <footer>
+        <div class="w">
+            <div class="fg">
+                <div class="fb">
+                    <img class="flogo" src="images/footer-logo.webp" width="436" height="180" alt="Gulf Books Publisher">
+
+                    <p class="ft"><b>Gulf Books Publisher</b> — self-publishing for authors across the GCC. Clear AED prices, Arabic and English, a written quote before any work begins, and you keep your rights.</p>
+
+                    <div class="soc">
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+                        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v1.5A5 5 0 0 1 16 8z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Become an Author</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Get Free Quote</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/book-publishing-amazon-kdp-service.html">Book Publishing &amp; Amazon KDP</a></li>
+                        <li><a href="services/editing-proofreading.html">Editing &amp; Proofreading</a></li>
+                        <li><a href="services/book-cover-design-formatting.html">Book Cover Design &amp; Formatting</a></li>
+                        <li><a href="services/ghostwriting.html">Book Writing &amp; Ghostwriting</a></li>
+                        <li><a href="services/book-printing.html">Book Printing</a></li>
+                        <li><a href="services/book-marketing-author-websites.html">Book Marketing &amp; Author Websites</a></li>
+                        <li><a href="services/audiobook-production.html">Audiobook Production</a></li>
+                        <li><a href="services/childrens-book-publishing.html">Children’s Book Publishing</a></li>
+                        <li><a href="services/corporate-book-publishing.html">Corporate &amp; Institutional Books</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Countries</h4>
+                    <ul>
+                        <li><a href="book-publishing-and-printing-uae.html">UAE</a></li>
+                        <li><a href="book-publishing-and-printing-saudi-arabia.html">Saudi Arabia</a></li>
+                        <li><a href="book-publishing-and-printing-qatar.html">Qatar</a></li>
+                        <li><a href="book-publishing-and-printing-kuwait.html">Kuwait</a></li>
+                        <li><a href="book-publishing-and-printing-bahrain.html">Bahrain</a></li>
+                        <li><a href="book-publishing-and-printing-oman.html">Oman</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="fc">
+                        <li>Business Bay, Dubai, UAE</li>
+                        <li><a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a></li>
+                        <li><a href="tel:+971581969313">+971 58 196 9313</a></li>
+                        <li><a href="https://wa.me/971581969313" target="_blank" rel="noopener">WhatsApp: +971 58 196 9313</a></li>
+                        <li>Mon – Fri, 9:00 AM – 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fbot">© Gulf Books Publisher. gulfbookspublisher.com</div>
+        </div>
+    </footer>
+
+
+    <div id="pu" class="pu" role="dialog" aria-modal="true" aria-labelledby="put" hidden>
+        <div class="pb">
+            <button class="px" id="px" type="button" aria-label="Close">&times;</button>
+            <h2 class="pt" id="put">Launch Your Book with Us</h2>
+            <div class="off">30% OFF</div>
+            <p>Get expert, author-friendly publishing with a written quote before any work begins. Share your details and claim your discount.</p>
+            <form id="pf" novalidate>
+                <input id="pn" placeholder="Enter Your Name" aria-label="Name" autocomplete="name">
+                <div class="err" id="pen"></div>
+                <input id="pe" type="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email">
+                <div class="err" id="pee"></div>
+                <input id="pc" placeholder="Enter Your Country" aria-label="Country" autocomplete="country-name">
+                <div class="pfp">
+                    <div class="cc"><button type="button" id="ccb" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>
+                        <ul id="ccl" role="listbox" hidden></ul>
+                    </div><input id="pp" type="tel" placeholder="Enter Your Phone Number" aria-label="Phone number" autocomplete="tel-national"></div>
+                <div class="err" id="pep"></div>
+                <button class="btn" type="submit" style="margin-top:16px;padding:13px 40px">Submit</button>
+            </form>
+            <div class="ok" id="pok" role="status"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        (function() {
+            function fixWhatsAppHref() {
+                document.querySelectorAll('a[href*="wa.me/971500000000"]').forEach(function(a) {
+                    a.href = a.href.replace('971500000000', '971581969313');
+                });
+            }
+
+            function initDropdowns() {
+                document.querySelectorAll('.dd-t').forEach(function(btn) {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        var dd = this.closest('.dd');
+                        var wasOpen = dd.classList.contains('open');
+                        document.querySelectorAll('.dd.open').forEach(function(d) {
+                            d.classList.remove('open');
+                            var t = d.querySelector('.dd-t');
+                            if (t) t.setAttribute('aria-expanded', 'false');
+                        });
+                        if (!wasOpen) {
+                            dd.classList.add('open');
+                            this.setAttribute('aria-expanded', 'true');
+                        }
+                    });
+                });
+                document.addEventListener('click', function() {
+                    document.querySelectorAll('.dd.open').forEach(function(d) {
+                        d.classList.remove('open');
+                        var t = d.querySelector('.dd-t');
+                        if (t) t.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            function initNav() {
+                var menu = document.getElementById('menu');
+                var navLinks = document.getElementById('navLinks');
+                if (!menu || !navLinks) return;
+
+                menu.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var isOpen = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', String(!isOpen));
+                    navLinks.classList.toggle('open', !isOpen);
+                });
+
+                navLinks.querySelectorAll('a').forEach(function(a) {
+                    a.addEventListener('click', function() {
+                        if (window.innerWidth <= 900) {
+                            menu.setAttribute('aria-expanded', 'false');
+                            navLinks.classList.remove('open');
+                        }
+                    });
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!navLinks.classList.contains('open')) return;
+                    if (e.target.closest('header')) return;
+                    menu.setAttribute('aria-expanded', 'false');
+                    navLinks.classList.remove('open');
+                });
+
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth > 900) {
+                        menu.setAttribute('aria-expanded', 'false');
+                        navLinks.classList.remove('open');
+                    }
+                });
+            }
+
+            function boot() {
+                fixWhatsAppHref();
+                initDropdowns();
+                initNav();
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', boot);
+            } else {
+                boot();
+            }
+        })();
+    </script>
+</body>
+
+</html>
