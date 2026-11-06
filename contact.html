@@ -11,6 +11,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hero form country code dropdown */
+        #qf .pfp { display: flex; gap: 8px; margin-bottom: 10px; }
+        #qf .pfp .cc { position: relative; flex-shrink: 0; }
+        #qf .pfp .cc > button { display: inline-flex; align-items: center; gap: 6px; padding: 10px 10px; border-radius: 6px; cursor: pointer; font-size: 14px; white-space: nowrap; height: 100%; }
+        #qf .pfp .cc > button .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
+        #qf .pfp .cc > button span:not(.flag-img) { font-size: 14px; }
+        #qf .pfp .cc > button i { display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid #333; margin-left: 2px; }
+        #qf .pfp .cc > ul { position: absolute; top: calc(100% + 4px); left: 0; min-width: 240px; max-height: 260px; overflow-y: auto; margin: 0; padding: 4px 0; list-style: none; background: #fff; border: 1px solid #d9d9d9; border-radius: 6px; box-shadow: 0 6px 20px rgba(0,0,0,0.10); z-index: 30; }
+        #qf .pfp .cc > ul li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 12px; cursor: pointer; font-size: 14px; }
+        #qf .pfp .cc > ul li:hover { background: #f5f7fb; }
+        #qf .pfp .cc > ul li .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; margin-right: 8px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
+        #qf .pfp .cc > ul li span { flex: 1 1 auto; text-align: left; }
+        #qf .pfp .cc > ul li b { color: #666; font-weight: 500; }
+        #qf .pfp input[type="tel"] { flex: 1 1 auto; min-width: 0; margin: 0; }
+    </style>
 </head>
 
 <body>
@@ -149,15 +165,13 @@
                     <p>Whether you have a finished manuscript, a rough idea or a question about cost, we are happy to talk. You will speak with a member of our team, and every project has a named project manager from the first conversation onward. We work in Arabic and English.</p>
                     <p><b>Ways to Reach Us</b></p>
                     <ul class="tk">
-                        <li>WhatsApp: <span class="ph">[number]</span></li>
-                        <li>Phone: <span class="ph">[local phone number]</span></li>
-                        <li>Email: <span class="ph">[email address]</span></li>
-                        <li>Office: <span class="ph">[office address]</span></li>
-                        <li>Business hours: <span class="ph">[days and hours, with time zone]</span></li>
+                        <li>WhatsApp: <span class="ph">+971 58 196 9313</span></li>
+                        <li>Phone: <span class="ph">+971 58 196 9313</span></li>
+                        <li>Email: <span class="ph">Info@gulfbookspublisher.com</span></li>
+                        <li>Office: <span class="ph">Sharjah Publishing City, Gulf Books Publisher, Sharjah, UAE.</span></li>
                         <li>Languages: Arabic and English</li>
                     </ul>
-                    <p class="small"><span class="ph">[Add only real, working contact details. Do not publish placeholder numbers or addresses.]</span></p>
-                    <div class="row"><a class="btn" href="#quote">Send Us a Message</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                    <div class="row"><a class="btn" href="free-quote.html">Send Us a Message</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
                     <div class="hv"><img src="images/home-before-info-section-img.webp" width="1100" height="619" alt="Gulf Books Publisher office with a reception wall, bookshelves and a meeting room" loading="lazy"></div>
                 </div>
                 <div>
@@ -169,7 +183,13 @@
                             <div class="err" id="en"></div>
                             <input id="e" type="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email">
                             <div class="err" id="ee"></div>
-                            <input id="p" type="tel" placeholder="Enter Your Phone or WhatsApp" aria-label="Phone number" autocomplete="tel">
+                            <div class="pfp">
+                                <div class="cc">
+                                    <button type="button" id="hcb" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>
+                                    <ul id="hcl" role="listbox" hidden></ul>
+                                </div>
+                                <input id="p" type="tel" placeholder="Enter Your Phone or WhatsApp" aria-label="Phone number" autocomplete="tel">
+                            </div>
                             <div class="err" id="ep"></div>
                             <select id="c" aria-label="Country"></select>
                             <select id="g" aria-label="Genre"></select>
@@ -192,33 +212,31 @@
                 <div class="grid">
                     <div class="card">
                         <h3>WhatsApp</h3>
-                        <p><span class="ph">[number]</span></p>
+                        <p><span class="ph">+971 58 196 9313</span></p>
                         <a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a>
                     </div>
                     <div class="card">
                         <h3>Phone</h3>
-                        <p><span class="ph">[local phone number]</span></p>
-                        <p class="small">Business hours: <span class="ph">[days and hours, with time zone]</span></p>
+                        <p><span class="ph">+971 58 196 9313</span></p>
                     </div>
                     <div class="card">
                         <h3>Email</h3>
-                        <p><span class="ph">[email address]</span></p>
+                        <p><span class="ph">Info@gulfbookspublisher.com</span></p>
                         <p class="small">Write to <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a> with a short summary of your enquiry.</p>
                     </div>
                     <div class="card">
                         <h3>Office</h3>
-                        <p><span class="ph">[office address]</span></p>
+                        <p><span class="ph">Sharjah Publishing City, Gulf Books Publisher, Sharjah, UAE.</span></p>
                         <p class="small">Languages: Arabic and English</p>
                     </div>
                 </div>
-                <p style="margin-top:18px"><span class="ph">[Add only real, working contact details. Do not publish placeholder numbers or addresses.]</span></p>
             </div>
         </section>
 
         <aside class="w cs">
             <div class="cb">
                 <div><strong>Looking for a Quote?</strong><span>For prices and a written timeline, use our free quote form. It takes a few minutes, and you receive an itemised quote with no obligation.</span></div>
-                <div class="row"><a class="btn" href="#quote">Get My Itemised Quote</a></div>
+                <div class="row"><a class="btn" href="free-quote.html">Get My Itemised Quote</a></div>
             </div>
         </aside>
 
@@ -234,8 +252,8 @@
                     <li>Press or partnership</li>
                     <li>Other</li>
                 </ul>
-                <p>We reply within <span class="ph">[number]</span> working days.</p>
-                <div class="row"><a class="btn" href="#quote">Send Message</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                <p>We reply within <span class="ph">+971 58 196 9313</span> working days.</p>
+                <div class="row"><a class="btn" href="free-quote.html">Send Message</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
             </div>
         </section>
 
@@ -243,7 +261,7 @@
             <div class="w">
                 <h2>Book a Free Consultation</h2>
                 <p>Our 30-minute consultation is free and comes with no obligation. We talk through your manuscript, goals, timeline and budget, then send an itemised quote. Consultations are by video, phone or WhatsApp, so you can speak with us from anywhere in the GCC or beyond.</p>
-                <div class="row" style="margin:0"><a class="btn" href="#quote">Book a Free Consultation</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                <div class="row" style="margin:0"><a class="btn" href="free-quote.html">Book a Free Consultation</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
             </div>
         </section>
 
@@ -251,7 +269,7 @@
             <div class="w">
                 <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-global-img.webp" width="1000" height="563" alt="Author working on a laptop with the Gulf Books Publisher logo and a world map connecting countries to the Gulf" loading="lazy">
                 <h2>Working With Authors in Every GCC Country</h2>
-                <p>We work online with authors in the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman, and with authors in other countries who want to reach Gulf readers. You do not need to visit an office, though you are welcome to if you are nearby <span class="ph">[confirm whether office visits are by appointment]</span>.</p>
+                <p>We work online with authors in the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman, and with authors in other countries who want to reach Gulf readers. You do not need to visit an office, though you are welcome to if you are nearby .</p>
             </div>
         </section>
 
@@ -265,14 +283,14 @@
         <section class="band">
             <div class="w">
                 <h2>Existing Authors</h2>
-                <p>If we are working on your book, contact your project manager directly. If you cannot reach them, write to <span class="ph">[email address]</span> with your book title, and we will pass your message on the same day.</p>
+                <p>If we are working on your book, contact your project manager directly. If you cannot reach them, write to <span class="ph">Info@gulfbookspublisher.com</span> with your book title, and we will pass your message on the same day.</p>
             </div>
         </section>
 
         <section>
             <div class="w">
                 <h2>Complaints and Feedback</h2>
-                <p>If something has not gone as it should, tell us. Write to <span class="ph">[email address]</span> with “Feedback” in the subject line, and we will reply within <span class="ph">[number]</span> working days. Our <span class="ph">[refund policy]</span> explains your options if we cannot resolve the issue.</p>
+                <p>If something has not gone as it should, tell us. Write to <span class="ph">Info@gulfbookspublisher.com</span> with “Feedback” in the subject line, and we will reply within <span class="ph">+971 58 196 9313</span> working days. Our <a href="privacy-policy.html"> refund policy</a> explains your options if we cannot resolve the issue.</p>
             </div>
         </section>
 
@@ -284,12 +302,9 @@
                 <div class="cd">
                     <div class="card">
                         <dl>
-                            <dt>Registered business name</dt>
-                            <dd><span class="ph">[Company name]</span></dd>
-                            <dt>Licence number and issuing authority</dt>
-                            <dd><span class="ph">[details]</span></dd>
+                            
                             <dt>Registered address</dt>
-                            <dd><span class="ph">[address]</span></dd>
+                            <dd><span class="ph">Sharjah Publishing City, Gulf Books Publisher, Sharjah, UAE.</span></dd>
                             <dt>Official email</dt>
                             <dd><a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a></dd>
                             <dt>Phone and WhatsApp</dt>
@@ -313,7 +328,7 @@
                 <img src="images/logo.webp" width="358" height="150" alt="Gulf Books Publisher logo" style="display:block;margin:0 auto 20px;height:100px;width:auto;background:#fff;border-radius:8px;padding:4px 8px">
                 <h2>Talk to Us First</h2>
                 <p>Reading about a publisher is helpful, but a conversation is better. Book a free 30-minute consultation and ask us anything about cost, timelines and platforms. There is no obligation.</p>
-                <div class="row"><a class="btn" href="#quote">Get My Itemised Quote</a><a class="btn o" href="#quote">Book a Free Consultation</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                <div class="row"><a class="btn" href="free-quote.html">Get My Itemised Quote</a><a class="btn o" href="free-quote.html">Book a Free Consultation</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
             </div>
         </section>
     </main>
@@ -379,7 +394,7 @@
                 <div>
                     <h4>Contact</h4>
                     <ul class="fc">
-                        <li>Business Bay, Dubai, UAE</li>
+                        <li>Sharjah Publishing City, Gulf Books Publisher, Sharjah, UAE.</li>
                         <li><a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a></li>
                         <li><a href="tel:+971581969313">+971 58 196 9313</a></li>
                         <li><a href="https://wa.me/971581969313" target="_blank" rel="noopener">WhatsApp: +971 58 196 9313</a></li>
@@ -415,6 +430,19 @@
             <div class="ok" id="pok" role="status"></div>
         </div>
     </div>
+
+    <!-- Hidden fallbacks so script.js does not crash on this page -->
+    <div hidden>
+        <div id="sv"></div>
+        <div id="gc"></div>
+        <ul id="oc"></ul>
+        <div id="gd"></div>
+        <div id="fq"></div>
+        <div class="cv" id="cv"></div>
+        <div class="mq"><div class="mt" id="mt"></div></div>
+        <div id="lb"><img alt=""></div>
+    </div>
+
     <script src="script.js"></script>
     <script>
         (function() {
@@ -467,7 +495,6 @@
                     navLinks.classList.toggle('open', !isOpen);
                 });
 
-                /* Close panel when a real link is clicked (mobile only) */
                 navLinks.querySelectorAll('a').forEach(function(a) {
                     a.addEventListener('click', function() {
                         if (window.innerWidth <= 900) {
@@ -477,7 +504,6 @@
                     });
                 });
 
-                /* Close panel on outside click */
                 document.addEventListener('click', function(e) {
                     if (!navLinks.classList.contains('open')) return;
                     if (e.target.closest('header')) return;
@@ -485,11 +511,72 @@
                     navLinks.classList.remove('open');
                 });
 
-                /* Reset on resize */
                 window.addEventListener('resize', function() {
                     if (window.innerWidth > 900) {
                         menu.setAttribute('aria-expanded', 'false');
                         navLinks.classList.remove('open');
+                    }
+                });
+            }
+
+            /* ---------- Hero form country code dropdown (with PNG flags) ---------- */
+            function initHeroCountryCode() {
+                var hcb = document.getElementById('hcb');
+                var hcl = document.getElementById('hcl');
+                if (!hcb || !hcl) return;
+
+                var codes = [
+                    ["UAE", "ae", "+971"],
+                    ["Saudi Arabia", "sa", "+966"],
+                    ["Qatar", "qa", "+974"],
+                    ["Kuwait", "kw", "+965"],
+                    ["Bahrain", "bh", "+973"],
+                    ["Oman", "om", "+968"],
+                    ["Jordan", "jo", "+962"],
+                    ["India", "in", "+91"],
+                    ["Egypt", "eg", "+20"],
+                    ["Nigeria", "ng", "+234"],
+                    ["Bangladesh", "bd", "+880"],
+                    ["Iraq", "iq", "+964"]
+                ];
+                var cur = 0;
+
+                function flagImg(iso, name) {
+                    return '<img class="flag-img" src="https://flagcdn.com/w40/' + iso + '.png" alt="' + name + '" loading="lazy">';
+                }
+
+                function setCc(i) {
+                    cur = i;
+                    hcb.innerHTML = flagImg(codes[i][1], codes[i][0]) +
+                        '<span>' + codes[i][2] + '</span><i></i>';
+                    hcl.hidden = true;
+                    hcb.setAttribute('aria-expanded', 'false');
+                }
+
+                hcl.innerHTML = codes.map(function(c, i) {
+                    return '<li role="option" data-i="' + i + '">' +
+                        flagImg(c[1], c[0]) +
+                        '<span>' + c[0] + '</span><b>' + c[2] + '</b></li>';
+                }).join('');
+                setCc(0);
+
+                hcb.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var h = hcl.hidden;
+                    hcl.hidden = !h;
+                    hcb.setAttribute('aria-expanded', String(h));
+                });
+
+                hcl.addEventListener('click', function(e) {
+                    var li = e.target.closest('li');
+                    if (li) setCc(+li.dataset.i);
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!hcl.hidden && !e.target.closest('#qf .cc')) {
+                        hcl.hidden = true;
+                        hcb.setAttribute('aria-expanded', 'false');
                     }
                 });
             }
@@ -499,6 +586,7 @@
                 fixWhatsAppHref();
                 initDropdowns();
                 initNav();
+                initHeroCountryCode();
             }
             if (document.readyState === 'loading') {
                 document.addEventListener('DOMContentLoaded', boot);

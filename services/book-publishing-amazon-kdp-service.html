@@ -12,6 +12,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
     <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Hero form country code dropdown */
+        #qf .pfp { display: flex; gap: 8px; margin-bottom: 10px; }
+        #qf .pfp .cc { position: relative; flex-shrink: 0; }
+        #qf .pfp .cc > button { display: inline-flex; align-items: center; gap: 6px; padding: 10px 10px; border-radius: 6px; cursor: pointer; font-size: 14px; white-space: nowrap; height: 100%; }
+        #qf .pfp .cc > button .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
+        #qf .pfp .cc > button span:not(.flag-img) { font-size: 14px; }
+        #qf .pfp .cc > button i { display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid #333; margin-left: 2px; }
+        #qf .pfp .cc > ul { position: absolute; top: calc(100% + 4px); left: 0; min-width: 240px; max-height: 260px; overflow-y: auto; margin: 0; padding: 4px 0; list-style: none; background: #fff; border: 1px solid #d9d9d9; border-radius: 6px; box-shadow: 0 6px 20px rgba(0,0,0,0.10); z-index: 30; }
+        #qf .pfp .cc > ul li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 12px; cursor: pointer; font-size: 14px; }
+        #qf .pfp .cc > ul li:hover { background: #f5f7fb; }
+        #qf .pfp .cc > ul li .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; margin-right: 8px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
+        #qf .pfp .cc > ul li span { flex: 1 1 auto; text-align: left; }
+        #qf .pfp .cc > ul li b { color: #666; font-weight: 500; }
+        #qf .pfp input[type="tel"] { flex: 1 1 auto; min-width: 0; margin: 0; }
+    </style>
 </head>
 
 <body>
@@ -79,7 +95,7 @@
                         or both. Whether you write from Dubai, Riyadh, Doha, Kuwait City, Manama or Muscat, you get one named project manager and an itemised quote before any work begins. Tell us about your book and we will show you the clearest route
                         to publication.</p>
                     <div class="row">
-                        <a class="btn" href="#">Get My Itemised Quote</a>
+                        <a class="btn" href="../free-quote.html">Get My Itemised Quote</a>
                         <a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a>
                     </div>
                     <div class="hv">
@@ -104,7 +120,13 @@
                             <input id="e" type="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email">
                             <div class="err" id="ee"></div>
 
-                            <input id="p" type="tel" placeholder="Enter Your Phone No." aria-label="Phone number" autocomplete="tel">
+                            <div class="pfp">
+                                <div class="cc">
+                                    <button type="button" id="hcb" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>
+                                    <ul id="hcl" role="listbox" hidden></ul>
+                                </div>
+                                <input id="p" type="tel" placeholder="Enter Your Phone No." aria-label="Phone number" autocomplete="tel">
+                            </div>
                             <div class="err" id="ep"></div>
 
                             <select id="c" aria-label="Country"></select>
@@ -178,7 +200,7 @@
 
                 <p>If your manuscript needs editing first, see our <a href="editing-and-proofreading-service.html">Editing &amp; Proofreading</a> service. For picture books, see our <a href="childrens-book-publishing.html">Children&rsquo;s Book Publishing</a> service.</p>
 
-                <div class="row"><a class="btn" href="#">Get My Itemised Quote</a></div>
+                <div class="row"><a class="btn" href="../free-quote.html">Get My Itemised Quote</a></div>
             </div>
         </section>
 
@@ -209,7 +231,7 @@
         <section class="band" id="arabic-english">
             <div class="w">
                 <h2>Arabic and English Book Publishing</h2>
-                <p>Arabic books need more than translated settings. At Gulf Books Publisher, native Arabic and English teams work in one workflow, so both languages get the same care. For Arabic titles we set text right to left, place the spine and page order
+                <p>Arabic books need more than translated settings. At <a href="../index.html"> Gulf Books Publisher</a>, native Arabic and English teams work in one workflow, so both languages get the same care. For Arabic titles we set text right to left, place the spine and page order
                     correctly, choose readable Arabic fonts and check punctuation, numerals and mixed Arabic and English passages. For bilingual books, we can place both languages in one volume or prepare matching editions. KDP&rsquo;s language and format
                     support changes over time, so we check current requirements for your title before we begin and tell you plainly what is possible.</p>
                 <div class="ar">
@@ -272,7 +294,7 @@
                 <p>We confirm a written schedule before we start. Many standard books move from approved manuscript to live listing in a matter of weeks, although illustrated or complex titles take longer. Amazon&rsquo;s own review time is outside our control,
                     and we will tell you honestly if a launch date is tight.</p>
                 <div class="row">
-                    <a class="btn" href="#">Get My Itemised Quote</a>
+                    <a class="btn" href="../free-quote.html">Get My Itemised Quote</a>
                     <a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a>
                 </div>
             </div>
@@ -285,7 +307,7 @@
                 <div id="fq">
                     <details>
                         <summary>What is the difference between book publishing and Amazon KDP?</summary>
-                        <p>KDP is Amazon&rsquo;s platform for selling your book. Book publishing is the work around it: formatting, cover design, ISBN and metadata. Gulf Books Publisher handles both, so your book is ready for KDP and set up correctly.</p>
+                        <p>KDP is Amazon&rsquo;s platform for selling your book. Book publishing is the work around it: formatting, cover design, ISBN and metadata. <a href="../index.html"> Gulf Books Publisher</a> handles both, so your book is ready for KDP and set up correctly.</p>
                     </details>
                     <details>
                         <summary>Do I keep the rights to my book?</summary>
@@ -320,11 +342,11 @@
             <div class="w">
                 <img src="../images/logo.webp" width="358" height="150" alt="Gulf Books Publisher logo" style="display:block;margin:0 auto 20px;height:100px;width:auto;background:#fff;border-radius:8px;padding:4px 8px">
                 <h2>Ready to Publish? Get an Itemised Quote</h2>
-                <p>Your book deserves a professional cover, a clean interior and a listing readers can trust. Tell Gulf Books Publisher about your manuscript, including the language, the formats and the countries where you want to sell, and our team will reply
+                <p>Your book deserves a professional cover, a clean interior and a listing readers can trust. Tell <a href="../index.html"> Gulf Books Publisher</a> about your manuscript, including the language, the formats and the countries where you want to sell, and our team will reply
                     with a clear, itemised quote and a suggested plan. No jargon, no pressure, just an honest next step.</p>
                 <div class="row">
-                    <a class="btn" href="#">Get My Itemised Quote</a>
-                    <a class="btn o" href="#">Book a Free Consultation</a>
+                    <a class="btn" href="../free-quote.html">Get My Itemised Quote</a>
+                    <a class="btn o" href="../free-quote.html">Book a Free Consultation</a>
                     <a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a>
                 </div>
             </div>
@@ -339,10 +361,10 @@
                     <img class="flogo" src="../images/footer-logo.webp" width="436" height="180" alt="Gulf Books Publisher">
                     <p class="ft"><b>Gulf Books Publisher</b> — self-publishing for authors across the GCC. Clear AED prices, Arabic and English, a written quote before any work begins, and you keep your rights.</p>
                     <div class="soc">
-                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
-                        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
-                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v1.5A5 5 0 0 1 16 8z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+                        <a href="../free-quote.html" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="../free-quote.html" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+                        <a href="../free-quote.html" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+                        <a href="../free-quote.html" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v1.5A5 5 0 0 1 16 8z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
                     </div>
                 </div>
 
@@ -357,7 +379,7 @@
                         <li><a href="../free-quote.html">Get Free Quote</a></li>
                         <li><a href="../privacy-policy.html">Privacy Policy</a></li>
                         <li><a href="../terms-and-conditions.html">Terms & Conditions</a></li>
-                        <li><a href="#">Resources</a></li>
+                        <li><a href="../free-quote.html">Resources</a></li>
                     </ul>
                 </div>
 
@@ -391,7 +413,7 @@
                 <div>
                     <h4>Contact</h4>
                     <ul class="fc">
-                        <li>Business Bay, Dubai, UAE</li>
+                        <li>Sharjah Publishing City, Gulf Books Publisher, Sharjah, UAE.</li>
                         <li><a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a></li>
                         <li><a href="tel:+971581969313">+971 58 196 9313</a></li>
                         <li><a href="https://wa.me/971581969313" target="_blank" rel="noopener">WhatsApp: +971 58 196 9313</a></li>
@@ -425,6 +447,18 @@
             </form>
             <div class="ok" id="pok" role="status"></div>
         </div>
+    </div>
+
+    <!-- Hidden fallbacks so script.js does not crash on this page -->
+    <div hidden>
+        <div id="sv"></div>
+        <div id="gc"></div>
+        <ul id="oc"></ul>
+        <div id="gd"></div>
+        <div class="cv" id="cv"></div>
+        <div class="mq"><div class="mt" id="mt"></div></div>
+        <div id="lb"><img alt=""></div>
+        <div id="qv"></div>
     </div>
 
     <script src="../script.js"></script>
@@ -500,10 +534,73 @@
                 });
             }
 
+            /* ---------- Hero form country code dropdown (with PNG flags) ---------- */
+            function initHeroCountryCode() {
+                var hcb = document.getElementById('hcb');
+                var hcl = document.getElementById('hcl');
+                if (!hcb || !hcl) return;
+
+                var codes = [
+                    ["UAE", "ae", "+971"],
+                    ["Saudi Arabia", "sa", "+966"],
+                    ["Qatar", "qa", "+974"],
+                    ["Kuwait", "kw", "+965"],
+                    ["Bahrain", "bh", "+973"],
+                    ["Oman", "om", "+968"],
+                    ["Jordan", "jo", "+962"],
+                    ["India", "in", "+91"],
+                    ["Egypt", "eg", "+20"],
+                    ["Nigeria", "ng", "+234"],
+                    ["Bangladesh", "bd", "+880"],
+                    ["Iraq", "iq", "+964"]
+                ];
+                var cur = 0;
+
+                function flagImg(iso, name) {
+                    return '<img class="flag-img" src="https://flagcdn.com/w40/' + iso + '.png" alt="' + name + '" loading="lazy">';
+                }
+
+                function setCc(i) {
+                    cur = i;
+                    hcb.innerHTML = flagImg(codes[i][1], codes[i][0]) +
+                        '<span>' + codes[i][2] + '</span><i></i>';
+                    hcl.hidden = true;
+                    hcb.setAttribute('aria-expanded', 'false');
+                }
+
+                hcl.innerHTML = codes.map(function(c, i) {
+                    return '<li role="option" data-i="' + i + '">' +
+                        flagImg(c[1], c[0]) +
+                        '<span>' + c[0] + '</span><b>' + c[2] + '</b></li>';
+                }).join('');
+                setCc(0);
+
+                hcb.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var h = hcl.hidden;
+                    hcl.hidden = !h;
+                    hcb.setAttribute('aria-expanded', String(h));
+                });
+
+                hcl.addEventListener('click', function(e) {
+                    var li = e.target.closest('li');
+                    if (li) setCc(+li.dataset.i);
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!hcl.hidden && !e.target.closest('#qf .cc')) {
+                        hcl.hidden = true;
+                        hcb.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
             function boot() {
                 fixWhatsAppHref();
                 initDropdowns();
                 initNav();
+                initHeroCountryCode();
             }
 
             if (document.readyState === 'loading') {

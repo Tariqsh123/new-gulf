@@ -11,11 +11,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        .cc button .flag-img {
+            margin-right: 6px;
+        }
+        #qcl li .flag-img {
+            margin-right: 8px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- ============ HEADER (MODERN NAVBAR) ============ -->
     <header>
         <div class="w nav-wrap">
             <a class="logo" href="index.html" aria-label="Gulf Books Publisher home">
@@ -65,28 +81,28 @@
         </div>
     </header>
 
-    <!-- ============ QUOTE VIEW (hidden) ============ -->
-    <div id="qv" hidden>
-        <section class="qh">
-            <div class="w">
-                <a class="small" href="#top">&larr; Back to home</a>
-                <div class="qg">
-                    <div>
-                        <h1>Get Your Free, Itemised Quote</h1>
-                        <p>Tell us about your book and we will send a clear written quote before any work begins. No payment and no obligation.</p>
-                        <ul class="tk">
-                            <li>Free consultation by video call or phone</li>
-                            <li>Free cover concept for your book</li>
-                            <li>Short sample edit of your opening pages</li>
-                            <li>Prices from AED 1,500, itemised service by service</li>
-                            <li>You keep your rights and approve every stage</li>
-                        </ul>
-                        <div class="card">
-                            <h3>Prefer to talk first?</h3>
-                            <p>Message us on WhatsApp, or write to <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a>.</p><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
-                    </div>
-                    <div class="card form">
-                        <h3>Tell us about your book</h3>
+    <main id="top">
+        <section>
+            <div class="w hero">
+                <div>
+                    <p class="small">UAE · Saudi Arabia · Qatar · Kuwait · Bahrain · Oman</p>
+                    <h1>Get Your Free Itemised Quote: Know the Price Before You Start</h1>
+                    <p>Tell us about your book and we will send a written, itemised quote with a timeline. The quote and the 30-minute consultation are free, with no payment and no obligation. You only pay if you decide to go ahead.</p>
+                    <p><b>What You Will Receive</b></p>
+                    <ul class="tk">
+                        <li>A clear list of each service your book needs, with its price</li>
+                        <li>Prices in your local currency, such as AED, SAR, QAR, KWD, BHD or OMR</li>
+                        <li>A written timeline for each stage</li>
+                        <li>A named project manager</li>
+                        <li>An honest recommendation, including what you can leave out</li>
+                    </ul>
+                    <div class="row"><a class="btn" href="#quote">Get My Itemised Quote</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                </div>
+                <div>
+                    <div class="card form" id="quote">
+                        <h3 class="oh">Request Your Free Quote<span>Typical Timeline: About 2 Weeks</span></h3>
+                        <p class="oi">Tell us about your book and the services you need. We will send an itemised quote with a written timeline, and you also get a</p>
+                        <p class="oo">free consultation + free cover concept + short sample edit of your opening pages.</p>
                         <form id="qq" novalidate>
                             <div class="g2">
                                 <div><input id="qn" placeholder="Full name" aria-label="Full name" autocomplete="name">
@@ -97,9 +113,11 @@
                                 </div>
                             </div>
                             <div class="pfp">
-                                <div class="cc"><button type="button" id="qcb" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>
+                                <div class="cc">
+                                    <button type="button" id="qcb" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>
                                     <ul id="qcl" role="listbox" hidden></ul>
-                                </div><input id="qp" type="tel" placeholder="Phone number" aria-label="Phone number" autocomplete="tel-national"></div>
+                                </div><input id="qp" type="tel" placeholder="Phone number" aria-label="Phone number" autocomplete="tel-national">
+                            </div>
                             <div class="err" id="qep"></div>
                             <div class="g2"><select id="qc" aria-label="Country"></select><select id="qg" aria-label="Genre"></select></div>
                             <div class="lb">Services you need</div>
@@ -126,61 +144,6 @@
                 </div>
             </div>
         </section>
-        <section class="band">
-            <div class="w">
-                <h2>What Happens After You Submit</h2>
-                <ol class="steps qs">
-                    <li data-ic="doc"><b>Tell us about your book</b>Share your genre, word count and the services you need.</li>
-                    <li data-ic="up"><b>Upload your manuscript</b>Optional. Attach a Word, PDF or text file now, or send it later.</li>
-                    <li data-ic="chat"><b>Talk to our team</b>We review your details and arrange a free consultation by video call or phone.</li>
-                    <li data-ic="check"><b>Receive your itemised quote</b>A written quote with every service priced and a timeline, before any work begins.</li>
-                </ol>
-                <p style="text-align:center;margin:36px auto 0">Prefer email? Write to <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a> with a short cover letter and your manuscript.</p>
-            </div>
-        </section>
-    </div>
-
-    <main id="top">
-        <section>
-            <div class="w hero">
-                <div>
-                    <p class="small">UAE · Saudi Arabia · Qatar · Kuwait · Bahrain · Oman</p>
-                    <h1>Get Your Free Itemised Quote: Know the Price Before You Start</h1>
-                    <p>Tell us about your book and we will send a written, itemised quote with a timeline. The quote and the 30-minute consultation are free, with no payment and no obligation. You only pay if you decide to go ahead.</p>
-                    <p><b>What You Will Receive</b></p>
-                    <ul class="tk">
-                        <li>A clear list of each service your book needs, with its price</li>
-                        <li>Prices in your local currency, such as AED, SAR, QAR, KWD, BHD or OMR <span class="ph">[confirm currencies offered]</span></li>
-                        <li>A written timeline for each stage</li>
-                        <li>A named project manager</li>
-                        <li>An honest recommendation, including what you can leave out</li>
-                    </ul>
-                    <div class="row"><a class="btn" href="#quote">Get My Itemised Quote</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
-                </div>
-                <div>
-                    <div class="card form" id="quote">
-                        <h3 class="oh">Request Your Free Quote<span>Typical Timeline: About 2 Weeks</span></h3>
-                        <p class="oi">Tell us about your book and the services you need. We will send an itemised quote with a written timeline, and you also get a</p>
-                        <p class="oo">free consultation + free cover concept + short sample edit of your opening pages.</p>
-                        <form id="qf" novalidate>
-                            <input id="n" placeholder="Enter your Full Name" aria-label="Full name" autocomplete="name">
-                            <div class="err" id="en"></div>
-                            <input id="e" type="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email">
-                            <div class="err" id="ee"></div>
-                            <input id="p" type="tel" placeholder="Enter Your Phone No." aria-label="Phone number" autocomplete="tel">
-                            <div class="err" id="ep"></div>
-                            <select id="c" aria-label="Country"></select>
-                            <select id="g" aria-label="Genre"></select>
-                            <input id="f" type="file" accept=".doc,.docx,.pdf,.txt,.rtf,.odt" aria-label="Upload your manuscript">
-                            <input id="t" placeholder="Write Your Book Title" aria-label="Book title">
-                            <textarea id="d" rows="3" placeholder="Details" aria-label="Details"></textarea>
-                            <button class="btn" type="submit" style="width:100%;margin-top:14px">Get My Itemised Quote</button>
-                        </form>
-                        <div class="ok" id="ok" role="status"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section class="band" id="cost">
             <div class="w">
@@ -190,15 +153,15 @@
                     <div class="card">
                         <h3>Publish my eBook</h3>
                         <div class="price">From AED 1,500</div>
-                        <p>Formatting, cover, ISBN and Amazon KDP set-up.</p><button class="go" data-s="Publish my eBook">Get this quote</button></div>
+                        <p>Formatting, cover, ISBN and Amazon KDP set-up.</p><a href="free-quote.html"> Get this quote</a></div>
                     <div class="card">
                         <h3>Edit, design and publish</h3>
                         <div class="price">From AED 2,000</div>
-                        <p>Editing, cover design, print and eBook formatting, ISBN and distribution.</p><button class="go" data-s="Edit, design and publish">Get this quote</button></div>
+                        <p>Editing, cover design, print and eBook formatting, ISBN and distribution.</p><a href="free-quote.html"> Get this quote</a></div>
                     <div class="card">
                         <h3>Full publishing and launch</h3>
                         <div class="price">From AED 3,500</div>
-                        <p>Everything in the previous tier plus a printed proof, a marketing plan and an author website.</p><button class="go" data-s="Full publishing and launch">Get this quote</button></div>
+                        <p>Everything in the previous tier plus a printed proof, a marketing plan and an author website.</p><a href="free-quote.html"> Get this quote</a></div>
                 </div>
             </div>
         </section>
@@ -301,7 +264,7 @@
                 <div>
                     <h4>Contact</h4>
                     <ul class="fc">
-                        <li>Business Bay, Dubai, UAE</li>
+                        <li>Sharjah Publishing City, Gulf Books Publisher, Sharjah, UAE.</li>
                         <li><a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a></li>
                         <li><a href="tel:+971581969313">+971 58 196 9313</a></li>
                         <li><a href="https://wa.me/971581969313" target="_blank" rel="noopener">WhatsApp: +971 58 196 9313</a></li>
@@ -314,101 +277,59 @@
         </div>
     </footer>
 
-
-    <div id="pu" class="pu" role="dialog" aria-modal="true" aria-labelledby="put" hidden>
-        <div class="pb">
-            <button class="px" id="px" type="button" aria-label="Close">&times;</button>
-            <h2 class="pt" id="put">Launch Your Book with Us</h2>
-            <div class="off">30% OFF</div>
-            <p>Get expert, author-friendly publishing with a written quote before any work begins. Share your details and claim your discount.</p>
-            <form id="pf" novalidate>
-                <input id="pn" placeholder="Enter Your Name" aria-label="Name" autocomplete="name">
-                <div class="err" id="pen"></div>
-                <input id="pe" type="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email">
-                <div class="err" id="pee"></div>
-                <input id="pc" placeholder="Enter Your Country" aria-label="Country" autocomplete="country-name">
-                <div class="pfp">
-                    <div class="cc"><button type="button" id="ccb" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>
-                        <ul id="ccl" role="listbox" hidden></ul>
-                    </div><input id="pp" type="tel" placeholder="Enter Your Phone Number" aria-label="Phone number" autocomplete="tel-national"></div>
-                <div class="err" id="pep"></div>
-                <button class="btn" type="submit" style="margin-top:16px;padding:13px 40px">Submit</button>
-            </form>
-            <div class="ok" id="pok" role="status"></div>
-        </div>
-    </div>
-    <script src="script.js"></script>
     <script>
-        (function() {
-            /* ---------- Fix WhatsApp numbers ---------- */
-            function fixWhatsAppHref() {
-                document.querySelectorAll('a[href*="wa.me/971500000000"]').forEach(function(a) {
-                    a.href = a.href.replace('971500000000', '971581969313');
-                });
-            }
+        (function () {
+            var $ = function (id) { return document.getElementById(id); };
 
-            /* ---------- Dropdowns ---------- */
-            function initDropdowns() {
-                document.querySelectorAll('.dd-t').forEach(function(btn) {
-                    btn.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        var dd = this.closest('.dd');
-                        var wasOpen = dd.classList.contains('open');
-                        document.querySelectorAll('.dd.open').forEach(function(d) {
-                            d.classList.remove('open');
-                            var t = d.querySelector('.dd-t');
-                            if (t) t.setAttribute('aria-expanded', 'false');
-                        });
-                        if (!wasOpen) {
-                            dd.classList.add('open');
-                            this.setAttribute('aria-expanded', 'true');
-                        }
-                    });
-                });
-                document.addEventListener('click', function() {
-                    document.querySelectorAll('.dd.open').forEach(function(d) {
+            /* ---------- WhatsApp number fix ---------- */
+            document.querySelectorAll('a[href*="wa.me/971500000000"]').forEach(function (a) {
+                a.href = a.href.replace('971500000000', '971581969313');
+            });
+
+            /* ---------- Nav dropdowns ---------- */
+            document.querySelectorAll('.dd-t').forEach(function (btn) {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault(); e.stopPropagation();
+                    var dd = this.closest('.dd');
+                    var wasOpen = dd.classList.contains('open');
+                    document.querySelectorAll('.dd.open').forEach(function (d) {
                         d.classList.remove('open');
-                        var t = d.querySelector('.dd-t');
-                        if (t) t.setAttribute('aria-expanded', 'false');
+                        var t = d.querySelector('.dd-t'); if (t) t.setAttribute('aria-expanded', 'false');
                     });
+                    if (!wasOpen) { dd.classList.add('open'); this.setAttribute('aria-expanded', 'true'); }
                 });
-            }
+            });
+            document.addEventListener('click', function () {
+                document.querySelectorAll('.dd.open').forEach(function (d) {
+                    d.classList.remove('open');
+                    var t = d.querySelector('.dd-t'); if (t) t.setAttribute('aria-expanded', 'false');
+                });
+            });
 
             /* ---------- Mobile menu ---------- */
-            function initNav() {
-                var menu = document.getElementById('menu');
-                var navLinks = document.getElementById('navLinks');
-                if (!menu || !navLinks) return;
-
-                menu.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
+            var menu = $('menu'), navLinks = $('navLinks');
+            if (menu && navLinks) {
+                menu.addEventListener('click', function (e) {
+                    e.preventDefault(); e.stopPropagation();
                     var isOpen = this.getAttribute('aria-expanded') === 'true';
                     this.setAttribute('aria-expanded', String(!isOpen));
                     navLinks.classList.toggle('open', !isOpen);
                 });
-
-                /* Close panel when a real link is clicked (mobile only) */
-                navLinks.querySelectorAll('a').forEach(function(a) {
-                    a.addEventListener('click', function() {
+                navLinks.querySelectorAll('a').forEach(function (a) {
+                    a.addEventListener('click', function () {
                         if (window.innerWidth <= 900) {
                             menu.setAttribute('aria-expanded', 'false');
                             navLinks.classList.remove('open');
                         }
                     });
                 });
-
-                /* Close panel on outside click */
-                document.addEventListener('click', function(e) {
+                document.addEventListener('click', function (e) {
                     if (!navLinks.classList.contains('open')) return;
                     if (e.target.closest('header')) return;
                     menu.setAttribute('aria-expanded', 'false');
                     navLinks.classList.remove('open');
                 });
-
-                /* Reset on resize */
-                window.addEventListener('resize', function() {
+                window.addEventListener('resize', function () {
                     if (window.innerWidth > 900) {
                         menu.setAttribute('aria-expanded', 'false');
                         navLinks.classList.remove('open');
@@ -416,17 +337,146 @@
                 });
             }
 
-            /* ---------- Boot ---------- */
-            function boot() {
-                fixWhatsAppHref();
-                initDropdowns();
-                initNav();
+            /* ---------- Country codes with PNG flag images ---------- */
+            var CCS = [
+                ["UAE", "ae", "+971"],
+                ["Saudi Arabia", "sa", "+966"],
+                ["Qatar", "qa", "+974"],
+                ["Kuwait", "kw", "+965"],
+                ["Bahrain", "bh", "+973"],
+                ["Oman", "om", "+968"],
+                ["Jordan", "jo", "+962"],
+                ["India", "in", "+91"],
+                ["Egypt", "eg", "+20"],
+                ["Nigeria", "ng", "+234"],
+                ["Bangladesh", "bd", "+880"],
+                ["Iraq", "iq", "+964"]
+            ];
+
+            var qcb = $('qcb'), qcl = $('qcl'), curCc = 0;
+
+            function setCountryCode(i) {
+                curCc = i;
+                if (qcb) {
+                    qcb.innerHTML =
+                        '<img src="https://flagcdn.com/w40/' + CCS[i][1] + '.png" alt="' + CCS[i][0] + '" class="flag-img">' +
+                        '<span>' + CCS[i][2] + '</span><i></i>';
+                }
+                if (qcl) qcl.hidden = true;
+                if (qcb) qcb.setAttribute('aria-expanded', 'false');
             }
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', boot);
-            } else {
-                boot();
+
+            if (qcl) {
+                qcl.innerHTML = CCS.map(function (c, i) {
+                    return '<li role="option" data-i="' + i + '">' +
+                        '<img src="https://flagcdn.com/w40/' + c[1] + '.png" alt="' + c[0] + '" class="flag-img">' +
+                        '<span>' + c[0] + '</span><b>' + c[2] + '</b></li>';
+                }).join('');
+                setCountryCode(0);
+
+                if (qcb) {
+                    qcb.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        var h = qcl.hidden;
+                        qcl.hidden = !h;
+                        qcb.setAttribute('aria-expanded', String(h));
+                    });
+                }
+                qcl.addEventListener('click', function (e) {
+                    var li = e.target.closest('li');
+                    if (li) setCountryCode(+li.dataset.i);
+                });
+                document.addEventListener('click', function (e) {
+                    if (qcl && !qcl.hidden && !e.target.closest('.cc')) {
+                        qcl.hidden = true;
+                        qcb.setAttribute('aria-expanded', 'false');
+                    }
+                });
             }
+
+            /* ---------- Fill selects ---------- */
+            function fillSelect(sel, opts, placeholder) {
+                if (!sel) return;
+                sel.innerHTML = (placeholder ? '<option value="">' + placeholder + '</option>' : '') +
+                    opts.map(function (o) { return '<option>' + o + '</option>'; }).join('');
+            }
+
+            fillSelect($('qc'), ["UAE","Saudi Arabia","Qatar","Kuwait","Bahrain","Oman",
+                "Jordan","India","Egypt","Nigeria","Bangladesh","Iraq","Other country"]);
+            fillSelect($('qg'), ["Fiction","Romance","Mystery and thriller",
+                "Fantasy and science fiction","Historical fiction","Literary fiction",
+                "Non-fiction","Memoir and biography","Self-help and personal development",
+                "Business and leadership","Religion and spirituality","Poetry",
+                "Children’s and picture books","Educational and academic","Cookbooks","Other"],
+                'Select genre');
+            fillSelect($('qw'), ["Under 20,000 words","20,000 to 50,000 words",
+                "50,000 to 80,000 words","Over 80,000 words","Not sure yet"],
+                'Approximate word count');
+            fillSelect($('qm'), ["My manuscript is complete","I am still writing",
+                "I only have an idea"], 'Manuscript status');
+
+            /* ---------- Services chips ---------- */
+            var qs = $('qs');
+            if (qs) {
+                qs.addEventListener('click', function (e) {
+                    var b = e.target.closest('button');
+                    if (b) b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') !== 'true');
+                });
+            }
+
+            /* ---------- File drop ---------- */
+            var dz = $('dz'), qfi = $('qfi'), qfn = $('qfn');
+            if (dz && qfi && qfn) {
+                qfi.addEventListener('change', function () {
+                    qfn.textContent = this.files.length ? this.files[0].name : 'Word, PDF or text file. Optional.';
+                });
+                ['dragenter', 'dragover'].forEach(function (t) {
+                    dz.addEventListener(t, function () { this.classList.add('on'); });
+                });
+                ['dragleave', 'drop'].forEach(function (t) {
+                    dz.addEventListener(t, function () { this.classList.remove('on'); });
+                });
+            }
+
+            /* ---------- Form submit ---------- */
+            var qq = $('qq');
+            if (qq) {
+                qq.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    var n = $('qn').value.trim();
+                    var m = $('qe').value.trim();
+                    var p = $('qp').value.trim();
+
+                    $('qen').textContent = n ? '' : 'Enter your full name.';
+                    var emailOk = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m);
+                    $('qee').textContent = emailOk ? '' : 'Enter a valid email address.';
+                    var phoneOk = /^[\d\s()+-]{6,}$/.test(p);
+                    $('qep').textContent = phoneOk ? '' : 'Enter a valid phone number.';
+
+                    if (!n || !emailOk || !phoneOk) return;
+
+                    var selected = qs ? [].slice.call(qs.querySelectorAll('[aria-pressed=true]'))
+                        .map(function (x) { return x.textContent; }) : [];
+
+                    qq.style.display = 'none';
+                    var ok = $('qok');
+                    ok.style.display = 'block';
+                    ok.textContent = 'Thank you, ' + n + '. We have your request' +
+                        (selected.length ? ' for ' + selected.join(', ') : '') +
+                        '. Our team will contact you on ' + CCS[curCc][2] + ' ' + p +
+                        ' or at ' + m + ' with an itemised quote.';
+                });
+            }
+
+            /* ---------- "Get this quote" buttons scroll to form ---------- */
+            document.addEventListener('click', function (e) {
+                var b = e.target.closest('[data-s]');
+                if (!b) return;
+                var d = $('qd');
+                if (d) d.value = 'Package: ' + b.dataset.s;
+                var target = $('quote');
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
         })();
     </script>
 </body>

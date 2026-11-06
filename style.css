@@ -387,3 +387,23 @@ textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;
 
 @media(max-width:900px){.fg{grid-template-columns:1fr 1fr;gap:32px}}
 @media(max-width:560px){.fg{grid-template-columns:1fr}footer{padding:44px 0 20px}.fbot{margin-top:32px}}
+
+
+.w h3{
+  font-size: 50px
+}
+.card h3{
+  font-size: 25px;
+}
+@media(max-width:560px){
+ .w h3{
+  font-size: 35px
+}
+
+.card h3{
+  font-size: 20px;
+} 
+}
+a{
+  text-decoration: none !important;
+}
