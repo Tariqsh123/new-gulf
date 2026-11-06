@@ -12,21 +12,114 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
     <link rel="stylesheet" href="../style.css">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="bingbot" content="noindex, nofollow">
     <style>
         /* Hero form country code dropdown */
-        #qf .pfp { display: flex; gap: 8px; margin-bottom: 10px; }
-        #qf .pfp .cc { position: relative; flex-shrink: 0; }
-        #qf .pfp .cc > button { display: inline-flex; align-items: center; gap: 6px; padding: 10px 10px; border-radius: 6px; cursor: pointer; font-size: 14px; white-space: nowrap; height: 100%;}
-        #qf .pfp .cc > button .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
-        #qf .pfp .cc > button span:not(.flag-img) { font-size: 14px; }
-        #qf .pfp .cc > button i { display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid #333; margin-left: 2px; }
-        #qf .pfp .cc > ul { position: absolute; top: calc(100% + 4px); left: 0; min-width: 240px; max-height: 260px; overflow-y: auto; margin: 0; padding: 4px 0; list-style: none; background: #fff; border: 1px solid #d9d9d9; border-radius: 6px; box-shadow: 0 6px 20px rgba(0,0,0,0.10); z-index: 30; }
-        #qf .pfp .cc > ul li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 12px; cursor: pointer; font-size: 14px; }
-        #qf .pfp .cc > ul li:hover { background: #f5f7fb; }
-        #qf .pfp .cc > ul li .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; margin-right: 8px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
-        #qf .pfp .cc > ul li span { flex: 1 1 auto; text-align: left; }
-        #qf .pfp .cc > ul li b { color: #666; font-weight: 500; }
-        #qf .pfp input[type="tel"] { flex: 1 1 auto; min-width: 0; margin: 0; }
+        
+        #qf .pfp {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        
+        #qf .pfp .cc {
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        #qf .pfp .cc>button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            white-space: nowrap;
+            height: 100%;
+        }
+        
+        #qf .pfp .cc>button .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #qf .pfp .cc>button span:not(.flag-img) {
+            font-size: 14px;
+        }
+        
+        #qf .pfp .cc>button i {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 5px solid #333;
+            margin-left: 2px;
+        }
+        
+        #qf .pfp .cc>ul {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            min-width: 240px;
+            max-height: 260px;
+            overflow-y: auto;
+            margin: 0;
+            padding: 4px 0;
+            list-style: none;
+            background: #fff;
+            border: 1px solid #d9d9d9;
+            border-radius: 6px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+            z-index: 30;
+        }
+        
+        #qf .pfp .cc>ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        #qf .pfp .cc>ul li:hover {
+            background: #f5f7fb;
+        }
+        
+        #qf .pfp .cc>ul li .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #qf .pfp .cc>ul li span {
+            flex: 1 1 auto;
+            text-align: left;
+        }
+        
+        #qf .pfp .cc>ul li b {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        #qf .pfp input[type="tel"] {
+            flex: 1 1 auto;
+            min-width: 0;
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -90,9 +183,9 @@
                 <div>
                     <p class="small">UAE · Saudi Arabia · Qatar · Kuwait · Bahrain · Oman</p>
                     <h1>Book Cover Design and Formatting Services in the Gulf: Arabic and English, Print and eBook</h1>
-                    <p>A cover is the first thing a reader judges, and the interior layout decides whether they keep reading. <a href="../index.html"> Gulf Books Publisher</a> provides book cover design and formatting services in the Gulf for authors who want both done properly: a front,
-                        spine and back cover built to your printer&rsquo;s exact specifications, and an interior laid out for print and eBook in Arabic, English or both. Whether you are publishing in Dubai, Riyadh, Doha, Kuwait City, Manama or Muscat,
-                        one team designs the cover, formats the pages and prepares the files for Amazon KDP, IngramSpark and other retailers, with a written quote before any work begins.</p>
+                    <p>A cover is the first thing a reader judges, and the interior layout decides whether they keep reading. <a href="../index.html"> Gulf Books Publisher</a> provides book cover design and formatting services in the Gulf for authors who
+                        want both done properly: a front, spine and back cover built to your printer&rsquo;s exact specifications, and an interior laid out for print and eBook in Arabic, English or both. Whether you are publishing in Dubai, Riyadh, Doha,
+                        Kuwait City, Manama or Muscat, one team designs the cover, formats the pages and prepares the files for Amazon KDP, IngramSpark and other retailers, with a written quote before any work begins.</p>
                     <div class="row">
                         <a class="btn" href="../free-quote.html">Get My Itemised Quote</a>
                         <a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a>
@@ -185,8 +278,8 @@
                 <p>Arabic books are bound on the right and open to the left, so the cover and interior must be built in reverse. On a paperback cover file, the front cover sits to the left of the spine and the back cover to the right, and margins, running
                     heads and page numbers mirror accordingly. On the page, we use readable Naskh-style typefaces for body text, reserve calligraphic styles such as Thuluth, Diwani or Kufic for titles, set diacritics only where the text needs them, and
                     keep English names, numerals and web addresses from breaking the right-to-left flow. Arabic eBooks also need the correct right-to-left page-turn setting inside the EPUB.</p>
-                <p>Our native Arabic editors check titles, blurbs and diacritics before files are released, a step <a href="../index.html"> Gulf Books Publisher</a> builds into every Arabic project. One practical point: Amazon KDP publishes Arabic as an eBook only, so Arabic paperbacks
-                    go through a print route that supports reverse binding, such as IngramSpark or a local printer. <span class="ph">[Confirm print route]</span></p>
+                <p>Our native Arabic editors check titles, blurbs and diacritics before files are released, a step <a href="../index.html"> Gulf Books Publisher</a> builds into every Arabic project. One practical point: Amazon KDP publishes Arabic as an
+                    eBook only, so Arabic paperbacks go through a print route that supports reverse binding, such as IngramSpark or a local printer. <span class="ph">[Confirm print route]</span></p>
             </div>
         </section>
 
@@ -304,7 +397,8 @@
                 <div id="fq">
                     <details>
                         <summary>What is the difference between cover design and book formatting?</summary>
-                        <p>Cover design creates the front, spine and back artwork. Formatting lays out the interior pages and eBook files. <a href="../index.html"> Gulf Books Publisher</a> handles both, so the cover and the pages match in style, size and print specification.</p>
+                        <p>Cover design creates the front, spine and back artwork. Formatting lays out the interior pages and eBook files. <a href="../index.html"> Gulf Books Publisher</a> handles both, so the cover and the pages match in style, size and
+                            print specification.</p>
                     </details>
                     <details>
                         <summary>Do you design covers and format interiors for Arabic books?</summary>
@@ -453,7 +547,9 @@
         <ul id="oc"></ul>
         <div id="gd"></div>
         <div class="cv" id="cv"></div>
-        <div class="mq"><div class="mt" id="mt"></div></div>
+        <div class="mq">
+            <div class="mt" id="mt"></div>
+        </div>
         <div id="lb"><img alt=""></div>
         <div id="qv"></div>
     </div>

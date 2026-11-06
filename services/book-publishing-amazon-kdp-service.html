@@ -12,21 +12,114 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
     <link rel="stylesheet" href="../style.css">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="bingbot" content="noindex, nofollow">
     <style>
         /* Hero form country code dropdown */
-        #qf .pfp { display: flex; gap: 8px; margin-bottom: 10px; }
-        #qf .pfp .cc { position: relative; flex-shrink: 0; }
-        #qf .pfp .cc > button { display: inline-flex; align-items: center; gap: 6px; padding: 10px 10px; border-radius: 6px; cursor: pointer; font-size: 14px; white-space: nowrap; height: 100%; }
-        #qf .pfp .cc > button .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
-        #qf .pfp .cc > button span:not(.flag-img) { font-size: 14px; }
-        #qf .pfp .cc > button i { display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid #333; margin-left: 2px; }
-        #qf .pfp .cc > ul { position: absolute; top: calc(100% + 4px); left: 0; min-width: 240px; max-height: 260px; overflow-y: auto; margin: 0; padding: 4px 0; list-style: none; background: #fff; border: 1px solid #d9d9d9; border-radius: 6px; box-shadow: 0 6px 20px rgba(0,0,0,0.10); z-index: 30; }
-        #qf .pfp .cc > ul li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 12px; cursor: pointer; font-size: 14px; }
-        #qf .pfp .cc > ul li:hover { background: #f5f7fb; }
-        #qf .pfp .cc > ul li .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; margin-right: 8px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
-        #qf .pfp .cc > ul li span { flex: 1 1 auto; text-align: left; }
-        #qf .pfp .cc > ul li b { color: #666; font-weight: 500; }
-        #qf .pfp input[type="tel"] { flex: 1 1 auto; min-width: 0; margin: 0; }
+        
+        #qf .pfp {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        
+        #qf .pfp .cc {
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        #qf .pfp .cc>button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            white-space: nowrap;
+            height: 100%;
+        }
+        
+        #qf .pfp .cc>button .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #qf .pfp .cc>button span:not(.flag-img) {
+            font-size: 14px;
+        }
+        
+        #qf .pfp .cc>button i {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 5px solid #333;
+            margin-left: 2px;
+        }
+        
+        #qf .pfp .cc>ul {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            min-width: 240px;
+            max-height: 260px;
+            overflow-y: auto;
+            margin: 0;
+            padding: 4px 0;
+            list-style: none;
+            background: #fff;
+            border: 1px solid #d9d9d9;
+            border-radius: 6px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+            z-index: 30;
+        }
+        
+        #qf .pfp .cc>ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        #qf .pfp .cc>ul li:hover {
+            background: #f5f7fb;
+        }
+        
+        #qf .pfp .cc>ul li .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #qf .pfp .cc>ul li span {
+            flex: 1 1 auto;
+            text-align: left;
+        }
+        
+        #qf .pfp .cc>ul li b {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        #qf .pfp input[type="tel"] {
+            flex: 1 1 auto;
+            min-width: 0;
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -90,10 +183,10 @@
                 <div>
                     <p class="small">UAE · Saudi Arabia · Qatar · Kuwait · Bahrain · Oman</p>
                     <h1>Book Publishing and Amazon KDP Services in the Gulf: Publish Your Book Properly, in Arabic or English</h1>
-                    <p>Publishing a book on Amazon is easy to start and easy to get wrong. A rushed file, a weak cover or the wrong categories can leave a good book unseen. <a href="../index.html"> Gulf Books Publisher</a> provides book publishing and Amazon KDP services in the Gulf
-                        for authors who want a professional result, from the finished manuscript to a live listing. Our team handles formatting, cover design, ISBN, KDP set-up and print-ready files for paperback, hardcover and eBook, in Arabic, English
-                        or both. Whether you write from Dubai, Riyadh, Doha, Kuwait City, Manama or Muscat, you get one named project manager and an itemised quote before any work begins. Tell us about your book and we will show you the clearest route
-                        to publication.</p>
+                    <p>Publishing a book on Amazon is easy to start and easy to get wrong. A rushed file, a weak cover or the wrong categories can leave a good book unseen. <a href="../index.html"> Gulf Books Publisher</a> provides book publishing and Amazon
+                        KDP services in the Gulf for authors who want a professional result, from the finished manuscript to a live listing. Our team handles formatting, cover design, ISBN, KDP set-up and print-ready files for paperback, hardcover and
+                        eBook, in Arabic, English or both. Whether you write from Dubai, Riyadh, Doha, Kuwait City, Manama or Muscat, you get one named project manager and an itemised quote before any work begins. Tell us about your book and we will show
+                        you the clearest route to publication.</p>
                     <div class="row">
                         <a class="btn" href="../free-quote.html">Get My Itemised Quote</a>
                         <a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a>
@@ -149,11 +242,12 @@
         <section class="band" id="why">
             <div class="w">
                 <h2>Why Authors Choose Guided Self-Publishing</h2>
-                <p>Self-publishing gives you control, but doing every step alone is slow and full of small traps: trim sizes, bleed, margins, metadata, tax forms and ISBN choices. At the other extreme, some services take your money, hold your files and
-                    leave you unsure who owns what.</p>
+                <p>Self-publishing gives you control, but doing every step alone is slow and full of small traps: trim sizes, bleed, margins, metadata, tax forms and ISBN choices. At the other extreme, some services take your money, hold your files and leave
+                    you unsure who owns what.</p>
                 <p>We take a middle path. We do the technical and design work, and you stay in charge of the decisions. We recommend publishing through your own KDP account, so your rights, royalties and reviews stay with you. You see every proof, approve
                     every file and receive final copies of your cover and interior. Because editing, Arabic and English work, formatting and publishing sit under one roof, nothing is lost between teams, and you deal with one person from first call to
-                    launch.</p>
+                    launch.
+                </p>
             </div>
         </section>
 
@@ -198,7 +292,7 @@
                     </div>
                 </div>
 
-                <p>If your manuscript needs editing first, see our <a href="editing-and-proofreading-service.html">Editing &amp; Proofreading</a> service. For picture books, see our <a href="childrens-book-publishing.html">Children&rsquo;s Book Publishing</a> service.</p>
+                <p>If your manuscript needs editing first, see our <a href="editing-and-proofreading-service.html">Editing &amp; Proofreading</a> service. For picture books, see our <a href="childrens-book-publishing.html">Children&rsquo;s Book Publishing</a>                    service.</p>
 
                 <div class="row"><a class="btn" href="../free-quote.html">Get My Itemised Quote</a></div>
             </div>
@@ -211,8 +305,8 @@
                 <p>Amazon KDP (Kindle Direct Publishing) lets you sell your book worldwide without printing stock in advance. Paperbacks and hardcovers are printed on demand, which means a copy is made only when a reader orders it, so you carry no inventory
                     and no upfront print run. eBooks are read on Kindle devices and apps.</p>
                 <p>Each format has its own rules. Print books need exact trim sizes, margins, a bleed area where images reach the page edge, and a cover template that matches your page count. eBooks need clean, reflowable files with a working table of contents.
-                    Royalties differ by format and price, and Amazon sets conditions for each, so we explain the current options before you choose a price. You can also decide whether to enrol your eBook in KDP Select, which offers promotion tools in exchange
-                    for a period of Amazon exclusivity. We set out the trade-offs so the choice is yours.</p>
+                    Royalties differ by format and price, and Amazon sets conditions for each, so we explain the current options before you choose a price. You can also decide whether to enrol your eBook in KDP Select, which offers promotion tools in
+                    exchange for a period of Amazon exclusivity. We set out the trade-offs so the choice is yours.</p>
             </div>
         </section>
 
@@ -231,9 +325,9 @@
         <section class="band" id="arabic-english">
             <div class="w">
                 <h2>Arabic and English Book Publishing</h2>
-                <p>Arabic books need more than translated settings. At <a href="../index.html"> Gulf Books Publisher</a>, native Arabic and English teams work in one workflow, so both languages get the same care. For Arabic titles we set text right to left, place the spine and page order
-                    correctly, choose readable Arabic fonts and check punctuation, numerals and mixed Arabic and English passages. For bilingual books, we can place both languages in one volume or prepare matching editions. KDP&rsquo;s language and format
-                    support changes over time, so we check current requirements for your title before we begin and tell you plainly what is possible.</p>
+                <p>Arabic books need more than translated settings. At <a href="../index.html"> Gulf Books Publisher</a>, native Arabic and English teams work in one workflow, so both languages get the same care. For Arabic titles we set text right to left,
+                    place the spine and page order correctly, choose readable Arabic fonts and check punctuation, numerals and mixed Arabic and English passages. For bilingual books, we can place both languages in one volume or prepare matching editions.
+                    KDP&rsquo;s language and format support changes over time, so we check current requirements for your title before we begin and tell you plainly what is possible.</p>
                 <div class="ar">
                     <p>نشر الكتب على أمازون KDP بالعربية والإنجليزية، مع تنسيق احترافي وتصميم غلاف وإعداد الملفات.</p>
                 </div>
@@ -254,8 +348,8 @@
                 <p>We publish books for authors across the Gulf Cooperation Council, and each market has its own mix of readers and goals. In the UAE, our book publishing service supports authors in Dubai, Abu Dhabi and Sharjah, from business leaders and
                     consultants publishing a first book to novelists and memoir writers releasing in English, Arabic or both. In Saudi Arabia, we guide Amazon KDP publishing for authors in Riyadh, Jeddah and the Eastern Province, with strong support for
                     Arabic-first and bilingual titles. In Qatar, we help writers in Doha publish fiction, non-fiction and academic books with clean formatting and professional covers, while in Kuwait we support authors who want Arabic and English editions
-                    handled with equal care. In Bahrain, our team publishes books for authors in Manama and beyond, including professionals turning expertise into a credible calling card, and in Oman we help writers in Muscat and across the Sultanate bring
-                    local history, poetry and storytelling to a wider audience.</p>
+                    handled with equal care. In Bahrain, our team publishes books for authors in Manama and beyond, including professionals turning expertise into a credible calling card, and in Oman we help writers in Muscat and across the Sultanate
+                    bring local history, poetry and storytelling to a wider audience.</p>
                 <p>The process is the same wherever you are, and it runs remotely by video call, email and shared files. Readers in the Gulf often buy through Amazon&rsquo;s international stores or order author copies, so we advise on print, shipping and
                     local print options for your market, and we recommend checking current local requirements before a bulk print run.</p>
             </div>
@@ -265,9 +359,9 @@
         <section id="metadata">
             <div class="w">
                 <h2>Getting Found on Amazon: Metadata, Categories and Launch</h2>
-                <p>A good book still needs to be found. We write a clear, honest book description, choose the keywords and categories readers use, and set up your author details so your listing looks complete. We also explain the ISBN options. A free KDP ISBN
-                    can be used only with KDP, while your own ISBN is portable and lets you name your own imprint, which matters if you later sell through other channels. We guide you through KDP&rsquo;s account, tax and payment steps, and suggest simple
-                    launch actions, such as asking early readers for honest reviews, without promising rankings or sales.</p>
+                <p>A good book still needs to be found. We write a clear, honest book description, choose the keywords and categories readers use, and set up your author details so your listing looks complete. We also explain the ISBN options. A free KDP
+                    ISBN can be used only with KDP, while your own ISBN is portable and lets you name your own imprint, which matters if you later sell through other channels. We guide you through KDP&rsquo;s account, tax and payment steps, and suggest
+                    simple launch actions, such as asking early readers for honest reviews, without promising rankings or sales.</p>
             </div>
         </section>
 
@@ -307,7 +401,8 @@
                 <div id="fq">
                     <details>
                         <summary>What is the difference between book publishing and Amazon KDP?</summary>
-                        <p>KDP is Amazon&rsquo;s platform for selling your book. Book publishing is the work around it: formatting, cover design, ISBN and metadata. <a href="../index.html"> Gulf Books Publisher</a> handles both, so your book is ready for KDP and set up correctly.</p>
+                        <p>KDP is Amazon&rsquo;s platform for selling your book. Book publishing is the work around it: formatting, cover design, ISBN and metadata. <a href="../index.html"> Gulf Books Publisher</a> handles both, so your book is ready for
+                            KDP and set up correctly.</p>
                     </details>
                     <details>
                         <summary>Do I keep the rights to my book?</summary>
@@ -342,8 +437,8 @@
             <div class="w">
                 <img src="../images/logo.webp" width="358" height="150" alt="Gulf Books Publisher logo" style="display:block;margin:0 auto 20px;height:100px;width:auto;background:#fff;border-radius:8px;padding:4px 8px">
                 <h2>Ready to Publish? Get an Itemised Quote</h2>
-                <p>Your book deserves a professional cover, a clean interior and a listing readers can trust. Tell <a href="../index.html"> Gulf Books Publisher</a> about your manuscript, including the language, the formats and the countries where you want to sell, and our team will reply
-                    with a clear, itemised quote and a suggested plan. No jargon, no pressure, just an honest next step.</p>
+                <p>Your book deserves a professional cover, a clean interior and a listing readers can trust. Tell <a href="../index.html"> Gulf Books Publisher</a> about your manuscript, including the language, the formats and the countries where you want
+                    to sell, and our team will reply with a clear, itemised quote and a suggested plan. No jargon, no pressure, just an honest next step.</p>
                 <div class="row">
                     <a class="btn" href="../free-quote.html">Get My Itemised Quote</a>
                     <a class="btn o" href="../free-quote.html">Book a Free Consultation</a>
@@ -457,7 +552,9 @@
         <ul id="oc"></ul>
         <div id="gd"></div>
         <div class="cv" id="cv"></div>
-        <div class="mq"><div class="mt" id="mt"></div></div>
+        <div class="mq">
+            <div class="mt" id="mt"></div>
+        </div>
         <div id="lb"><img alt=""></div>
         <div id="qv"></div>
     </div>

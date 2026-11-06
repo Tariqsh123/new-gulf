@@ -12,21 +12,114 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
     <link rel="stylesheet" href="../style.css">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="bingbot" content="noindex, nofollow">
     <style>
         /* Hero form country code dropdown */
-        #qf .pfp { display: flex; gap: 8px; margin-bottom: 10px; }
-        #qf .pfp .cc { position: relative; flex-shrink: 0; }
-        #qf .pfp .cc > button { display: inline-flex; align-items: center; gap: 6px; padding: 10px 10px; border-radius: 6px; cursor: pointer; font-size: 14px; white-space: nowrap; height: 100%;}
-        #qf .pfp .cc > button .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
-        #qf .pfp .cc > button span:not(.flag-img) { font-size: 14px; }
-        #qf .pfp .cc > button i { display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid #333; margin-left: 2px; }
-        #qf .pfp .cc > ul { position: absolute; top: calc(100% + 4px); left: 0; min-width: 240px; max-height: 260px; overflow-y: auto; margin: 0; padding: 4px 0; list-style: none; background: #fff; border: 1px solid #d9d9d9; border-radius: 6px; box-shadow: 0 6px 20px rgba(0,0,0,0.10); z-index: 30; }
-        #qf .pfp .cc > ul li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 12px; cursor: pointer; font-size: 14px; }
-        #qf .pfp .cc > ul li:hover { background: #f5f7fb; }
-        #qf .pfp .cc > ul li .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; margin-right: 8px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
-        #qf .pfp .cc > ul li span { flex: 1 1 auto; text-align: left; }
-        #qf .pfp .cc > ul li b { color: #666; font-weight: 500; }
-        #qf .pfp input[type="tel"] { flex: 1 1 auto; min-width: 0; margin: 0; }
+        
+        #qf .pfp {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        
+        #qf .pfp .cc {
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        #qf .pfp .cc>button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            white-space: nowrap;
+            height: 100%;
+        }
+        
+        #qf .pfp .cc>button .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #qf .pfp .cc>button span:not(.flag-img) {
+            font-size: 14px;
+        }
+        
+        #qf .pfp .cc>button i {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 5px solid #333;
+            margin-left: 2px;
+        }
+        
+        #qf .pfp .cc>ul {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            min-width: 240px;
+            max-height: 260px;
+            overflow-y: auto;
+            margin: 0;
+            padding: 4px 0;
+            list-style: none;
+            background: #fff;
+            border: 1px solid #d9d9d9;
+            border-radius: 6px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+            z-index: 30;
+        }
+        
+        #qf .pfp .cc>ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        #qf .pfp .cc>ul li:hover {
+            background: #f5f7fb;
+        }
+        
+        #qf .pfp .cc>ul li .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #qf .pfp .cc>ul li span {
+            flex: 1 1 auto;
+            text-align: left;
+        }
+        
+        #qf .pfp .cc>ul li b {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        #qf .pfp input[type="tel"] {
+            flex: 1 1 auto;
+            min-width: 0;
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -90,9 +183,10 @@
                 <div>
                     <p class="small">UAE · Saudi Arabia · Qatar · Kuwait · Bahrain · Oman</p>
                     <h1>Book Marketing and Author Websites in the Gulf: Help Readers Find Your Book</h1>
-                    <p>Publishing a book is only half the job. Readers still have to find it, trust it and buy it. <a href="../index.html"> Gulf Books Publisher</a> provides book marketing and author website services in the Gulf for authors who want a clear plan instead of scattered posts
-                        and hope. Our team builds your author website, tunes your Amazon listing, plans your launch and sets up the tools that bring readers back, in Arabic, English or both. Whether you write from Dubai, Riyadh, Doha, Kuwait City, Manama
-                        or Muscat, you receive an itemised quote and a named project manager before any work begins. We are honest about results: we do not promise sales, bestseller status or rankings, because no one can.</p>
+                    <p>Publishing a book is only half the job. Readers still have to find it, trust it and buy it. <a href="../index.html"> Gulf Books Publisher</a> provides book marketing and author website services in the Gulf for authors who want a clear
+                        plan instead of scattered posts and hope. Our team builds your author website, tunes your Amazon listing, plans your launch and sets up the tools that bring readers back, in Arabic, English or both. Whether you write from Dubai,
+                        Riyadh, Doha, Kuwait City, Manama or Muscat, you receive an itemised quote and a named project manager before any work begins. We are honest about results: we do not promise sales, bestseller status or rankings, because no one
+                        can.</p>
                     <div class="row">
                         <a class="btn" href="../free-quote.html">Get My Itemised Quote</a>
                         <a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a>
@@ -148,8 +242,8 @@
         <section class="band" id="why">
             <div class="w">
                 <h2>Why Authors Choose a Planned Approach to Book Marketing</h2>
-                <p>Most authors try marketing in bursts: a few social posts at launch, a discount, then silence. Agencies that sell generic packages, guaranteed reviews or &ldquo;bestseller&rdquo; badges often cost a lot and leave authors with nothing
-                    they own.</p>
+                <p>Most authors try marketing in bursts: a few social posts at launch, a discount, then silence. Agencies that sell generic packages, guaranteed reviews or &ldquo;bestseller&rdquo; badges often cost a lot and leave authors with nothing they
+                    own.</p>
                 <p>We build assets that last. You own your website, your domain, your email list and your content. Every activity ties back to one goal: more of the right readers reaching your book page and choosing to buy. A project manager explains each
                     step in plain language, and you see what has been done and why. Because publishing, design and marketing sit under one roof, your cover, book description and website all say the same thing in the same style.</p>
             </div>
@@ -203,9 +297,9 @@
         <section id="arabic-marketing">
             <div class="w">
                 <h2>Arabic and English Book Marketing</h2>
-                <p>Marketing in Arabic is not translated English marketing. At <a href="../index.html"> Gulf Books Publisher</a>, native Arabic and English teams write copy for each audience, choose the tone that suits it and check that dialect, spelling and cultural references fit
-                    your readers. For bilingual authors, we can run Arabic and English campaigns side by side with a consistent brand, covering your website, listing, social posts and email. We also advise which platforms your readers actually use, rather
-                    than spreading your effort across all of them.</p>
+                <p>Marketing in Arabic is not translated English marketing. At <a href="../index.html"> Gulf Books Publisher</a>, native Arabic and English teams write copy for each audience, choose the tone that suits it and check that dialect, spelling
+                    and cultural references fit your readers. For bilingual authors, we can run Arabic and English campaigns side by side with a consistent brand, covering your website, listing, social posts and email. We also advise which platforms your
+                    readers actually use, rather than spreading your effort across all of them.</p>
                 <div class="ar">
                     <p>تسويق الكتب وتصميم مواقع المؤلفين بالعربية والإنجليزية، بخطة واضحة وموقع تملكه أنت.</p>
                 </div>
@@ -218,9 +312,9 @@
                 <h2>Book Marketing and Author Websites Across the Gulf</h2>
                 <p>We support authors across the Gulf Cooperation Council, and the best channels differ by market. In the UAE, our book marketing service helps authors in Dubai, Abu Dhabi and Sharjah build English, Arabic or bilingual author websites and
                     launch plans for business books, novels and memoirs. In Saudi Arabia, we work with authors in Riyadh, Jeddah and the Eastern Province on Arabic-first book marketing, Arabic search-friendly websites and social campaigns that suit local
-                    readers. In Qatar, we help writers in Doha present their books with a professional author website and a focused launch, while in Kuwait we support authors who want Arabic and English promotion handled consistently across their site and
-                    social channels. In Bahrain, our team builds author websites and promotion plans for authors in Manama and beyond, including professionals who use a book to build credibility, and in Oman we help writers in Muscat and across the Sultanate
-                    share local stories and expertise with readers in Oman and abroad.</p>
+                    readers. In Qatar, we help writers in Doha present their books with a professional author website and a focused launch, while in Kuwait we support authors who want Arabic and English promotion handled consistently across their site
+                    and social channels. In Bahrain, our team builds author websites and promotion plans for authors in Manama and beyond, including professionals who use a book to build credibility, and in Oman we help writers in Muscat and across the
+                    Sultanate share local stories and expertise with readers in Oman and abroad.</p>
                 <p>Work is done remotely wherever you are, through video calls, shared documents and regular written updates. We can include regional events and book fairs in your plan, and we recommend checking current requirements for promotions and events
                     in your own market.</p>
             </div>
@@ -251,8 +345,8 @@
         <section id="cost">
             <div class="w">
                 <h2>Pricing &amp; Timeline</h2>
-                <p>Website builds and launch plans are usually priced as one-off projects, while ongoing marketing and ad management are priced monthly. The cost depends on the number of pages and languages, how much copywriting is needed, the length of your
-                    campaign and your ad budget, which is paid to the ad platform separately. Every quote is itemised, so you see what each part costs and can remove anything you do not need. <span class="ph">[Add starting price for a standard author website and for monthly marketing management]</span></p>
+                <p>Website builds and launch plans are usually priced as one-off projects, while ongoing marketing and ad management are priced monthly. The cost depends on the number of pages and languages, how much copywriting is needed, the length of
+                    your campaign and your ad budget, which is paid to the ad platform separately. Every quote is itemised, so you see what each part costs and can remove anything you do not need. <span class="ph">[Add starting price for a standard author website and for monthly marketing management]</span></p>
                 <p>We confirm a written schedule before we start. A typical author website takes a few weeks from approved content to launch, and a launch plan works best when we start before your publication date. We tell you honestly if a date is too close
                     for the plan you want.</p>
                 <div class="row">
@@ -269,7 +363,8 @@
                 <div id="fq">
                     <details>
                         <summary>What do book marketing services include?</summary>
-                        <p>They include a plan, Amazon listing improvements, launch materials, email set-up and, where useful, paid ads. <a href="../index.html"> Gulf Books Publisher</a> agrees the exact scope in writing first, so you know what is included and what is not.</p>
+                        <p>They include a plan, Amazon listing improvements, launch materials, email set-up and, where useful, paid ads. <a href="../index.html"> Gulf Books Publisher</a> agrees the exact scope in writing first, so you know what is included
+                            and what is not.</p>
                     </details>
                     <details>
                         <summary>Can you guarantee book sales or bestseller status?</summary>
@@ -304,8 +399,8 @@
             <div class="w">
                 <img src="../images/logo.webp" width="358" height="150" alt="Gulf Books Publisher logo" style="display:block;margin:0 auto 20px;height:100px;width:auto;background:#fff;border-radius:8px;padding:4px 8px">
                 <h2>Ready to Reach More Readers? Get an Itemised Quote</h2>
-                <p>Your book deserves more than a launch-day post. Tell <a href="../index.html"> Gulf Books Publisher</a> about your book, including your readers, your language and the countries where you want to be found, and our team will reply with a clear, itemised quote and a suggested
-                    plan. No jargon, no pressure, just an honest next step.</p>
+                <p>Your book deserves more than a launch-day post. Tell <a href="../index.html"> Gulf Books Publisher</a> about your book, including your readers, your language and the countries where you want to be found, and our team will reply with a
+                    clear, itemised quote and a suggested plan. No jargon, no pressure, just an honest next step.</p>
                 <div class="row">
                     <a class="btn" href="../free-quote.html">Get My Itemised Quote</a>
                     <a class="btn o" href="../free-quote.html">Book a Free Consultation</a>
@@ -419,7 +514,9 @@
         <ul id="oc"></ul>
         <div id="gd"></div>
         <div class="cv" id="cv"></div>
-        <div class="mq"><div class="mt" id="mt"></div></div>
+        <div class="mq">
+            <div class="mt" id="mt"></div>
+        </div>
         <div id="lb"><img alt=""></div>
         <div id="qv"></div>
     </div>

@@ -5,27 +5,132 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#ffffff">
+
+    <!-- SEO: No Index -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="bingbot" content="noindex, nofollow">
+
+    <!-- Existing SEO Title -->
     <title>Gulf Books Publisher | Book Publishing Services for Authors Across the Gulf</title>
+
+    <!-- Existing Meta Description -->
     <meta name="description" content="Self-publishing for authors across the GCC. Clear AED prices, Arabic and English, a written quote before any work begins.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
     <style>
         /* Hero form country code dropdown */
-        #qf .pfp { display: flex; gap: 8px; margin-bottom: 10px; }
-        #qf .pfp .cc { position: relative; flex-shrink: 0; }
-        #qf .pfp .cc > button { display: inline-flex; align-items: center; gap: 6px; padding: 10px 10px;  border-radius: 6px; cursor: pointer; font-size: 14px; white-space: nowrap; height: 100%; }
-        #qf .pfp .cc > button .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
-        #qf .pfp .cc > button span:not(.flag-img) { font-size: 14px; }
-        #qf .pfp .cc > button i { display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid #333; margin-left: 2px; }
-        #qf .pfp .cc > ul { position: absolute; top: calc(100% + 4px); left: 0; min-width: 240px; max-height: 260px; overflow-y: auto; margin: 0; padding: 4px 0; list-style: none; background: #fff; border: 1px solid #d9d9d9; border-radius: 6px; box-shadow: 0 6px 20px rgba(0,0,0,0.10); z-index: 30; }
-        #qf .pfp .cc > ul li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 12px; cursor: pointer; font-size: 14px; }
-        #qf .pfp .cc > ul li:hover { background: #f5f7fb; }
-        #qf .pfp .cc > ul li .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; margin-right: 8px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
-        #qf .pfp .cc > ul li span { flex: 1 1 auto; text-align: left; }
-        #qf .pfp .cc > ul li b { color: #666; font-weight: 500; }
-        #qf .pfp input[type="tel"] { flex: 1 1 auto; min-width: 0; margin: 0; }
+        
+        #qf .pfp {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        
+        #qf .pfp .cc {
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        #qf .pfp .cc>button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            white-space: nowrap;
+            height: 100%;
+        }
+        
+        #qf .pfp .cc>button .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #qf .pfp .cc>button span:not(.flag-img) {
+            font-size: 14px;
+        }
+        
+        #qf .pfp .cc>button i {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 5px solid #333;
+            margin-left: 2px;
+        }
+        
+        #qf .pfp .cc>ul {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            min-width: 240px;
+            max-height: 260px;
+            overflow-y: auto;
+            margin: 0;
+            padding: 4px 0;
+            list-style: none;
+            background: #fff;
+            border: 1px solid #d9d9d9;
+            border-radius: 6px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+            z-index: 30;
+        }
+        
+        #qf .pfp .cc>ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        #qf .pfp .cc>ul li:hover {
+            background: #f5f7fb;
+        }
+        
+        #qf .pfp .cc>ul li .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #qf .pfp .cc>ul li span {
+            flex: 1 1 auto;
+            text-align: left;
+        }
+        
+        #qf .pfp .cc>ul li b {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        #qf .pfp input[type="tel"] {
+            flex: 1 1 auto;
+            min-width: 0;
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -162,8 +267,8 @@
                 <div>
                     <p class="small">UAE · Saudi Arabia · Qatar · Kuwait · Bahrain · Oman</p>
                     <h1>Premium Book Publishing Services in Gulf - Gulf Books Publisher</h1>
-                    <p>Gulf Books Publisher is a professional Self Book Publishing Services company for authors across the GCC. We take your manuscript from first draft to a professionally published book, in print, as an eBook and on Amazon, with a written quote before any work begins.
-                        Whether you are writing in Dubai, Riyadh, Doha, Kuwait City, Manama or Muscat, you get one team for editing, cover design, formatting, ISBN registration, printing and distribution.</p>
+                    <p>Gulf Books Publisher is a professional Self Book Publishing Services company for authors across the GCC. We take your manuscript from first draft to a professionally published book, in print, as an eBook and on Amazon, with a written
+                        quote before any work begins. Whether you are writing in Dubai, Riyadh, Doha, Kuwait City, Manama or Muscat, you get one team for editing, cover design, formatting, ISBN registration, printing and distribution.</p>
                     <p>Authors across the region tell us the same three frustrations: prices nobody will state, publishers who only work in English, and companies they cannot verify. We built Gulf Books Publisher to fix all three. You keep your rights, you
                         are listed as the publisher, and you approve every stage.</p>
                     <p><b>Start with a free consultation and an itemised quote.</b></p>
@@ -205,7 +310,8 @@
         <section class="band" id="why">
             <div class="w">
                 <h2>Why Gulf Authors Choose Us as their Preferred Self Publishing Company in GCC</h2>
-                <p>Many book publishing companies in the Gulf promise to publish your book. Here are four things every author should be able to expect from any self-publishing company for authors across the GCC, and the standards we hold ourselves to, and the ones we hold ourselves to.</p>
+                <p>Many book publishing companies in the Gulf promise to publish your book. Here are four things every author should be able to expect from any self-publishing company for authors across the GCC, and the standards we hold ourselves to, and
+                    the ones we hold ourselves to.</p>
                 <div class="grid">
                     <div class="card">
                         <h3>Prices you can see</h3>
@@ -243,78 +349,78 @@
                 <h2>Professional Book Publishing Services under one roof to Publish your book in the Middle East</h2>
                 <p>As Gulf Book Publishers working with first-time and established authors, we cover each stage of the journey so you are not juggling a separate specialist for every task. Choose the full package or only the services your book needs.</p>
                 <div class="grid" id="sv">
-    <div class="card">
-        <h3>Book Publishing &amp; Amazon KDP</h3>
-        <p>ISBN registration, eBook conversion, print-on-demand set-up and Amazon KDP publishing, with category and keyword research. Wide distribution to Amazon, Apple Books, Kobo, Google Play Books and IngramSpark.</p>
-        <a class="go" href="services/book-publishing-amazon-kdp-service.html" data-s="Book Publishing & Amazon KDP">
+                    <div class="card">
+                        <h3>Book Publishing &amp; Amazon KDP</h3>
+                        <p>ISBN registration, eBook conversion, print-on-demand set-up and Amazon KDP publishing, with category and keyword research. Wide distribution to Amazon, Apple Books, Kobo, Google Play Books and IngramSpark.</p>
+                        <a class="go" href="services/book-publishing-amazon-kdp-service.html" data-s="Book Publishing & Amazon KDP">
             Visit Page to Learn More →
         </a>
-    </div>
+                    </div>
 
-    <div class="card">
-        <h3>Editing &amp; Proofreading</h3>
-        <p>Developmental editing, line editing, copy editing and proofreading in English and Arabic, with tracked changes so you see every improvement.</p>
-        <a class="go" href="services/editing-proofreading.html" data-s="Editing & Proofreading">
+                    <div class="card">
+                        <h3>Editing &amp; Proofreading</h3>
+                        <p>Developmental editing, line editing, copy editing and proofreading in English and Arabic, with tracked changes so you see every improvement.</p>
+                        <a class="go" href="services/editing-proofreading.html" data-s="Editing & Proofreading">
             Visit Page to Learn More →
         </a>
-    </div>
+                    </div>
 
-    <div class="card">
-        <h3>Book Cover Design &amp; Formatting</h3>
-        <p>Custom covers for your genre and a clean interior layout for print and eBook, with right-to-left formatting for Arabic titles.</p>
-        <a class="go" href="services/book-cover-design-formatting.html" data-s="Book Cover Design & Formatting">
+                    <div class="card">
+                        <h3>Book Cover Design &amp; Formatting</h3>
+                        <p>Custom covers for your genre and a clean interior layout for print and eBook, with right-to-left formatting for Arabic titles.</p>
+                        <a class="go" href="services/book-cover-design-formatting.html" data-s="Book Cover Design & Formatting">
             Visit Page to Learn More →
         </a>
-    </div>
+                    </div>
 
-    <div class="card">
-        <h3>Book Writing &amp; Ghostwriting</h3>
-        <p>Professional writers who capture your voice, from non-fiction and memoir to fiction. You keep full credit and full ownership, and we will sign a confidentiality agreement if you ask.</p>
-        <a class="go" href="services/ghostwriting.html" data-s="Book Writing & Ghostwriting">
+                    <div class="card">
+                        <h3>Book Writing &amp; Ghostwriting</h3>
+                        <p>Professional writers who capture your voice, from non-fiction and memoir to fiction. You keep full credit and full ownership, and we will sign a confidentiality agreement if you ask.</p>
+                        <a class="go" href="services/ghostwriting.html" data-s="Book Writing & Ghostwriting">
             Visit Page to Learn More →
         </a>
-    </div>
+                    </div>
 
-    <div class="card">
-        <h3>Book Printing</h3>
-        <p>Print-on-demand and short runs in paperback and hardcover for authors across the GCC, with printed proofs before you approve.</p>
-        <a class="go" href="services/book-printing.html" data-s="Book Printing">
+                    <div class="card">
+                        <h3>Book Printing</h3>
+                        <p>Print-on-demand and short runs in paperback and hardcover for authors across the GCC, with printed proofs before you approve.</p>
+                        <a class="go" href="services/book-printing.html" data-s="Book Printing">
             Visit Page to Learn More →
         </a>
-    </div>
+                    </div>
 
-    <div class="card">
-        <h3>Book Marketing &amp; Author Websites</h3>
-        <p>Launch plans, Amazon ads, review outreach, email lists and an author website that sends readers to your books.</p>
-        <a class="go" href="services/book-marketing-author-websites.html" data-s="Book Marketing & Author Websites">
+                    <div class="card">
+                        <h3>Book Marketing &amp; Author Websites</h3>
+                        <p>Launch plans, Amazon ads, review outreach, email lists and an author website that sends readers to your books.</p>
+                        <a class="go" href="services/book-marketing-author-websites.html" data-s="Book Marketing & Author Websites">
             Visit Page to Learn More →
         </a>
-    </div>
+                    </div>
 
-    <div class="card">
-        <h3>Audiobook Production</h3>
-        <p>Professional narration, editing and mastering, delivered in the formats audiobook platforms require.</p>
-        <a class="go" href="services/audiobook-production.html" data-s="Audiobook Production">
+                    <div class="card">
+                        <h3>Audiobook Production</h3>
+                        <p>Professional narration, editing and mastering, delivered in the formats audiobook platforms require.</p>
+                        <a class="go" href="services/audiobook-production.html" data-s="Audiobook Production">
             Visit Page to Learn More →
         </a>
-    </div>
+                    </div>
 
-    <div class="card">
-        <h3>Children’s Book Publishing</h3>
-        <p>Illustration, layout and publishing for picture books and early readers, in Arabic, English or bilingual editions.</p>
-        <a class="go" href="services/childrens-book-publishing.html" data-s="Children’s Book Publishing">
+                    <div class="card">
+                        <h3>Children’s Book Publishing</h3>
+                        <p>Illustration, layout and publishing for picture books and early readers, in Arabic, English or bilingual editions.</p>
+                        <a class="go" href="services/childrens-book-publishing.html" data-s="Children’s Book Publishing">
             Visit Page to Learn More →
         </a>
-    </div>
+                    </div>
 
-    <div class="card">
-        <h3>Corporate &amp; Institutional Books</h3>
-        <p>Company histories, anniversary books, reports and institutional publications for businesses, schools and organisations.</p>
-        <a class="go" href="services/corporate-book-publishing.html" data-s="Corporate & Institutional Books">
+                    <div class="card">
+                        <h3>Corporate &amp; Institutional Books</h3>
+                        <p>Company histories, anniversary books, reports and institutional publications for businesses, schools and organisations.</p>
+                        <a class="go" href="services/corporate-book-publishing.html" data-s="Corporate & Institutional Books">
             Visit Page to Learn More →
         </a>
-    </div>
-</div>
+                    </div>
+                </div>
                 <div class="row"><a class="btn" href="free-quote.html">Start My Publishing Plan</a></div>
             </div>
         </section>
@@ -409,8 +515,8 @@
                         <div class="price">From AED 3,500</div>
                         <p>Everything in the previous tier plus a printed proof, marketing plan and author website.</p><a href="free-quote.html">Get this quote</a></div>
                 </div>
-                <p style="margin-top:18px">Prices are also shown in SAR, QAR, KWD, BHD and OMR on the Prices are also shown in SAR, QAR, KWD, BHD and OMR on the respective country Page. Every package is covered by our 100% <a href="privacy-policy.html"> refund policy</a>. You only pay for services you choose, and there are no hidden fees.. Every package is covered by our 100% refund policy.  You only pay for services
-                    you choose, and there are no hidden fees.</p>
+                <p style="margin-top:18px">Prices are also shown in SAR, QAR, KWD, BHD and OMR on the Prices are also shown in SAR, QAR, KWD, BHD and OMR on the respective country Page. Every package is covered by our 100% <a href="privacy-policy.html"> refund policy</a>. You only
+                    pay for services you choose, and there are no hidden fees.. Every package is covered by our 100% refund policy. You only pay for services you choose, and there are no hidden fees.</p>
             </div>
         </section>
 
@@ -474,8 +580,9 @@
             <div class="w">
                 <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-global-img.webp" width="1000" height="563" alt="Author working on a laptop with the Gulf Books Publisher logo and a world map connecting countries to the Gulf" loading="lazy">
                 <h2>Global Publishing Services for Authors Looking to Launch Their Books in Gulf</h2>
-                <p>You do not have to live in the Gulf to publish with a Gulf-based publishing house. Authors in other regions Like Jordan, Egypt, Nigeria, Bangladesh, Iraq, India work with  work with Gulf Books Publisher to publish their books professionally and to reach readers in the UAE, Saudi Arabia, Qatar, Kuwait,
-                    Bahrain and Oman. Everything is handled online, with video, phone or WhatsApp consultations, secure manuscript upload and the same itemised quote as every other author. You keep your rights and approve every stage.</p>
+                <p>You do not have to live in the Gulf to publish with a Gulf-based publishing house. Authors in other regions Like Jordan, Egypt, Nigeria, Bangladesh, Iraq, India work with work with Gulf Books Publisher to publish their books professionally
+                    and to reach readers in the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman. Everything is handled online, with video, phone or WhatsApp consultations, secure manuscript upload and the same itemised quote as every other author.
+                    You keep your rights and approve every stage.</p>
                 <!-- <ul class="chips" id="oc">
                     <li><span class="fl" data-flag="Jordan"></span>Jordan</li>
                     <li><span class="fl" data-flag="India"></span>India</li>
@@ -531,7 +638,7 @@
                             <dd>Via WhatsApp, Phone or by Appointment.</dd>
                         </dl>
                     </div>
-                    <div class="card mp"><iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1803.2844772203935!2d55.45729078846761!3d25.318682368974986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sSharjah%20Publishing%20City%2C%20Gulf%20Books%20Publisher%2C%20Sharjah%2C%20UAE.!5e0!3m2!1sen!2s!4v1793621425241!5m2!1sen!2s"
+                    <div class="card mp"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14425.816014515953!2d55.45373833726502!3d25.322542121723192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f26195b7e6b%3A0xc0f6d4eb509bdf75!2sSPC%20Free%20Zone%20-%20Business%20Setup%20In%20Sharjah%2C%20UAE!5e0!3m2!1sen!2s!4v1794000666819!5m2!1sen!2s"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
                 </div>
             </div>
@@ -543,7 +650,7 @@
                 <div class="row"><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a><a class="btn" href="free-quote.html">Get a Quote</a></div>
             </div>
         </aside>
-
+        <!-- 
         <section>
             <div class="w">
                 <h2 id="guides">Free Publishing Guides for Gulf Authors</h2>
@@ -560,7 +667,7 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="band" id="faq">
             <div class="w">
@@ -620,7 +727,9 @@
                     </details>
                     <details>
                         <summary>Is Gulf Books Publisher the same company as Gulf Book Publishers, Gulf Publisher or other similar names?</summary>
-                        <p>No. Gulf Books Publisher operates only from gulfbookspublisher.com and is not affiliated with other companies that have similar names. See our <a href="about.html"> About Us</a> page for Office Address, Contact No & Official Email Address.</p>
+                        <p>No. Gulf Books Publisher operates only from gulfbookspublisher.com and is not affiliated with other companies that have similar names. See our <a href="about.html"> About Us</a> page for Office Address, Contact No & Official Email
+                            Address.
+                        </p>
                     </details>
                 </div>
             </div>

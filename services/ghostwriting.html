@@ -12,21 +12,114 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
     <link rel="stylesheet" href="../style.css">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="bingbot" content="noindex, nofollow">
     <style>
         /* Hero form country code dropdown */
-        #qf .pfp { display: flex; gap: 8px; margin-bottom: 10px; }
-        #qf .pfp .cc { position: relative; flex-shrink: 0; }
-        #qf .pfp .cc > button { display: inline-flex; align-items: center; gap: 6px; padding: 10px 10px; border-radius: 6px; cursor: pointer; font-size: 14px; white-space: nowrap; height: 100%; }
-        #qf .pfp .cc > button .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
-        #qf .pfp .cc > button span:not(.flag-img) { font-size: 14px; }
-        #qf .pfp .cc > button i { display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid #333; margin-left: 2px; }
-        #qf .pfp .cc > ul { position: absolute; top: calc(100% + 4px); left: 0; min-width: 240px; max-height: 260px; overflow-y: auto; margin: 0; padding: 4px 0; list-style: none; background: #fff; border: 1px solid #d9d9d9; border-radius: 6px; box-shadow: 0 6px 20px rgba(0,0,0,0.10); z-index: 30; }
-        #qf .pfp .cc > ul li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 12px; cursor: pointer; font-size: 14px; }
-        #qf .pfp .cc > ul li:hover { background: #f5f7fb; }
-        #qf .pfp .cc > ul li .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; margin-right: 8px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
-        #qf .pfp .cc > ul li span { flex: 1 1 auto; text-align: left; }
-        #qf .pfp .cc > ul li b { color: #666; font-weight: 500; }
-        #qf .pfp input[type="tel"] { flex: 1 1 auto; min-width: 0; margin: 0; }
+        
+        #qf .pfp {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        
+        #qf .pfp .cc {
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        #qf .pfp .cc>button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            white-space: nowrap;
+            height: 100%;
+        }
+        
+        #qf .pfp .cc>button .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #qf .pfp .cc>button span:not(.flag-img) {
+            font-size: 14px;
+        }
+        
+        #qf .pfp .cc>button i {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 5px solid #333;
+            margin-left: 2px;
+        }
+        
+        #qf .pfp .cc>ul {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            min-width: 240px;
+            max-height: 260px;
+            overflow-y: auto;
+            margin: 0;
+            padding: 4px 0;
+            list-style: none;
+            background: #fff;
+            border: 1px solid #d9d9d9;
+            border-radius: 6px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+            z-index: 30;
+        }
+        
+        #qf .pfp .cc>ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        #qf .pfp .cc>ul li:hover {
+            background: #f5f7fb;
+        }
+        
+        #qf .pfp .cc>ul li .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #qf .pfp .cc>ul li span {
+            flex: 1 1 auto;
+            text-align: left;
+        }
+        
+        #qf .pfp .cc>ul li b {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        #qf .pfp input[type="tel"] {
+            flex: 1 1 auto;
+            min-width: 0;
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -90,9 +183,9 @@
                 <div>
                     <p class="small">UAE · Saudi Arabia · Qatar · Kuwait · Bahrain · Oman</p>
                     <h1>Book Writing and Ghostwriting Services in the Gulf: Your Story, Your Name, Written Properly in Arabic or English</h1>
-                    <p>Most people with a book in them do not have the months it takes to write one. <a href="../index.html"> Gulf Books Publisher</a> provides book writing and ghostwriting services in the Gulf for authors who have the story, the expertise or the outline and want a
-                        professional writer to turn it into a finished manuscript in their own voice. Whether you are based in Dubai, Riyadh, Doha, Kuwait City, Manama or Muscat, you work with writers who interview you, draft in Arabic or English, and
-                        pass the manuscript straight to editing, design and publishing, with a written quote first and an NDA on request. You keep the credit and the rights.</p>
+                    <p>Most people with a book in them do not have the months it takes to write one. <a href="../index.html"> Gulf Books Publisher</a> provides book writing and ghostwriting services in the Gulf for authors who have the story, the expertise
+                        or the outline and want a professional writer to turn it into a finished manuscript in their own voice. Whether you are based in Dubai, Riyadh, Doha, Kuwait City, Manama or Muscat, you work with writers who interview you, draft
+                        in Arabic or English, and pass the manuscript straight to editing, design and publishing, with a written quote first and an NDA on request. You keep the credit and the rights.</p>
                     <div class="row">
                         <a class="btn" href="../free-quote.html">Get My Itemised Quote</a>
                         <a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a>
@@ -185,8 +278,8 @@
                 <h2>Arabic and English Ghostwriting</h2>
                 <p>Arabic ghostwriting is not English ghostwriting translated. Our native Arabic writers work in Arabic from the first interview, so the voice is natural rather than converted. They judge when a passage calls for Modern Standard Arabic and
                     when Gulf dialect belongs in dialogue, handle names, quotations and honorifics with care, and keep the tone right for your readers, whether the book is a memoir, a business title or a children&rsquo;s story.</p>
-                <p>English manuscripts are written to the spelling convention you prefer, British or American, with attention to voice rather than a stock style. <a href="../index.html"> Gulf Books Publisher</a> keeps Arabic and English writing, editing and formatting under one roof,
-                    so an author who wants both languages works with one team.</p>
+                <p>English manuscripts are written to the spelling convention you prefer, British or American, with attention to voice rather than a stock style. <a href="../index.html"> Gulf Books Publisher</a> keeps Arabic and English writing, editing
+                    and formatting under one roof, so an author who wants both languages works with one team.</p>
             </div>
         </section>
 
@@ -317,7 +410,8 @@
                     </details>
                     <details>
                         <summary>Is my story kept confidential?</summary>
-                        <p>Yes. We sign an NDA on request, share drafts and recordings through secure channels, and never publicise your project. Confidentiality is built into how <a href="../index.html"> Gulf Books Publisher</a> handles every ghostwriting engagement. <span class="ph">[Confirm]</span></p>
+                        <p>Yes. We sign an NDA on request, share drafts and recordings through secure channels, and never publicise your project. Confidentiality is built into how <a href="../index.html"> Gulf Books Publisher</a> handles every ghostwriting
+                            engagement. <span class="ph">[Confirm]</span></p>
                     </details>
                     <details>
                         <summary>Do you write books in Arabic as well as English?</summary>
@@ -462,7 +556,9 @@
         <ul id="oc"></ul>
         <div id="gd"></div>
         <div class="cv" id="cv"></div>
-        <div class="mq"><div class="mt" id="mt"></div></div>
+        <div class="mq">
+            <div class="mt" id="mt"></div>
+        </div>
         <div id="lb"><img alt=""></div>
         <div id="qv"></div>
     </div>
