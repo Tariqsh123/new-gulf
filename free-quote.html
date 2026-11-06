@@ -21,9 +21,11 @@
             border-radius: 2px;
             box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
         }
+        
         .cc button .flag-img {
             margin-right: 6px;
         }
+        
         #qcl li .flag-img {
             margin-right: 8px;
         }
@@ -145,43 +147,29 @@
             </div>
         </section>
 
-        <section class="band" id="cost">
-            <div class="w">
-                <h2>Starting Prices</h2>
-                <p>These are our starting prices. Your quote itemises everything, and the final price depends on word count, editing depth, cover complexity, illustrations, print format and marketing.</p>
-                <div class="grid">
-                    <div class="card">
-                        <h3>Publish my eBook</h3>
-                        <div class="price">From AED 1,500</div>
-                        <p>Formatting, cover, ISBN and Amazon KDP set-up.</p><a href="free-quote.html"> Get this quote</a></div>
-                    <div class="card">
-                        <h3>Edit, design and publish</h3>
-                        <div class="price">From AED 2,000</div>
-                        <p>Editing, cover design, print and eBook formatting, ISBN and distribution.</p><a href="free-quote.html"> Get this quote</a></div>
-                    <div class="card">
-                        <h3>Full publishing and launch</h3>
-                        <div class="price">From AED 3,500</div>
-                        <p>Everything in the previous tier plus a printed proof, a marketing plan and an author website.</p><a href="free-quote.html"> Get this quote</a></div>
-                </div>
-            </div>
-        </section>
-
-        <aside class="w cs">
-            <div class="cb">
-                <div><strong>Ready to request your quote?</strong><span>Itemised prices and a written timeline before any work begins.</span></div>
-                <div class="row"><a class="btn" href="#quote">Get My Itemised Quote</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
-            </div>
-        </aside>
 
         <section>
             <div class="w">
                 <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/how-section-img.webp" width="1000" height="563" alt="Author at a desk looking at the Dubai skyline with icons for writing, design, publishing, printing and distribution" loading="lazy">
+
                 <h2>What Happens Next</h2>
+
                 <ol class="steps">
-                    <li><b>We review your details</b>A member of our team reads your enquiry and any file you attached.</li>
-                    <li><b>We contact you</b>We reply within <span class="ph">[number]</span> working days to arrange your free 30-minute consultation by video, phone or WhatsApp.</li>
-                    <li><b>You receive your quote</b>We send an itemised quote with a written timeline.</li>
-                    <li><b>You decide</b>There is no pressure. If you go ahead, we send a plain-language agreement, and work begins only once you approve it.</li>
+                    <li>
+                        <b>We review your details</b> A member of our team reads your enquiry and any file you attached.
+                    </li>
+
+                    <li>
+                        <b>We contact you</b> We reply within <span class="ph">4 hours</span> to arrange your free 30-minute consultation by video, phone or WhatsApp.
+                    </li>
+
+                    <li>
+                        <b>You receive your quote</b> We send an itemised quote with a written timeline, along with the NDA and Service Agreement for your review and decision.
+                    </li>
+
+                    <li>
+                        <b>You decide</b> There is no pressure. If you decide to go ahead, simply send us the signed agreement and NDA. We will then share the invoice so we can get started.
+                    </li>
                 </ol>
             </div>
         </section>
@@ -189,7 +177,8 @@
         <section class="band">
             <div class="w">
                 <h2>Your Manuscript Stays Private</h2>
-                <p>Your manuscript is confidential. We use it only to prepare your quote and to deliver the services you choose, and we will sign a non-disclosure agreement (NDA) on request. You can read more in our Privacy Policy.</p>
+                <p>Your manuscript is confidential. We use it only to prepare your quote and to deliver the services you choose, and we will sign a non-disclosure agreement (NDA) on request. You can read more in our <a href="privacy-policy.html"> Privacy Policy</a>.</p>
+                <a href="#"><button class="btn">Get Started</button></a>
             </div>
         </section>
 
@@ -279,58 +268,68 @@
     </footer>
 
     <script>
-        (function () {
-            var $ = function (id) { return document.getElementById(id); };
+        (function() {
+            var $ = function(id) {
+                return document.getElementById(id);
+            };
 
             /* ---------- WhatsApp number fix ---------- */
-            document.querySelectorAll('a[href*="wa.me/971500000000"]').forEach(function (a) {
+            document.querySelectorAll('a[href*="wa.me/971500000000"]').forEach(function(a) {
                 a.href = a.href.replace('971500000000', '971581969313');
             });
 
             /* ---------- Nav dropdowns ---------- */
-            document.querySelectorAll('.dd-t').forEach(function (btn) {
-                btn.addEventListener('click', function (e) {
-                    e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.dd-t').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     var dd = this.closest('.dd');
                     var wasOpen = dd.classList.contains('open');
-                    document.querySelectorAll('.dd.open').forEach(function (d) {
+                    document.querySelectorAll('.dd.open').forEach(function(d) {
                         d.classList.remove('open');
-                        var t = d.querySelector('.dd-t'); if (t) t.setAttribute('aria-expanded', 'false');
+                        var t = d.querySelector('.dd-t');
+                        if (t) t.setAttribute('aria-expanded', 'false');
                     });
-                    if (!wasOpen) { dd.classList.add('open'); this.setAttribute('aria-expanded', 'true'); }
+                    if (!wasOpen) {
+                        dd.classList.add('open');
+                        this.setAttribute('aria-expanded', 'true');
+                    }
                 });
             });
-            document.addEventListener('click', function () {
-                document.querySelectorAll('.dd.open').forEach(function (d) {
+            document.addEventListener('click', function() {
+                document.querySelectorAll('.dd.open').forEach(function(d) {
                     d.classList.remove('open');
-                    var t = d.querySelector('.dd-t'); if (t) t.setAttribute('aria-expanded', 'false');
+                    var t = d.querySelector('.dd-t');
+                    if (t) t.setAttribute('aria-expanded', 'false');
                 });
             });
 
             /* ---------- Mobile menu ---------- */
-            var menu = $('menu'), navLinks = $('navLinks');
+            var menu = $('menu'),
+                navLinks = $('navLinks');
             if (menu && navLinks) {
-                menu.addEventListener('click', function (e) {
-                    e.preventDefault(); e.stopPropagation();
+                menu.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     var isOpen = this.getAttribute('aria-expanded') === 'true';
                     this.setAttribute('aria-expanded', String(!isOpen));
                     navLinks.classList.toggle('open', !isOpen);
                 });
-                navLinks.querySelectorAll('a').forEach(function (a) {
-                    a.addEventListener('click', function () {
+                navLinks.querySelectorAll('a').forEach(function(a) {
+                    a.addEventListener('click', function() {
                         if (window.innerWidth <= 900) {
                             menu.setAttribute('aria-expanded', 'false');
                             navLinks.classList.remove('open');
                         }
                     });
                 });
-                document.addEventListener('click', function (e) {
+                document.addEventListener('click', function(e) {
                     if (!navLinks.classList.contains('open')) return;
                     if (e.target.closest('header')) return;
                     menu.setAttribute('aria-expanded', 'false');
                     navLinks.classList.remove('open');
                 });
-                window.addEventListener('resize', function () {
+                window.addEventListener('resize', function() {
                     if (window.innerWidth > 900) {
                         menu.setAttribute('aria-expanded', 'false');
                         navLinks.classList.remove('open');
@@ -354,7 +353,9 @@
                 ["Iraq", "iq", "+964"]
             ];
 
-            var qcb = $('qcb'), qcl = $('qcl'), curCc = 0;
+            var qcb = $('qcb'),
+                qcl = $('qcl'),
+                curCc = 0;
 
             function setCountryCode(i) {
                 curCc = i;
@@ -368,7 +369,7 @@
             }
 
             if (qcl) {
-                qcl.innerHTML = CCS.map(function (c, i) {
+                qcl.innerHTML = CCS.map(function(c, i) {
                     return '<li role="option" data-i="' + i + '">' +
                         '<img src="https://flagcdn.com/w40/' + c[1] + '.png" alt="' + c[0] + '" class="flag-img">' +
                         '<span>' + c[0] + '</span><b>' + c[2] + '</b></li>';
@@ -376,18 +377,18 @@
                 setCountryCode(0);
 
                 if (qcb) {
-                    qcb.addEventListener('click', function (e) {
+                    qcb.addEventListener('click', function(e) {
                         e.preventDefault();
                         var h = qcl.hidden;
                         qcl.hidden = !h;
                         qcb.setAttribute('aria-expanded', String(h));
                     });
                 }
-                qcl.addEventListener('click', function (e) {
+                qcl.addEventListener('click', function(e) {
                     var li = e.target.closest('li');
                     if (li) setCountryCode(+li.dataset.i);
                 });
-                document.addEventListener('click', function (e) {
+                document.addEventListener('click', function(e) {
                     if (qcl && !qcl.hidden && !e.target.closest('.cc')) {
                         qcl.hidden = true;
                         qcb.setAttribute('aria-expanded', 'false');
@@ -399,50 +400,62 @@
             function fillSelect(sel, opts, placeholder) {
                 if (!sel) return;
                 sel.innerHTML = (placeholder ? '<option value="">' + placeholder + '</option>' : '') +
-                    opts.map(function (o) { return '<option>' + o + '</option>'; }).join('');
+                    opts.map(function(o) {
+                        return '<option>' + o + '</option>';
+                    }).join('');
             }
 
-            fillSelect($('qc'), ["UAE","Saudi Arabia","Qatar","Kuwait","Bahrain","Oman",
-                "Jordan","India","Egypt","Nigeria","Bangladesh","Iraq","Other country"]);
-            fillSelect($('qg'), ["Fiction","Romance","Mystery and thriller",
-                "Fantasy and science fiction","Historical fiction","Literary fiction",
-                "Non-fiction","Memoir and biography","Self-help and personal development",
-                "Business and leadership","Religion and spirituality","Poetry",
-                "Children’s and picture books","Educational and academic","Cookbooks","Other"],
+            fillSelect($('qc'), ["UAE", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman",
+                "Jordan", "India", "Egypt", "Nigeria", "Bangladesh", "Iraq", "Other country"
+            ]);
+            fillSelect($('qg'), ["Fiction", "Romance", "Mystery and thriller",
+                    "Fantasy and science fiction", "Historical fiction", "Literary fiction",
+                    "Non-fiction", "Memoir and biography", "Self-help and personal development",
+                    "Business and leadership", "Religion and spirituality", "Poetry",
+                    "Children’s and picture books", "Educational and academic", "Cookbooks", "Other"
+                ],
                 'Select genre');
-            fillSelect($('qw'), ["Under 20,000 words","20,000 to 50,000 words",
-                "50,000 to 80,000 words","Over 80,000 words","Not sure yet"],
+            fillSelect($('qw'), ["Under 20,000 words", "20,000 to 50,000 words",
+                    "50,000 to 80,000 words", "Over 80,000 words", "Not sure yet"
+                ],
                 'Approximate word count');
-            fillSelect($('qm'), ["My manuscript is complete","I am still writing",
-                "I only have an idea"], 'Manuscript status');
+            fillSelect($('qm'), ["My manuscript is complete", "I am still writing",
+                "I only have an idea"
+            ], 'Manuscript status');
 
             /* ---------- Services chips ---------- */
             var qs = $('qs');
             if (qs) {
-                qs.addEventListener('click', function (e) {
+                qs.addEventListener('click', function(e) {
                     var b = e.target.closest('button');
                     if (b) b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') !== 'true');
                 });
             }
 
             /* ---------- File drop ---------- */
-            var dz = $('dz'), qfi = $('qfi'), qfn = $('qfn');
+            var dz = $('dz'),
+                qfi = $('qfi'),
+                qfn = $('qfn');
             if (dz && qfi && qfn) {
-                qfi.addEventListener('change', function () {
+                qfi.addEventListener('change', function() {
                     qfn.textContent = this.files.length ? this.files[0].name : 'Word, PDF or text file. Optional.';
                 });
-                ['dragenter', 'dragover'].forEach(function (t) {
-                    dz.addEventListener(t, function () { this.classList.add('on'); });
+                ['dragenter', 'dragover'].forEach(function(t) {
+                    dz.addEventListener(t, function() {
+                        this.classList.add('on');
+                    });
                 });
-                ['dragleave', 'drop'].forEach(function (t) {
-                    dz.addEventListener(t, function () { this.classList.remove('on'); });
+                ['dragleave', 'drop'].forEach(function(t) {
+                    dz.addEventListener(t, function() {
+                        this.classList.remove('on');
+                    });
                 });
             }
 
             /* ---------- Form submit ---------- */
             var qq = $('qq');
             if (qq) {
-                qq.addEventListener('submit', function (e) {
+                qq.addEventListener('submit', function(e) {
                     e.preventDefault();
                     var n = $('qn').value.trim();
                     var m = $('qe').value.trim();
@@ -457,7 +470,9 @@
                     if (!n || !emailOk || !phoneOk) return;
 
                     var selected = qs ? [].slice.call(qs.querySelectorAll('[aria-pressed=true]'))
-                        .map(function (x) { return x.textContent; }) : [];
+                        .map(function(x) {
+                            return x.textContent;
+                        }) : [];
 
                     qq.style.display = 'none';
                     var ok = $('qok');
@@ -470,13 +485,16 @@
             }
 
             /* ---------- "Get this quote" buttons scroll to form ---------- */
-            document.addEventListener('click', function (e) {
+            document.addEventListener('click', function(e) {
                 var b = e.target.closest('[data-s]');
                 if (!b) return;
                 var d = $('qd');
                 if (d) d.value = 'Package: ' + b.dataset.s;
                 var target = $('quote');
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (target) target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             });
         })();
     </script>

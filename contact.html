@@ -13,19 +13,109 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Hero form country code dropdown */
-        #qf .pfp { display: flex; gap: 8px; margin-bottom: 10px; }
-        #qf .pfp .cc { position: relative; flex-shrink: 0; }
-        #qf .pfp .cc > button { display: inline-flex; align-items: center; gap: 6px; padding: 10px 10px; border-radius: 6px; cursor: pointer; font-size: 14px; white-space: nowrap; height: 100%; }
-        #qf .pfp .cc > button .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
-        #qf .pfp .cc > button span:not(.flag-img) { font-size: 14px; }
-        #qf .pfp .cc > button i { display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid #333; margin-left: 2px; }
-        #qf .pfp .cc > ul { position: absolute; top: calc(100% + 4px); left: 0; min-width: 240px; max-height: 260px; overflow-y: auto; margin: 0; padding: 4px 0; list-style: none; background: #fff; border: 1px solid #d9d9d9; border-radius: 6px; box-shadow: 0 6px 20px rgba(0,0,0,0.10); z-index: 30; }
-        #qf .pfp .cc > ul li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 12px; cursor: pointer; font-size: 14px; }
-        #qf .pfp .cc > ul li:hover { background: #f5f7fb; }
-        #qf .pfp .cc > ul li .flag-img { width: 22px; height: auto; display: inline-block; vertical-align: middle; margin-right: 8px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
-        #qf .pfp .cc > ul li span { flex: 1 1 auto; text-align: left; }
-        #qf .pfp .cc > ul li b { color: #666; font-weight: 500; }
-        #qf .pfp input[type="tel"] { flex: 1 1 auto; min-width: 0; margin: 0; }
+        
+        #qf .pfp {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        
+        #qf .pfp .cc {
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        #qf .pfp .cc>button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            white-space: nowrap;
+            height: 100%;
+        }
+        
+        #qf .pfp .cc>button .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #qf .pfp .cc>button span:not(.flag-img) {
+            font-size: 14px;
+        }
+        
+        #qf .pfp .cc>button i {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 5px solid #333;
+            margin-left: 2px;
+        }
+        
+        #qf .pfp .cc>ul {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            min-width: 240px;
+            max-height: 260px;
+            overflow-y: auto;
+            margin: 0;
+            padding: 4px 0;
+            list-style: none;
+            background: #fff;
+            border: 1px solid #d9d9d9;
+            border-radius: 6px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+            z-index: 30;
+        }
+        
+        #qf .pfp .cc>ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        #qf .pfp .cc>ul li:hover {
+            background: #f5f7fb;
+        }
+        
+        #qf .pfp .cc>ul li .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #qf .pfp .cc>ul li span {
+            flex: 1 1 auto;
+            text-align: left;
+        }
+        
+        #qf .pfp .cc>ul li b {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        #qf .pfp input[type="tel"] {
+            flex: 1 1 auto;
+            min-width: 0;
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -161,8 +251,8 @@
             <div class="w hero">
                 <div>
                     <p class="small">UAE · Saudi Arabia · Qatar · Kuwait · Bahrain · Oman</p>
-                    <h1>Contact Gulf Books Publisher: Talk to a Real Person</h1>
-                    <p>Whether you have a finished manuscript, a rough idea or a question about cost, we are happy to talk. You will speak with a member of our team, and every project has a named project manager from the first conversation onward. We work in Arabic and English.</p>
+                    <h1>Contact Gulf Books Publisher Team</h1>
+                    <!-- <p>Whether you have a finished manuscript, a rough idea or a question about cost, we are happy to talk. You will speak with a member of our team, and every project has a named project manager from the first conversation onward. We work in Arabic and English.</p>
                     <p><b>Ways to Reach Us</b></p>
                     <ul class="tk">
                         <li>WhatsApp: <span class="ph">+971 58 196 9313</span></li>
@@ -170,14 +260,18 @@
                         <li>Email: <span class="ph">Info@gulfbookspublisher.com</span></li>
                         <li>Office: <span class="ph">Sharjah Publishing City, Gulf Books Publisher, Sharjah, UAE.</span></li>
                         <li>Languages: Arabic and English</li>
-                    </ul>
+                    </ul> -->
+                    <p>Do you have a finished manuscript, a rough idea or a question about cost? </p>
+                    <p>We are happy and always available to talk. You will speak with a member of our team, and every project has an assigned project manager</p>
                     <div class="row"><a class="btn" href="free-quote.html">Send Us a Message</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
-                    <div class="hv"><img src="images/home-before-info-section-img.webp" width="1100" height="619" alt="Gulf Books Publisher office with a reception wall, bookshelves and a meeting room" loading="lazy"></div>
+                    <div class="hv"><img src="images/after-hero-img.webp" width="1100" height="619" alt="Gulf Books Publisher office with a reception wall, bookshelves and a meeting room" loading="lazy"></div>
                 </div>
                 <div>
                     <div class="card form" id="quote">
-                        <h3 class="oh">Send Us a Message<span>We reply within 1 working day</span></h3>
-                        <p class="oi">Tell us how we can help — a publishing enquiry, an existing project, billing, press or anything else. Include your name and book title if your message is about a project already in progress.</p>
+                        <h3 class="oh">Send Us a Message
+                            <span>We reply within 4-5 Hours </span>
+                        </h3>
+                        <p class="oi">Tell us how we can help? A publishing enquiry, an existing project, billing, press, partnership or anything else. Include your name and book title if your message is about a project already in progress.</p>
                         <form id="qf" novalidate>
                             <input id="n" placeholder="Enter your Full Name" aria-label="Full name" autocomplete="name">
                             <div class="err" id="en"></div>
@@ -205,6 +299,7 @@
             </div>
         </section>
 
+
         <section class="band">
             <div class="w">
                 <h2>Ways to Reach Us</h2>
@@ -212,7 +307,6 @@
                 <div class="grid">
                     <div class="card">
                         <h3>WhatsApp</h3>
-                        <p><span class="ph">+971 58 196 9313</span></p>
                         <a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a>
                     </div>
                     <div class="card">
@@ -232,6 +326,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <aside class="w cs">
             <div class="cb">
@@ -257,21 +353,6 @@
             </div>
         </section>
 
-        <section class="band">
-            <div class="w">
-                <h2>Book a Free Consultation</h2>
-                <p>Our 30-minute consultation is free and comes with no obligation. We talk through your manuscript, goals, timeline and budget, then send an itemised quote. Consultations are by video, phone or WhatsApp, so you can speak with us from anywhere in the GCC or beyond.</p>
-                <div class="row" style="margin:0"><a class="btn" href="free-quote.html">Book a Free Consultation</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
-            </div>
-        </section>
-
-        <section>
-            <div class="w">
-                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-global-img.webp" width="1000" height="563" alt="Author working on a laptop with the Gulf Books Publisher logo and a world map connecting countries to the Gulf" loading="lazy">
-                <h2>Working With Authors in Every GCC Country</h2>
-                <p>We work online with authors in the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman, and with authors in other countries who want to reach Gulf readers. You do not need to visit an office, though you are welcome to if you are nearby .</p>
-            </div>
-        </section>
 
         <aside class="w cs">
             <div class="cb">
@@ -283,54 +364,27 @@
         <section class="band">
             <div class="w">
                 <h2>Existing Authors</h2>
-                <p>If we are working on your book, contact your project manager directly. If you cannot reach them, write to <span class="ph">Info@gulfbookspublisher.com</span> with your book title, and we will pass your message on the same day.</p>
+                <p>
+                    If we are working on your book, contact your project manager directly. If you cannot reach them, write to
+                    <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a> with your book title, and we will resolve your issue on the same day.
+                </p>
             </div>
         </section>
 
         <section>
             <div class="w">
                 <h2>Complaints and Feedback</h2>
-                <p>If something has not gone as it should, tell us. Write to <span class="ph">Info@gulfbookspublisher.com</span> with “Feedback” in the subject line, and we will reply within <span class="ph">+971 58 196 9313</span> working days. Our <a href="privacy-policy.html"> refund policy</a> explains your options if we cannot resolve the issue.</p>
+                <p>
+                    If something has not gone as it should, tell us. Write to
+                    <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a> with “Feedback” in the subject line, and we will reply within
+                    <span class="ph">24 Hours</span>. Our
+                    <a href="privacy-policy.html">refund policy</a> explains your options if we cannot resolve the issue.
+                </p>
             </div>
         </section>
 
-        <section class="band" id="verify">
-            <div class="w">
-                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-before-info-section-img.webp" width="1100" height="619" alt="Gulf Books Publisher office with a reception wall, bookshelves and a meeting room" loading="lazy">
-                <h2>Our Details</h2>
-                <p><a href="index.html"> Gulf Books Publisher</a> operates from gulfbookspublisher.com and is not affiliated with other companies that have similar names.</p>
-                <div class="cd">
-                    <div class="card">
-                        <dl>
-                            
-                            <dt>Registered address</dt>
-                            <dd><span class="ph">Sharjah Publishing City, Gulf Books Publisher, Sharjah, UAE.</span></dd>
-                            <dt>Official email</dt>
-                            <dd><a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a></dd>
-                            <dt>Phone and WhatsApp</dt>
-                            <dd><a href="tel:+971581969313">+971 58 196 9313</a></dd>
-                            <dt>Working hours</dt>
-                            <dd>Monday to Friday, 9:00 AM to 6:00 PM</dd>
-                            <dt>Languages</dt>
-                            <dd>Arabic and English</dd>
-                        </dl>
-                    </div>
-                    <div class="card mp">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1803.2844772203935!2d55.45729078846761!3d25.318682368974986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sSharjah%20Publishing%20City%2C%20Gulf%20Books%20Publisher%2C%20Sharjah%2C%20UAE.!5e0!3m2!1sen!2s!4v1793621425241!5m2!1sen!2s"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="cta">
-            <div class="w">
-                <img src="images/logo.webp" width="358" height="150" alt="Gulf Books Publisher logo" style="display:block;margin:0 auto 20px;height:100px;width:auto;background:#fff;border-radius:8px;padding:4px 8px">
-                <h2>Talk to Us First</h2>
-                <p>Reading about a publisher is helpful, but a conversation is better. Book a free 30-minute consultation and ask us anything about cost, timelines and platforms. There is no obligation.</p>
-                <div class="row"><a class="btn" href="free-quote.html">Get My Itemised Quote</a><a class="btn o" href="free-quote.html">Book a Free Consultation</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
-            </div>
-        </section>
+
     </main>
 
     <footer>
@@ -440,7 +494,9 @@
         <div id="gd"></div>
         <div id="fq"></div>
         <div class="cv" id="cv"></div>
-        <div class="mq"><div class="mt" id="mt"></div></div>
+        <div class="mq">
+            <div class="mt" id="mt"></div>
+        </div>
         <div id="lb"><img alt=""></div>
     </div>
 

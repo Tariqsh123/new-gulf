@@ -12,6 +12,136 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* WhatsApp icon inside .btn */
+        
+        .btn .wa-ic {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+        /* Two-column layout for "If Something Goes Wrong" */
+        
+        .contact-two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        
+        @media (max-width: 900px) {
+            .contact-two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Scoped styles for the inserted contact form country code dropdown */
+        
+        #contact-form #qf .pfp {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        
+        #contact-form #qf .pfp .cc {
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        #contact-form #qf .pfp .cc>button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            white-space: nowrap;
+            height: 100%;
+        }
+        
+        #contact-form #qf .pfp .cc>button .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #contact-form #qf .pfp .cc>button span:not(.flag-img) {
+            font-size: 14px;
+        }
+        
+        #contact-form #qf .pfp .cc>button i {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 5px solid #333;
+            margin-left: 2px;
+        }
+        
+        #contact-form #qf .pfp .cc>ul {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            min-width: 240px;
+            max-height: 260px;
+            overflow-y: auto;
+            margin: 0;
+            padding: 4px 0;
+            list-style: none;
+            background: #fff;
+            border: 1px solid #d9d9d9;
+            border-radius: 6px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+            z-index: 30;
+        }
+        
+        #contact-form #qf .pfp .cc>ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        #contact-form #qf .pfp .cc>ul li:hover {
+            background: #f5f7fb;
+        }
+        
+        #contact-form #qf .pfp .cc>ul li .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #contact-form #qf .pfp .cc>ul li span {
+            flex: 1 1 auto;
+            text-align: left;
+        }
+        
+        #contact-form #qf .pfp .cc>ul li b {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        #contact-form #qf .pfp input[type="tel"] {
+            flex: 1 1 auto;
+            min-width: 0;
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -84,7 +214,12 @@
                         </ul>
                         <div class="card">
                             <h3>Prefer to talk first?</h3>
-                            <p>Message us on WhatsApp, or write to <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a>.</p><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                            <p>Message us on WhatsApp, or write to <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a>.</p>
+                            <a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">
+                                <svg class="wa-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                                <span>Chat on WhatsApp</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="card form">
                         <h3>Tell us about your book</h3>
@@ -146,35 +281,33 @@
             <div class="w hero">
                 <div>
                     <p class="small">UAE · Saudi Arabia · Qatar · Kuwait · Bahrain · Oman</p>
-                    <h1>Author Reviews: What Authors Say About Gulf Books Publisher</h1>
-                    <p>Choosing a publisher means trusting a company with your book, so we want you to be able to check what other authors say. On this page you will find reviews from authors who published with us, along with how we collect them and how we handle criticism.</p>
-                    <p><b>Start with a free consultation and an itemised quote.</b></p>
-                    <div class="row"><a class="btn" href="free-quote.html">Get My Itemised Quote</a><a class="btn o" href="free-quote.html">Book a Free Consultation</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                    <h1>What Authors Say About Gulf Books Publisher</h1>
+                    <p>Choosing a publisher means trusting a company with your book, so we want you to be able to check what other authors say. On this page you will find reviews from authors who published with us, with different genres from different geographies.</p>
+                    <div class="row">
+                        <a class="btn" href="free-quote.html">Get My Itemised Quote</a>
+                        <a class="btn o" href="free-quote.html">Book a Free Consultation</a>
+                        <a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">
+                            <svg class="wa-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <div class="hv"><img src="images/after-hero-img.webp" width="1100" height="619" alt="Gulf Books Publisher stand in a Gulf shopping mall with visitors browsing books" loading="lazy"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="band" id="policy">
-            <div class="w">
-                <h2>Our Review Policy</h2>
-                <div class="card">
-                    <ul style="list-style: none;">
-                        <li>We publish reviews only when the author has agreed.</li>
-                        <li>Every review can be checked against an independent source, such as Trustpilot or Google, and we link to it.</li>
-                        <li>We do not write, edit, buy or invent reviews, and we do not offer discounts or payment in exchange for them.</li>
-                        <li>We do not hide criticism. If an author raises a problem, we respond publicly and try to put it right.</li>
-                        <li>We show the author’s name and book title only with their permission.</li>
-                    </ul>
+                    <style>
+                        @media (max-width: 767px) {
+                            .hv {
+                                display: none !important;
+                            }
+                        }
+                    </style>
                 </div>
             </div>
         </section>
 
         <section id="verified">
             <div class="w">
-                <h2>Verified Reviews</h2>
+                <h2>Loved by Authors in GCC</h2>
 
                 <!--
                     Replace the sample reviews below with real, verified reviews before publishing.
@@ -215,14 +348,14 @@
                         <div class="swiper-slide">
                             <article class="review-card">
                                 <div class="rev-head">
-                                    <div class="rev-avatar" aria-hidden="true">FK</div>
+                                    <div class="rev-avatar" aria-hidden="true">FA</div>
                                     <div>
                                         <strong class="rev-name">Fatima Al Kuwari</strong>
                                         <span class="rev-country">Qatar</span>
                                     </div>
                                 </div>
                                 <div class="rev-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                                <p class="rev-text">“From the first consultation to the printed copies, everything was clear. The itemised quote meant there were no surprises, and the timeline was realistic.”</p>
+                                <p class="rev-text" dir="rtl" lang="ar">منذ الاستشارة الأولى وحتى الحصول على النسخ المطبوعة، كان كل شيء واضحاً. عرض السعر المفصّل يعني عدم وجود أي مفاجآت، وكان الجدول الزمني واقعياً.</p>
                             </article>
                         </div>
 
@@ -250,7 +383,7 @@
                                     </div>
                                 </div>
                                 <div class="rev-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                                <p class="rev-text">“My children’s book needed illustrations and a careful layout. The team was patient with revisions and the final print quality was excellent.”</p>
+                                <p class="rev-text">كتاب الأطفال الخاص بي كان بحاجة إلى رسوم توضيحية وتنسيق دقيق. كان الفريق صبوراً جداً مع المراجعات، وجودة الطباعة النهائية كانت ممتازة.</p>
                             </article>
                         </div>
 
@@ -275,6 +408,28 @@
                 </div>
             </div>
         </section>
+        <section class="trust-feedback">
+            <div class="w">
+                <div class="trust-feedback-content">
+
+                    <h2>Published with us?</h2>
+
+                    <p class="trust-feedback-desc">
+                        We would value your honest feedback, good or bad. You can review us on our Trustpilot Profile below.
+                    </p>
+
+                    <div class="trustpilot-brand">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNUOuek3aPxjw_L25qj3oDxtqAjUfn30WZs2jXRptgBzYv_VvuAg1EEUQh&s=10" alt="Trustpilot Logo" width="" style="border: 1px solid rgb(178, 214, 255);" height="100" loading="lazy">
+                    </div>
+
+                    <p class="trust-feedback-email">
+                        You can also write to us at
+                        <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a>, and if you agree, we will ask for permission before sharing your comments or reviews anywhere.
+                    </p>
+
+                </div>
+            </div>
+        </section>
 
         <aside class="w cs">
             <div class="cb">
@@ -283,41 +438,115 @@
             </div>
         </aside>
 
-        <section class="band" id="leave-review">
+        <!-- ===== If Something Goes Wrong: text left, contact form right ===== -->
+        <section id="contact-form">
             <div class="w">
-                <h2>Leave a Review</h2>
-                <p>Published with us? We would value your honest feedback, good or bad. You can review us on:</p>
-                <ul class="chips">
-                    <li><span class="ph">[Trustpilot link]</span></li>
-                    <li><span class="ph">[Google Business Profile link]</span></li>
-                    <li><span class="ph">[Other independent platform link]</span></li>
-                </ul>
-                <p>You can also write to us at <span class="ph">Info@gulfbookspublisher.com</span>, and if you agree, we will ask for permission before sharing your comments anywhere.</p>
+                <div class="contact-two-col">
+                    <div>
+                        <h2>If Something Goes Wrong</h2>
+                        <p>We aim to get every project right, but if something falls short, tell us. Write to <a href="mailto:Info@gulfbookspublisher.com">Info@gulfbookspublisher.com</a> or message us on WhatsApp <a href="https://wa.me/971581969313" target="_blank"
+                                rel="noopener">+971 58 196 9313</a>, and your project manager will reply within 2 working days. If we cannot resolve the issue, our <a href="refund-policy.html">refund policy</a> explains your options for partial or full refund.</p>
+                    </div>
+                    <div class="card form" id="quote">
+                        <h3 class="oh">Send Us a Message<span>We reply within 1 working day</span></h3>
+                        <p class="oi">Tell us how we can help — a publishing enquiry, an existing project, billing, press or anything else. Include your name and book title if your message is about a project already in progress.</p>
+                        <form id="qf" novalidate>
+                            <input id="n" placeholder="Enter your Full Name" aria-label="Full name" autocomplete="name">
+                            <div class="err" id="en"></div>
+                            <input id="e" type="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email">
+                            <div class="err" id="ee"></div>
+                            <div class="pfp">
+                                <div class="cc">
+                                    <button type="button" id="hcb" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>
+                                    <ul id="hcl" role="listbox" hidden></ul>
+                                </div>
+                                <input id="p" type="tel" placeholder="Enter Your Phone or WhatsApp" aria-label="Phone number" autocomplete="tel">
+                            </div>
+                            <div class="err" id="ep"></div>
+                            <select id="c" aria-label="Country"></select>
+                            <select id="g" aria-label="Genre"></select>
+                            <input id="f" type="file" accept=".doc,.docx,.pdf,.txt,.rtf,.odt" aria-label="Upload your manuscript">
+                            <input id="t" placeholder="Subject" aria-label="Subject">
+                            <textarea id="d" rows="4" placeholder="Your message" aria-label="Message"></textarea>
+                            <button class="btn" type="submit" style="width:100%;margin-top:14px">Send Message</button>
+                            <p class="small" style="text-align:center;margin:10px 0 0">By sending this form you agree that <a href="index.html"> Gulf Books Publisher</a> may contact you about your message and process your details as described in the Privacy Policy.</p>
+                        </form>
+                        <div class="ok" id="ok" role="status"></div>
+                    </div>
+                </div>
             </div>
+            <script>
+                (function() {
+                    function initHeroCountryCode() {
+                        var hcb = document.getElementById('hcb');
+                        var hcl = document.getElementById('hcl');
+                        if (!hcb || !hcl) return;
+
+                        var codes = [
+                            ["UAE", "ae", "+971"],
+                            ["Saudi Arabia", "sa", "+966"],
+                            ["Qatar", "qa", "+974"],
+                            ["Kuwait", "kw", "+965"],
+                            ["Bahrain", "bh", "+973"],
+                            ["Oman", "om", "+968"],
+                            ["Jordan", "jo", "+962"],
+                            ["India", "in", "+91"],
+                            ["Egypt", "eg", "+20"],
+                            ["Nigeria", "ng", "+234"],
+                            ["Bangladesh", "bd", "+880"],
+                            ["Iraq", "iq", "+964"]
+                        ];
+                        var cur = 0;
+
+                        function flagImg(iso, name) {
+                            return '<img class="flag-img" src="https://flagcdn.com/w40/' + iso + '.png" alt="' + name + '" loading="lazy">';
+                        }
+
+                        function setCc(i) {
+                            cur = i;
+                            hcb.innerHTML = flagImg(codes[i][1], codes[i][0]) +
+                                '<span>' + codes[i][2] + '</span><i></i>';
+                            hcl.hidden = true;
+                            hcb.setAttribute('aria-expanded', 'false');
+                        }
+
+                        hcl.innerHTML = codes.map(function(c, i) {
+                            return '<li role="option" data-i="' + i + '">' +
+                                flagImg(c[1], c[0]) +
+                                '<span>' + c[0] + '</span><b>' + c[2] + '</b></li>';
+                        }).join('');
+                        setCc(0);
+
+                        hcb.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            var h = hcl.hidden;
+                            hcl.hidden = !h;
+                            hcb.setAttribute('aria-expanded', String(h));
+                        });
+
+                        hcl.addEventListener('click', function(e) {
+                            var li = e.target.closest('li');
+                            if (li) setCc(+li.dataset.i);
+                        });
+
+                        document.addEventListener('click', function(e) {
+                            if (!hcl.hidden && !e.target.closest('#contact-form .cc')) {
+                                hcl.hidden = true;
+                                hcb.setAttribute('aria-expanded', 'false');
+                            }
+                        });
+                    }
+
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initHeroCountryCode);
+                    } else {
+                        initHeroCountryCode();
+                    }
+                })();
+            </script>
         </section>
 
-        <section>
-            <div class="w">
-                <h2>If Something Goes Wrong</h2>
-                <p>We aim to get every project right, but if something falls short, tell us. Write to <span class="ph">Info@gulfbookspublisher.com</span> or message us on WhatsApp <span class="ph"> +971 58 196 9313</span>, and your project manager will reply within <span class="ph"> +971 58 196 9313</span> working days. If we cannot resolve the issue, our <a href="refund-policy.html"> refund policy</a> explains your options.</p>
-            </div>
-        </section>
-
-        <aside class="w cs">
-            <div class="cb">
-                <div><strong>Talk to Us First</strong><span>Reading about a publisher is helpful, but a conversation is better.</span></div>
-                <div class="row"><a class="btn" href="free-quote.html">Book a Free Consultation</a><a class="btn o" href="about.html">Meet the Team</a></div>
-            </div>
-        </aside>
-
-        <section class="cta">
-            <div class="w">
-                <img src="images/logo.webp" width="358" height="150" alt="Gulf Books Publisher logo" style="display:block;margin:0 auto 20px;height:100px;width:auto;background:#fff;border-radius:8px;padding:4px 8px">
-                <h2>Talk to Us First</h2>
-                <p>Reading about a publisher is helpful, but a conversation is better. Book a free 30-minute consultation and ask us anything about cost, timelines and platforms.</p>
-                <div class="row"><a class="btn" href="free-quote.html">Book a Free Consultation</a><a class="btn o" href="about.html">Meet the Team</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -470,7 +699,6 @@
                     navLinks.classList.toggle('open', !isOpen);
                 });
 
-                /* Close panel when a real link is clicked (mobile only) */
                 navLinks.querySelectorAll('a').forEach(function(a) {
                     a.addEventListener('click', function() {
                         if (window.innerWidth <= 900) {
@@ -480,7 +708,6 @@
                     });
                 });
 
-                /* Close panel on outside click */
                 document.addEventListener('click', function(e) {
                     if (!navLinks.classList.contains('open')) return;
                     if (e.target.closest('header')) return;
@@ -488,7 +715,6 @@
                     navLinks.classList.remove('open');
                 });
 
-                /* Reset on resize */
                 window.addEventListener('resize', function() {
                     if (window.innerWidth > 900) {
                         menu.setAttribute('aria-expanded', 'false');
@@ -530,10 +756,16 @@
                     clickable: true
                 },
                 breakpoints: {
-                    640: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 }
+                    640: {
+                        slidesPerView: 2
+                    },
+                    1024: {
+                        slidesPerView: 3
+                    }
                 },
-                a11y: { enabled: true }
+                a11y: {
+                    enabled: true
+                }
             });
         })();
     </script>
