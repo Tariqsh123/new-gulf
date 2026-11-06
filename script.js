@@ -36,7 +36,15 @@ var pg=!p||/^[+()\d][\d\s()+-]{6,}$/.test(p);$('ep').textContent=pg?'':'Enter a 
 if(!n||!good||!pg)return;
 $('qf').style.display='none';var o=$('ok'),t=$('t').value.trim();o.style.display='block';
 o.textContent='Thank you, '+n+'. We have received your request'+(t?' for \u201c'+t+'\u201d':'')+($('f').files.length?' and your manuscript':'')+'. We will reply to '+m+' with an itemised quote.'});
-document.querySelectorAll('.card h3').forEach(function(h){var k=IM[h.textContent];if(k){var s=document.createElement('span');s.className='ib';s.innerHTML=ic(k);h.parentNode.insertBefore(s,h)}});
+document.querySelectorAll('#why .card').forEach(function(card, i) {
+    var icons = ['tag', 'globe', 'build', 'lock'];
+
+    var s = document.createElement('span');
+    s.className = 'ib';
+    s.innerHTML = ic(icons[i]);
+
+    card.insertBefore(s, card.querySelector('h3'));
+});
 document.querySelectorAll('.qs li').forEach(function(li){var d=document.createElement('div');d.className='si';d.innerHTML=ic(li.dataset.ic);li.insertBefore(d,li.firstChild)});
 document.querySelectorAll('.steps:not(.qs) li').forEach(function(li,i){var d=document.createElement('div');d.className='si';d.innerHTML=ic(["chat","docedit","cover","laptop","rocket"][i]);li.insertBefore(d,li.firstChild)});
 var pr=PL.map(function(p){return '<div class="pl"><img src="'+p[1]+'" alt="'+p[0]+'" loading="lazy"></div>'}).join('');$('mt').innerHTML=pr+pr+pr+pr;
