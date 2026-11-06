@@ -10,7 +10,104 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== TEAM SWIPER ===== */
+        .team-swiper {
+            padding: 8px 4px 56px;
+            overflow: hidden;
+        }
+        .team-swiper .swiper-slide {
+            height: auto;
+            display: flex;
+        }
+        .team-card {
+            width: 100%;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 26px 22px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 18px 36px -30px rgba(16, 36, 61, .55);
+        }
+        .team-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 14px;
+            border: 4px solid var(--tint2);
+            background: var(--tint);
+            box-shadow: 0 14px 26px -14px rgba(27, 120, 189, .6);
+            flex: none;
+        }
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .team-name {
+            font: 700 1.15rem Poppins, system-ui, sans-serif;
+            color: var(--acc);
+            margin: 0;
+            text-align: center;
+        }
+        .team-role {
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--accd);
+            margin: 0 0 10px;
+            text-align: center;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+        }
+        .team-bio {
+            font-size: .92rem;
+            line-height: 1.7;
+            color: var(--ink);
+            text-align: center;
+            margin: 0;
+            max-width: none;
+        }
+        .team-swiper .swiper-button-prev,
+        .team-swiper .swiper-button-next {
+            color: var(--acc);
+            --swiper-navigation-size: 26px;
+            width: 42px;
+            height: 42px;
+            background: rgba(255, 255, 255, .92);
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            box-shadow: 0 10px 20px -14px rgba(16, 36, 61, .5);
+        }
+        .team-swiper .swiper-button-prev:hover,
+        .team-swiper .swiper-button-next:hover {
+            background: var(--tint);
+        }
+        .team-swiper .swiper-pagination-bullet {
+            background: var(--tint2);
+            opacity: 1;
+            width: 8px;
+            height: 8px;
+        }
+        .team-swiper .swiper-pagination-bullet-active {
+            background: var(--acc);
+        }
+        @media (max-width: 560px) {
+            .team-card { padding: 22px 18px; }
+            .team-img { width: 120px; height: 120px; }
+            .team-name { font-size: 1.05rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .team-swiper .swiper-wrapper { transition-duration: 0s !important; }
+        }
+    </style>
 </head>
 
 <body>
@@ -159,34 +256,9 @@
 
         <section class="band">
             <div class="w">
-                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/before-service-img.webp" width="1100" height="733" alt="An author writing in a notebook in front of the Gulf Books Publisher logo" loading="lazy">
+                <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/after-hero-img.webp" width="1100" height="733" alt="An author writing in a notebook in front of the Gulf Books Publisher logo" loading="lazy">
                 <h2>Why We Started</h2>
-                <p>Authors in the region kept telling us the same three things. Nobody would state a price. Many publishers worked only in English. And it was often impossible to check who was really behind the company. We built <a href="index.html"> Gulf Books Publisher</a> to fix all three: prices you can see, Arabic and English handled with equal care, and a company you can verify.</p>
-            </div>
-        </section>
-
-        <section id="why">
-            <div class="w">
-                <h2>What We Believe</h2>
-                <p>These are the four commitments we hold ourselves to on every book we publish, in every country we work in.</p>
-                <div class="grid">
-                    <div class="card">
-                        <h3>You should know what you are paying for</h3>
-                        <p>Our starting prices are published, and every quote is itemised. You pay for the services your book needs, not a bundle you did not ask for.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Arabic is a first-class language</h3>
-                        <p>Native Arabic writers and editors work in-house. Cover design, interior formatting and metadata are done for each language, including right-to-left layouts for print and eBook.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Your book stays yours</h3>
-                        <p>You keep your rights. Your ISBNs are registered with you as the publisher, and your Amazon KDP account stays in your name. Every file, cover and proof needs your approval before it goes live.</p>
-                    </div>
-                    <div class="card">
-                        <h3>We make honest claims</h3>
-                        <p>No invented awards, no unverifiable numbers and no reviews we cannot trace. If we cannot prove it, we do not say it.</p>
-                    </div>
-                </div>
+                <p>Authors in the GCC region kept telling us the same three things. Nobody would state the pricing openly mentioned on the website, Many publishers worked only in English only, And it was often impossible to check the team members was behind the company. We built Gulf Books Publisher to fix all three: prices you can see, Arabic and English handled with equal care, and a team you can physically meet at our Sharjah Office or connect via our contact number +971 58 196 9313 or email us at Info@gulfbookspublisher.com</p>
             </div>
         </section>
 
@@ -197,25 +269,6 @@
             </div>
         </aside>
 
-        <section class="band">
-            <div class="w">
-                <h2>What We Do</h2>
-                <p>We cover each stage of the journey, so you are not coordinating five freelancers. You can choose the full package or only the services your book needs.</p>
-                <ul class="chips">
-                    <li>Book publishing and Amazon KDP</li>
-                    <li>Editing and proofreading in English and Arabic</li>
-                    <li>Book cover design and formatting</li>
-                    <li>Book writing and ghostwriting</li>
-                    <li>Book printing</li>
-                    <li>Book marketing and author websites</li>
-                    <li>Audiobook production</li>
-                    <li>Children’s book publishing</li>
-                    <li>Corporate and institutional books</li>
-                </ul>
-                <div class="row" style="margin:0"><a class="btn" href="free-quote.html">Start My Publishing Plan</a><a class="btn o" href="https://wa.me/971581969313" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
-            </div>
-        </section>
-
         <section>
             <div class="w">
                 <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-global-img.webp" width="1000" height="563" alt="Author working on a laptop with the Gulf Books Publisher logo and a world map connecting countries to the Gulf" loading="lazy">
@@ -224,43 +277,86 @@
             </div>
         </section>
 
-        <aside class="w cs">
-            <div class="cb">
-                <div><strong>Not sure which package fits your book?</strong><span>Tell us about your book and we will recommend the right services.</span></div>
-                <div class="row"><a class="btn" href="free-quote.html">Book a Free Consultation</a></div>
-            </div>
-        </aside>
-
-        <section class="band" id="verify">
-            <div class="w">
-                <h2>A Publisher You Can Verify</h2>
-                <p>We put the checkable facts where you can see them.</p>
-                <div class="card">
-                    <dl>
-                        <dt>Office and local contact</dt>
-                        <dd><span class="ph">+971 58 196 9313</span></dd>
-                        <dt>Named team</dt>
-                        <dd>Every project has a named project manager, and the people who work on your book are listed below.</dd>
-                        <dt>Written contract</dt>
-                        <dd>Plain-language terms, your rights stated clearly and a 100% <a href="privacy-policy.html"> refund policy</a>.</dd>
-                    </dl>
-                </div>
-            </div>
-        </section>
-
-        <section>
+        <!-- ============ MEET THE TEAM (SWIPER) ============ -->
+        <section id="team">
             <div class="w">
                 <h2>Meet the Team</h2>
-                <div class="card">
-                    <p><span class="ph">[Add real team profiles: name, role, languages, and a short, truthful bio for each. Include the project managers, the Arabic editors, the English editors, the designers and the sales or customer-support lead. Use real photos only, and do not list anyone who does not work on client projects. Do not add credentials, awards or years of experience that cannot be shown.]</span></p>
-                </div>
-            </div>
-        </section>
+                <p>Real people, real roles. Here are the project managers, editors, designers and support leads who work on author projects every day. Replace these sample profiles with your verified team members and real photos before publishing.</p>
 
-        <section class="band">
-            <div class="w">
-                <h2>Not Affiliated With Similar Names</h2>
-                <p><a href="index.html"> Gulf Books Publisher</a> operates only from gulfbookspublisher.com and is not affiliated with other companies that have similar names. Always check a publisher’s registration before you pay anyone, including us.</p>
+                <div class="swiper team-swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Ahmed Hassan" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Ahmed Hassan</h3>
+                                <p class="team-role">Managing Director</p>
+                                <p class="team-bio">Ahmed leads Gulf Books Publisher and works closely with authors on strategy, pricing and timelines. He speaks Arabic and English and is based at our Sharjah office.</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Layla Al Farsi" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Layla Al Farsi</h3>
+                                <p class="team-role">Project Manager</p>
+                                <p class="team-bio">Layla coordinates every stage of a book project, from the first quote to final approval, and keeps authors updated on WhatsApp and email.</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Omar Khalid" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Omar Khalid</h3>
+                                <p class="team-role">Senior Arabic Editor</p>
+                                <p class="team-bio">Omar handles Arabic editing and proofreading for fiction and non-fiction, with a focus on natural, readable Gulf Arabic.</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Sarah Mitchell" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Sarah Mitchell</h3>
+                                <p class="team-role">English Editor</p>
+                                <p class="team-bio">Sarah works on English developmental editing, copy-editing and proofreading, and helps authors prepare clean files for Amazon KDP.</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Youssef Nabil" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Youssef Nabil</h3>
+                                <p class="team-role">Lead Designer</p>
+                                <p class="team-bio">Youssef designs book covers and interiors for print and eBook, including children’s book illustrations and layout formatting.</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Nadia Rahman" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Nadia Rahman</h3>
+                                <p class="team-role">Customer Success Lead</p>
+                                <p class="team-bio">Nadia is the first point of contact for new authors, handles free consultations and makes sure every question is answered before a quote is accepted.</p>
+                            </article>
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </section>
 
@@ -462,6 +558,34 @@
             } else {
                 boot();
             }
+        })();
+    </script>
+
+    <!-- Swiper JS + init -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        (function() {
+            if (typeof Swiper === 'undefined') return;
+            new Swiper('.team-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 24,
+                loop: true,
+                grabCursor: true,
+                navigation: {
+                    nextEl: '.team-swiper .swiper-button-next',
+                    prevEl: '.team-swiper .swiper-button-prev'
+                },
+                pagination: {
+                    el: '.team-swiper .swiper-pagination',
+                    clickable: true
+                },
+                breakpoints: {
+                    640: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 },
+                    1280: { slidesPerView: 4 }
+                },
+                a11y: { enabled: true }
+            });
         })();
     </script>
 </body>
