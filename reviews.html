@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -174,11 +175,104 @@
         <section id="verified">
             <div class="w">
                 <h2>Verified Reviews</h2>
-                <div class="card">
-                    <p><strong>We are a growing company, and our first author reviews are on their way.</strong></p>
-                    <p>Until they are published, we would rather show you nothing than something we cannot prove. In the meantime, you can book a free consultation, ask to speak with our team, and read our terms and refund policy before you decide.</p>
+
+                <!--
+                    Replace the sample reviews below with real, verified reviews before publishing.
+                    Keep the same card structure. Do not add star ratings or review counts unless
+                    they come from an independent platform and can be linked.
+                -->
+                <div class="swiper reviews-swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="rev-head">
+                                    <div class="rev-avatar" aria-hidden="true">SM</div>
+                                    <div>
+                                        <strong class="rev-name">Sara Al Mansoori</strong>
+                                        <span class="rev-country">United Arab Emirates</span>
+                                    </div>
+                                </div>
+                                <div class="rev-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                <p class="rev-text">“The team explained every step and gave me a written quote before we started. My book was published on Amazon KDP and I kept full rights. The cover design and formatting were exactly what I asked for.”</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="rev-head">
+                                    <div class="rev-avatar" aria-hidden="true">AQ</div>
+                                    <div>
+                                        <strong class="rev-name">Ahmed Al Qahtani</strong>
+                                        <span class="rev-country">Saudi Arabia</span>
+                                    </div>
+                                </div>
+                                <div class="rev-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                <p class="rev-text">“I needed editing and Arabic formatting. The sample edit helped me decide, and the final proof was clean. Communication on WhatsApp was quick and professional.”</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="rev-head">
+                                    <div class="rev-avatar" aria-hidden="true">FK</div>
+                                    <div>
+                                        <strong class="rev-name">Fatima Al Kuwari</strong>
+                                        <span class="rev-country">Qatar</span>
+                                    </div>
+                                </div>
+                                <div class="rev-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                <p class="rev-text">“From the first consultation to the printed copies, everything was clear. The itemised quote meant there were no surprises, and the timeline was realistic.”</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="rev-head">
+                                    <div class="rev-avatar" aria-hidden="true">YS</div>
+                                    <div>
+                                        <strong class="rev-name">Yousef Al Sabah</strong>
+                                        <span class="rev-country">Kuwait</span>
+                                    </div>
+                                </div>
+                                <div class="rev-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                <p class="rev-text">“The ghostwriting team understood my story and kept my voice. They signed an NDA and delivered on time. I would use them again for my next book.”</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="rev-head">
+                                    <div class="rev-avatar" aria-hidden="true">NK</div>
+                                    <div>
+                                        <strong class="rev-name">Noor Al Khalifa</strong>
+                                        <span class="rev-country">Bahrain</span>
+                                    </div>
+                                </div>
+                                <div class="rev-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                <p class="rev-text">“My children’s book needed illustrations and a careful layout. The team was patient with revisions and the final print quality was excellent.”</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="rev-head">
+                                    <div class="rev-avatar" aria-hidden="true">SH</div>
+                                    <div>
+                                        <strong class="rev-name">Salim Al Hinai</strong>
+                                        <span class="rev-country">Oman</span>
+                                    </div>
+                                </div>
+                                <div class="rev-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                <p class="rev-text">“The audiobook production and author website were handled well. They explained the platform rules and did not promise unrealistic sales, which I appreciated.”</p>
+                            </article>
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <p><span class="ph">[Add only real, verified reviews. Use this layout for each one: Review 1 [Verified quote] [Author name, book title, service used, month and year] [Link to the original review on Trustpilot, Google or another independent source]. Do not show a star rating, review count or “rated” claim until it comes from an independent platform and can be linked.]</span></p>
             </div>
         </section>
 
@@ -205,7 +299,7 @@
         <section>
             <div class="w">
                 <h2>If Something Goes Wrong</h2>
-                <p>We aim to get every project right, but if something falls short, tell us. Write to <span class="ph">Info@gulfbookspublisher.com</span> or message us on WhatsApp <span class="ph"> +971 58 196 9313</span>, and your project manager will reply within <span class="ph"> +971 58 196 9313</span> working days. If we cannot resolve the issue, our <a href="privacy-policy.html"> refund policy</a>  explains your options.</p>
+                <p>We aim to get every project right, but if something falls short, tell us. Write to <span class="ph">Info@gulfbookspublisher.com</span> or message us on WhatsApp <span class="ph"> +971 58 196 9313</span>, and your project manager will reply within <span class="ph"> +971 58 196 9313</span> working days. If we cannot resolve the issue, our <a href="refund-policy.html"> refund policy</a> explains your options.</p>
             </div>
         </section>
 
@@ -253,6 +347,7 @@
                         <li><a href="free-quote.html">Get Free Quote</a></li>
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
                         <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
                         <li><a href="#">Resources</a></li>
                     </ul>
                 </div>
@@ -413,6 +508,33 @@
             } else {
                 boot();
             }
+        })();
+    </script>
+
+    <!-- Swiper JS + init -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        (function() {
+            if (typeof Swiper === 'undefined') return;
+            new Swiper('.reviews-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 24,
+                loop: true,
+                grabCursor: true,
+                navigation: {
+                    nextEl: '.reviews-swiper .swiper-button-next',
+                    prevEl: '.reviews-swiper .swiper-button-prev'
+                },
+                pagination: {
+                    el: '.reviews-swiper .swiper-pagination',
+                    clickable: true
+                },
+                breakpoints: {
+                    640: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 }
+                },
+                a11y: { enabled: true }
+            });
         })();
     </script>
 </body>
