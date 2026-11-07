@@ -27,20 +27,29 @@ var GD = [
     ["How to Publish an Arabic Book", "Editing, right-to-left formatting and distribution"],
     ["Legal Deposit and Book Registration in the GCC", "What each country requires after you publish"]
 ];
-// var FQ = [
-//     ["How do I publish a book in the UAE?", "Start with a free consultation, then editing, cover design, formatting and ISBN registration, followed by platform set-up on Amazon KDP and other retailers and a printed proof. A full-service publisher such as Gulf Books Publisher manages each step and sends a written quote and timeline first. You keep your rights throughout."],
-//     ["How much does it cost to publish a book in the UAE or Saudi Arabia?", "Cost depends on word count, editing depth, cover and interior complexity, illustrations, print format and marketing. Our starting prices are AED 1,500 to publish an eBook, AED 2,000 to edit, design and publish, and AED 3,500 for full publishing and launch. Your quote itemises every service, so you only pay for what your book needs. See our cost guide for a full breakdown."],
-//     ["Do I need an ISBN to publish my book?", "An ISBN is how bookstores, libraries and most online retailers identify your book, so you will need one for those channels. If you are selling only an eBook on Amazon, its own ASIN may be sufficient. We register your ISBNs under your name as publisher and explain the steps for your country."],
-//     ["Do I have to deposit copies of my book with a national library?", "Legal deposit rules exist across the GCC, usually requiring a small number of free copies to go to the national library, and in several countries the deposit is linked to ISBN registration. The receiving body and the rules differ by country: for example, the UAE uses the National Library and Archives and Saudi Arabia uses King Fahd National Library. We tell you what applies to your book and guide you through the paperwork."],
-//     ["How long does it take to publish a book?", "Our typical timeline is about 2 weeks. It depends on your manuscript and the services you choose, and longer books, heavier editing, illustrations or printed proofs can add time. We agree a schedule in writing before work begins, and we do not promise unrealistic turnaround times."],
-//     ["Can you publish my book on Amazon KDP and let me keep my rights?", "Yes. The KDP account is opened in your name, so the rights and the royalties remain yours. Our part is the hands-on work: formatting, metadata, categories and price set-up."],
-//     ["Do you publish Arabic books?", "Yes, in Arabic, English or both, with native Arabic writers and editors in-house and right-to-left formatting for print and eBook. See the Arabic and English section above or visit the Arabic site."],
-//     ["Can authors outside the UAE use your services?", "Yes. We work with authors in the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman. You can speak to us by video call or phone, send your manuscript through a secure upload, and receive your quote in your local currency."],
-//     ["Can I publish with a Gulf-based publisher if I live outside the Gulf?", "Yes. Authors in Jordan, India, Egypt, Nigeria, Bangladesh, Iraq and other countries publish with us entirely online. We handle editing, design, formatting and platform set-up, explain which ISBN and registration route suits your country, and plan your launch so your book can reach readers in the Gulf as well as at home."],
-//     ["Is the consultation really free?", "Yes. The first half-hour call costs nothing and carries no obligation. We go through your manuscript and goals, send you an itemised quote, and you pay only if you choose to proceed. A free cover concept and a short sample edit of your opening pages are included, so you can judge our work first."],
-//     ["What is your refund policy?", "Our packages are covered by a 100% refund policy. [Add the exact conditions: stage, timeframe and how to claim] The full terms are on the refund policy page. [Link]"],
-//     ["Is Gulf Books Publisher the same company as Gulf Book Publishers, Gulf Publisher or other similar names?", "No. Gulf Books Publisher operates only from gulfbookspublisher.com and is not affiliated with other companies that have similar names. Our registered details are on the About page: [company name and licence number]. Always check a publisher’s registration before you pay."]
-// ];
+var FQ = [
+    ["How do I publish a book in the Gulf?", "Start with a free consultation, then editing, cover design, formatting and ISBN registration, followed by platform set-up on Amazon KDP and other retailers and a printed proof. A full-service publisher such as Gulf Books Publisher manages each step and sends a written quote and timeline first. You keep your rights throughout."],
+
+    ["How much does it cost to publish a book in the UAE or Saudi Arabia?", "Cost depends on word count, editing depth, cover and interior complexity, illustrations, print format and marketing. Our starting prices are AED 1,500 to publish an eBook, AED 2,000 to edit, design and publish, and AED 3,500 for full publishing and launch. Your quote itemises every service, so you only pay for what your book needs. See our cost guide for a full breakdown."],
+
+    ["Do I need an ISBN to publish my book?", "An ISBN is how bookstores, libraries and most online retailers identify your book, so you will need one for those channels. If you are selling only an eBook on Amazon, its own ASIN may be sufficient. We register your ISBNs under your name as publisher and explain the steps for your country."],
+
+    ["Do I have to deposit copies of my book with a national library?", "Legal deposit rules exist across the GCC, usually requiring a small number of free copies to go to the national library, and in several countries the deposit is linked to ISBN registration. The receiving body and the rules differ by country: for example, the UAE uses the National Library and Archives and Saudi Arabia uses King Fahd National Library. We tell you what applies to your book and guide you through the paperwork."],
+
+    ["How long does it take to publish a book?", "Our typical timeline is about 2 weeks. It depends on your manuscript and the services you choose, and longer books, heavier editing, illustrations or printed proofs can add time. We agree a schedule in writing before work begins, and we do not promise unrealistic turnaround times."],
+
+    ["Can you publish my book on Amazon KDP and let me keep my rights?", "Yes. The KDP account is opened in your name, so the rights and the royalties remain yours. Our part is the hands-on work: formatting, metadata, categories and price set-up."],
+
+    ["Do you publish Arabic books?", "Yes, in Arabic, English or both, with native Arabic writers and editors in-house and right-to-left formatting for print and eBook. See the Arabic and English section above or visit the Arabic site."],
+
+    ["Can I publish with a Gulf-based publisher if I live outside the Gulf?", "Yes. Authors in Jordan, India, Egypt, Nigeria, Bangladesh, Iraq and other countries publish with us entirely online. We handle editing, design, formatting and platform set-up, explain which ISBN and registration route suits your country, and plan your launch so your book can reach readers in the Gulf as well as at home."],
+
+    ["Is the consultation really free?", "Yes. The first half-hour call costs nothing and carries no obligation. We go through your manuscript and goals, send you an itemised quote, and you pay only if you choose to proceed. A free cover concept and a short sample edit of your opening pages are included, so you can judge our work first."],
+
+    ["What is your refund policy?", "Our packages are covered by a 100% refund policy. The full terms are on the refund policy page."],
+
+    ["Is Gulf Books Publisher the same company as Gulf Book Publishers, Gulf Publisher or other similar names?", "No. Gulf Books Publisher operates only from gulfbookspublisher.com and is not affiliated with other companies that have similar names. See our About Us page for Office Address, Contact No & Official Email Address."]
+];
 var $ = function(i) { return document.getElementById(i) };
 var IC = { tag: "M3 12V4h8l10 10-8 8zM7.5 8.5h.01", globe: "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18", shield: "M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6zM8.5 12l2.5 2.5 5-5", lock: "M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3", book: "M4 4.5A1.5 1.5 0 0 1 5.5 3H19v15H5.5A1.5 1.5 0 0 0 4 19.5zM4 19.5A1.5 1.5 0 0 0 5.5 21H19v-3", edit: "M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4", layout: "M4 4h16v16H4zM4 9h16M9 9v11", quill: "M12 3l5 7-5 11-5-11zM12 10v3", print: "M7 9V4h10v5M7 17H5v-6h14v6h-2M7 14h10v6H7z", mega: "M4 10v4h3l8 4V6L7 10zM18 9a4 4 0 0 1 0 6", head: "M4 15v-3a8 8 0 0 1 16 0v3M4 15h3v5H4zM17 15h3v5h-3z", star: "M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.3l6.1-.7z", build: "M5 21V4h9v17M14 9h5v12M3 21h18M8 8h3M8 12h3M8 16h3", tablet: "M7 3h10v18H7zM11 18h2", up: "M12 20V6M6 12l6-6 6 6M5 20h14", pin: "M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z", user: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0", doc: "M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h7", check: "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM8 12l3 3 5-6", spark: "M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z", search: "M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM16 16l5 5", mark: "M6 3h12v18l-6-4-6 4z", chat: "M4 5h16v11H9l-5 4zM8 9h8M8 12.5h5", docedit: "M6 3h8l4 4v4M14 3v4h4M6 3v18h5M9 11h6M9 15h2M13 21l.8-3.2 6-6 2.4 2.4-6 6z", cover: "M6 3h12v18H6zM9 7h6M9 10h4M9 15v3M11 15v3M13 15v3M15 15v3", laptop: "M4 5h16v11H4zM2 19.5h20M9 10.5l2 2 4-4.5", rocket: "M12 3c3.5 2 5 5.5 5 9l-2 3H9l-2-3c0-3.5 1.5-7 5-9zM12 11.5a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2zM9 15l-3 3 3.2-.6M15 15l3 3-3.2-.6M12 17.5V21" };
 
@@ -135,12 +144,11 @@ if (mtEl) { mtEl.innerHTML = pr + pr + pr + pr; }
 
 /* ---------- COVERS (this now runs!) ---------- */
 var CV = [
-    ["The Dreamer’s Path: A Magical Journey", "Children’s fantasy", "images/The Dreamer’s Path_ A Magical Journey.webp"],
-    ["The Dreaming Arts", "Literary fiction", "images/The Dreaming Arts.webp"],
-    ["The Enigma of Blackwood Manor", "Mystery", "images/The Enigma of Blackwood Manor.webp"],
-    ["The Mild Edges: A Haunted Forest", "Middle grade horror", "images/The Mild Edges_ A Haunted Forest.webp"],
-    ["The Mild Edges: A Magical Adventure", "Middle grade fantasy", "images/The Mild Edges_ A Magical Adventure.webp"],
-    ["The Ocean and Moon: Mystery by Moonlight", "Mystery romance", "images/The Ocean and Moon_ Mystery by Moonlight.webp"]
+    ["23 Years Of Silence", "23 Years Of Silence", "images/1.jpeg"],
+    ["The mirage of Sovireignty", "The mirage of Sovireignty", "images/2.jpeg"],
+    ["The Snack Clock", "The Snack Clock", "images/3.jpeg"],
+    ["The House with No Doors", "The House with No Doors", "images/4.jpeg"],
+    ["The Last Pearl Diver", "The Last Pearl Diver", "images/5.jpeg"],
 ];
 
 $('cv').innerHTML = CV.map(function(c, i) {
