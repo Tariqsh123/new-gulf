@@ -56,19 +56,30 @@ var PL = ["Amazon Kindle", "IngramSpark", "Draft2Digital", "Lulu", "PublishDrive
 function ph(t) { return t.replace(/\[[^\]]+\]/g, function(m) { return '<span class="ph">' + m + '</span>' }) }
 
 function fill(sel, opts, first) { sel.innerHTML = (first ? '<option value="">' + first + '</option>' : '') + opts.map(function(o) { return '<option>' + o + '</option>' }).join('') }
-// $('sv').innerHTML=SV.map(function(s){return '<div class="card"><h3>'+s[0]+'</h3><p>'+ph(s[1])+'</p><button class="go" data-s="'+s[0].replace(/&/g,'&amp;')+'">Visit Page to Learn More ➜</button></div>'}).join('');
+
+/* ---------------- MAIN EXECUTION ---------------- */
 $('gc').innerHTML = GC.map(function(g) {
+    var slug = g[1].toLowerCase().replace(/\s+/g, '-');
     return '<div class="card">' + flag(g[1]) +
         '<h3>' + g[0] + '</h3><p>' + g[2] + '</p>' +
         (g[3] ? '<p><b>' + g[3] + '</b></p>' : '') +
-        '<a class="go" href="book-publishing-and-printing-' + g[1].toLowerCase() + '.html">Publish in ' + g[1] + ' →</a></div>'
+        '<a class="go" href="book-publishing-and-printing-' + slug + '.html">Publish in ' + g[1] + ' →</a></div>';
 }).join('');
+
 $('oc').innerHTML = OC.map(function(c) { return '<li>' + flag(c) + c + '</li>' }).join('');
-$('gd').innerHTML = '<ul class="rs">' + GD.map(function(g) { return '<li><a href="#guides">' + g[0] + '</a><span>' + g[1] + '</span></li>' }).join('') + '</ul>';
+
+/* FIX: #gd does not exist in HTML (commented out) — guard it */
+var gdEl = $('gd');
+if (gdEl) {
+    gdEl.innerHTML = '<ul class="rs">' + GD.map(function(g) { return '<li><a href="#guides">' + g[0] + '</a><span>' + g[1] + '</span></li>' }).join('') + '</ul>';
+}
+
 $('fq').innerHTML = FQ.map(function(f) { return '<details><summary>' + f[0] + '</summary><p>' + ph(f[1]) + '</p></details>' }).join('');
+
 var C = ["UAE", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman"].concat(OC);
 fill($('c'), C);
 fill($('g'), ["Fiction", "Non-fiction", "Memoir and biography", "Children’s and educational", "Business and corporate", "Poetry", "Religious and Islamic", "Academic and self-help", "Other"], 'Select Genre');
+
 var PRE = {};
 document.addEventListener('click', function(e) {
     var b = e.target.closest('[data-s],[data-c]');
@@ -76,6 +87,7 @@ document.addEventListener('click', function(e) {
     PRE = { s: b.dataset.s ? b.dataset.s.replace('&amp;', '&') : '', c: b.dataset.c || '' };
     location.hash = 'get-quote'
 });
+
 $('qf').addEventListener('submit', function(e) {
     e.preventDefault();
     var n = $('n').value.trim(),
@@ -93,25 +105,35 @@ $('qf').addEventListener('submit', function(e) {
     o.style.display = 'block';
     o.textContent = 'Thank you, ' + n + '. We have received your request' + (t ? ' for \u201c' + t + '\u201d' : '') + ($('f').files.length ? ' and your manuscript' : '') + '. We will reply to ' + m + ' with an itemised quote.'
 });
+
 document.querySelectorAll('#why .card').forEach(function(card, i) {
     var icons = ['tag', 'globe', 'build', 'lock'];
-
     var s = document.createElement('span');
     s.className = 'ib';
     s.innerHTML = ic(icons[i]);
-
     card.insertBefore(s, card.querySelector('h3'));
 });
-document.querySelectorAll('.qs li').forEach(function(li) { var d = document.createElement('div');
+
+document.querySelectorAll('.qs li').forEach(function(li) {
+    var d = document.createElement('div');
     d.className = 'si';
     d.innerHTML = ic(li.dataset.ic);
-    li.insertBefore(d, li.firstChild) });
-document.querySelectorAll('.steps:not(.qs) li').forEach(function(li, i) { var d = document.createElement('div');
+    li.insertBefore(d, li.firstChild)
+});
+
+document.querySelectorAll('.steps:not(.qs) li').forEach(function(li, i) {
+    var d = document.createElement('div');
     d.className = 'si';
     d.innerHTML = ic(["chat", "docedit", "cover", "laptop", "rocket"][i]);
-    li.insertBefore(d, li.firstChild) });
+    li.insertBefore(d, li.firstChild)
+});
+
+/* FIX: #mt was replaced by .platform-marquee in HTML — guard it */
 var pr = PL.map(function(p) { return '<div class="pl"><span>' + p + '</span></div>' }).join('');
-$('mt').innerHTML = pr + pr + pr + pr;
+var mtEl = $('mt');
+if (mtEl) { mtEl.innerHTML = pr + pr + pr + pr; }
+
+/* ---------- COVERS (this now runs!) ---------- */
 var CV = [
     ["The Dreamer’s Path: A Magical Journey", "Children’s fantasy", "images/The Dreamer’s Path_ A Magical Journey.webp"],
     ["The Dreaming Arts", "Literary fiction", "images/The Dreaming Arts.webp"],
@@ -120,16 +142,29 @@ var CV = [
     ["The Mild Edges: A Magical Adventure", "Middle grade fantasy", "images/The Mild Edges_ A Magical Adventure.webp"],
     ["The Ocean and Moon: Mystery by Moonlight", "Mystery romance", "images/The Ocean and Moon_ Mystery by Moonlight.webp"]
 ];
-$('cv').innerHTML = CV.map(function(c, i) { return '<button data-k="' + i + '"><img src="' + c[2] + '" alt="' + c[0] + '" loading="lazy">' + c[1] + '</button>' }).join('');
-$('cv').addEventListener('click', function(e) { var b = e.target.closest('button'); if (!b) return; var c = CV[b.dataset.k],
+
+$('cv').innerHTML = CV.map(function(c, i) {
+    return '<button data-k="' + i + '"><img src="' + c[2] + '" alt="' + c[0] + '" loading="lazy">' + c[1] + '</button>'
+}).join('');
+
+$('cv').addEventListener('click', function(e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    var c = CV[b.dataset.k],
         l = $('lb');
     l.firstChild.src = c[2];
     l.firstChild.alt = c[0];
-    l.classList.add('on') });
+    l.classList.add('on')
+});
+
 $('lb').addEventListener('click', function() { this.classList.remove('on') });
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') $('lb').classList.remove('on') });
+
+/* ---------- WhatsApp icons ---------- */
 var WA = '<svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.52.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.483.709.315 1.262.495 1.694.63.712.227 1.36.195 1.871.12.571-.09 1.758-.72 2.006-1.41.248-.69.248-1.275.173-1.41-.074-.135-.272-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375c-.99-1.576-1.516-3.391-1.516-5.26 0-5.445 4.455-9.885 9.942-9.885 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.46 9.885-9.935 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/>';
 document.querySelectorAll('a[href*="wa.me"]').forEach(function(a) { a.insertAdjacentHTML('afterbegin', WA) });
+
+/* ---------- Popup form country-code ---------- */
 var CCS = [
         ["UAE", "+971"],
         ["Saudi Arabia", "+966"],
@@ -146,25 +181,33 @@ var CCS = [
     ],
     cur = 0;
 
-function ccSet(i) { cur = i;
+function ccSet(i) {
+    cur = i;
     $('ccb').innerHTML = flag(CCS[i][0]) + '<span>' + CCS[i][1] + '</span><i></i>';
     $('ccl').hidden = true;
-    $('ccb').setAttribute('aria-expanded', 'false') }
+    $('ccb').setAttribute('aria-expanded', 'false')
+}
 $('ccl').innerHTML = CCS.map(function(c, i) { return '<li role="option" data-i="' + i + '">' + flag(c[0]) + '<span>' + c[0] + '</span><b>' + c[1] + '</b></li>' }).join('');
 ccSet(0);
-$('ccb').addEventListener('click', function() { var h = $('ccl').hidden;
+$('ccb').addEventListener('click', function() {
+    var h = $('ccl').hidden;
     $('ccl').hidden = !h;
-    this.setAttribute('aria-expanded', h) });
+    this.setAttribute('aria-expanded', h)
+});
 $('ccl').addEventListener('click', function(e) { var l = e.target.closest('li'); if (l) ccSet(+l.dataset.i) });
+
+/* ---------- Popup show/hide ---------- */
 var pu = $('pu'),
     pshown = false,
     pseen = false;
 try { pseen = sessionStorage.getItem('pu') } catch (x) {}
 
-function openP() { if (pshown || pseen || !$('qv').hidden) return;
+function openP() {
+    if (pshown || pseen || !$('qv').hidden) return;
     pshown = true;
     pu.hidden = false;
-    $('pn').focus() }
+    $('pn').focus()
+}
 
 function closeP() { pu.hidden = true; try { sessionStorage.setItem('pu', '1') } catch (x) {} }
 setTimeout(openP, 9000);
@@ -172,6 +215,7 @@ document.addEventListener('mouseout', function(e) { if (e.clientY <= 0 && !e.rel
 $('px').addEventListener('click', closeP);
 pu.addEventListener('click', function(e) { if (e.target === pu) closeP() });
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && !pu.hidden) closeP() });
+
 $('pf').addEventListener('submit', function(e) {
     e.preventDefault();
     var n = $('pn').value.trim(),
@@ -190,18 +234,27 @@ $('pf').addEventListener('submit', function(e) {
     try { sessionStorage.setItem('pu', '1') } catch (x) {}
 });
 
+/* ---------- Quote view country code ---------- */
 function mkcc(b, l) {
+    /* FIX: mark as ready so the inline safety script doesn't double-bind */
+    if (b.getAttribute('data-cc-ready') === '1') return function() { return CCS[0] };
+    b.setAttribute('data-cc-ready', '1');
+
     var cu = 0;
 
-    function set(i) { cu = i;
+    function set(i) {
+        cu = i;
         b.innerHTML = flag(CCS[i][0]) + '<span>' + CCS[i][1] + '</span><i></i>';
         l.hidden = true;
-        b.setAttribute('aria-expanded', 'false') }
+        b.setAttribute('aria-expanded', 'false')
+    }
     l.innerHTML = CCS.map(function(c, i) { return '<li role="option" data-i="' + i + '">' + flag(c[0]) + '<span>' + c[0] + '</span><b>' + c[1] + '</b></li>' }).join('');
     set(0);
-    b.onclick = function() { var h = l.hidden;
+    b.onclick = function() {
+        var h = l.hidden;
         l.hidden = !h;
-        b.setAttribute('aria-expanded', h) };
+        b.setAttribute('aria-expanded', h)
+    };
     l.onclick = function(e) { var x = e.target.closest('li'); if (x) set(+x.dataset.i) };
     return function() { return CCS[cu] }
 }
@@ -210,11 +263,13 @@ fill($('qc'), C);
 fill($('qg'), ["Fiction", "Romance", "Mystery and thriller", "Fantasy and science fiction", "Historical fiction", "Literary fiction", "Non-fiction", "Memoir and biography", "Self-help and personal development", "Business and leadership", "Religion and spirituality", "Poetry", "Children\u2019s and picture books", "Educational and academic", "Cookbooks", "Other"], 'Select genre');
 fill($('qw'), ["Under 20,000 words", "20,000 to 50,000 words", "50,000 to 80,000 words", "Over 80,000 words", "Not sure yet"], 'Approximate word count');
 fill($('qm'), ["My manuscript is complete", "I am still writing", "I only have an idea"], 'Manuscript status');
+
 $('qs').innerHTML = SV.map(function(v) { return '<button type="button" aria-pressed="false">' + v[0].replace(/&/g, '&amp;') + '</button>' }).join('');
 $('qs').addEventListener('click', function(e) { var b = e.target.closest('button'); if (b) b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') !== 'true') });
 $('qfi').addEventListener('change', function() { $('qfn').textContent = this.files.length ? this.files[0].name : 'Word, PDF or text file. Optional.' });
 ['dragenter', 'dragover'].forEach(function(t) { $('dz').addEventListener(t, function() { this.classList.add('on') }) });
 ['dragleave', 'drop'].forEach(function(t) { $('dz').addEventListener(t, function() { this.classList.remove('on') }) });
+
 $('qq').addEventListener('submit', function(e) {
     e.preventDefault();
     var n = $('qn').value.trim(),
@@ -238,6 +293,8 @@ $('qq').addEventListener('submit', function(e) {
     a.textContent = 'Back to home';
     o.appendChild(a)
 });
+
+/* ---------- Hash routing ---------- */
 var T0 = document.title;
 var lastY = 0,
     inQ = false,
@@ -245,30 +302,46 @@ var lastY = 0,
     preQ = '';
 
 function route() {
-    var q = location.hash === '#get-quotea';
-    if (q && !inQ) { lastY = window.scrollY;
-        preQ = prevH }
+    var q = location.hash === 'free-quotea.html';
+    if (q && !inQ) {
+        lastY = window.scrollY;
+        preQ = prevH
+    }
     $('qv').hidden = !q;
     $('top').hidden = q;
     document.title = q ? 'Get Your Free Quote | Gulf Books Publisher' : T0;
     var de = document.documentElement;
-    if (q) { if (PRE.c) $('qc').value = PRE.c; if (PRE.s) { var hit = 0;
-            [].forEach.call($('qs').children, function(b) { if (b.textContent === PRE.s) { b.setAttribute('aria-pressed', 'true');
-                    hit = 1 } }); if (!hit && !$('qd').value) $('qd').value = 'Package: ' + PRE.s }
+    if (q) {
+        if (PRE.c) $('qc').value = PRE.c;
+        if (PRE.s) {
+            var hit = 0;
+            [].forEach.call($('qs').children, function(b) {
+                if (b.textContent === PRE.s) {
+                    b.setAttribute('aria-pressed', 'true');
+                    hit = 1
+                }
+            });
+            if (!hit && !$('qd').value) $('qd').value = 'Package: ' + PRE.s
+        }
         PRE = {};
         de.style.scrollBehavior = 'auto';
         window.scrollTo(0, 0);
-        de.style.scrollBehavior = '' } else {
+        de.style.scrollBehavior = ''
+    } else {
         var h = location.hash;
-        if (inQ && (h === '' || h === '#top' || h === preQ)) { de.style.scrollBehavior = 'auto';
+        if (inQ && (h === '' || h === '#top' || h === preQ)) {
+            de.style.scrollBehavior = 'auto';
             window.scrollTo(0, lastY);
-            de.style.scrollBehavior = '' } else if (h.length > 1) { var el = document.getElementById(h.slice(1)); if (el) el.scrollIntoView() }
+            de.style.scrollBehavior = ''
+        } else if (h.length > 1) { var el = document.getElementById(h.slice(1)); if (el) el.scrollIntoView() }
     }
     inQ = q;
     prevH = location.hash
 }
 addEventListener('hashchange', route);
 route();
+
+/* ---------- Floating WhatsApp button ---------- */
 var wf = document.createElement('a');
 wf.className = 'wf';
 wf.href = 'https://wa.me/971581969313';
@@ -277,7 +350,16 @@ wf.rel = 'noopener';
 wf.setAttribute('aria-label', 'Start WhatsApp chat on +971 58 196 9313');
 wf.innerHTML = '<span class="wi">' + WA + '</span><span class="wt"><b>Start WhatsApp chat</b><small>+971 58 196 9313</small></span>';
 document.body.appendChild(wf);
-$('menu').addEventListener('click', function() { var n = $('nav'),
-        o = n.classList.toggle('open');
-    this.setAttribute('aria-expanded', o) });
-$('nav').addEventListener('click', function(e) { if (e.target.classList.contains('l')) $('nav').classList.remove('open') });
+
+/* FIX: #nav does not exist (nav is #navLinks, already handled by inline script) — guard it */
+var navEl = $('nav');
+var menuEl = $('menu');
+if (navEl && menuEl) {
+    menuEl.addEventListener('click', function() {
+        var o = navEl.classList.toggle('open');
+        this.setAttribute('aria-expanded', o)
+    });
+    navEl.addEventListener('click', function(e) {
+        if (e.target.classList.contains('l')) navEl.classList.remove('open')
+    });
+}

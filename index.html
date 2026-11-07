@@ -7,9 +7,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- SEO: No Index -->
-    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
-    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
-    <meta name="bingbot" content="noindex, nofollow">
+    <meta name="robots" content="index, follow, archive, snippet">
+    <meta name="googlebot" content="index, follow, archive, snippet">
+    <meta name="bingbot" content="index, follow">
 
     <!-- Existing SEO Title -->
     <title>Gulf Books Publisher | Book Publishing Services for Authors Across the Gulf</title>
@@ -22,6 +22,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap">
+
+    <!-- Swiper CSS (reviews slider + team slider) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -132,11 +135,235 @@
             margin: 0;
         }
     </style>
+
+    <!-- ==== FIX: Dropdown styling for quote view (#qv) + popup (#pu) ==== -->
+    <style>
+        #qv .pfp,
+        #pu .pfp {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        
+        #qv .pfp .cc,
+        #pu .pfp .cc {
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        #qv .pfp .cc>button,
+        #pu .pfp .cc>button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            white-space: nowrap;
+            height: 100%;
+        }
+        
+        #qv .pfp .cc>button .flag-img,
+        #pu .pfp .cc>button .flag-img,
+        #qv .pfp .cc>ul li .flag-img,
+        #pu .pfp .cc>ul li .flag-img {
+            width: 22px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #qv .pfp .cc>button i,
+        #pu .pfp .cc>button i {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 5px solid #333;
+            margin-left: 2px;
+        }
+        
+        #qv .pfp .cc>ul,
+        #pu .pfp .cc>ul {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            min-width: 240px;
+            max-height: 260px;
+            overflow-y: auto;
+            margin: 0;
+            padding: 4px 0;
+            list-style: none;
+            background: #fff;
+            border: 1px solid #d9d9d9;
+            border-radius: 6px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+            z-index: 30;
+        }
+        
+        #qv .pfp .cc>ul li,
+        #pu .pfp .cc>ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        #qv .pfp .cc>ul li:hover,
+        #pu .pfp .cc>ul li:hover {
+            background: #f5f7fb;
+        }
+        
+        #qv .pfp .cc>ul li span,
+        #pu .pfp .cc>ul li span {
+            flex: 1 1 auto;
+            text-align: left;
+        }
+        
+        #qv .pfp .cc>ul li b,
+        #pu .pfp .cc>ul li b {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        #qv .pfp input[type="tel"],
+        #pu .pfp input[type="tel"] {
+            flex: 1 1 auto;
+            min-width: 0;
+            margin: 0;
+        }
+    </style>
+
+    <!-- ==== TEAM SWIPER STYLES ==== -->
+    <style>
+        .team-swiper {
+            padding: 8px 4px 56px;
+            overflow: hidden;
+        }
+        
+        .team-swiper .swiper-slide {
+            height: auto;
+            display: flex;
+        }
+        
+        .team-card {
+            width: 100%;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 26px 22px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 18px 36px -30px rgba(16, 36, 61, .55);
+        }
+        
+        .team-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 14px;
+            border: 4px solid var(--tint2);
+            background: var(--tint);
+            box-shadow: 0 14px 26px -14px rgba(27, 120, 189, .6);
+            flex: none;
+        }
+        
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .team-name {
+            font: 700 1.15rem Poppins, system-ui, sans-serif;
+            color: var(--acc);
+            margin: 0;
+            text-align: center;
+        }
+        
+        .team-role {
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--accd);
+            margin: 0 0 10px;
+            text-align: center;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+        }
+        
+        .team-bio {
+            font-size: .92rem;
+            line-height: 1.7;
+            color: var(--ink);
+            text-align: center;
+            margin: 0;
+            max-width: none;
+        }
+        
+        .team-swiper .swiper-button-prev,
+        .team-swiper .swiper-button-next {
+            color: var(--acc);
+            --swiper-navigation-size: 26px;
+            width: 42px;
+            height: 42px;
+            background: rgba(255, 255, 255, .92);
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            box-shadow: 0 10px 20px -14px rgba(16, 36, 61, .5);
+        }
+        
+        .team-swiper .swiper-button-prev:hover,
+        .team-swiper .swiper-button-next:hover {
+            background: var(--tint);
+        }
+        
+        .team-swiper .swiper-pagination-bullet {
+            background: var(--tint2);
+            opacity: 1;
+            width: 8px;
+            height: 8px;
+        }
+        
+        .team-swiper .swiper-pagination-bullet-active {
+            background: var(--acc);
+        }
+        
+        @media (max-width: 560px) {
+            .team-card {
+                padding: 22px 18px;
+            }
+            .team-img {
+                width: 120px;
+                height: 120px;
+            }
+            .team-name {
+                font-size: 1.05rem;
+            }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .team-swiper .swiper-wrapper {
+                transition-duration: 0s !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- ============ HEADER (MODERN NAVBAR) ============ -->
+    <!-- ============ HEADER ============ -->
     <header>
         <div class="w nav-wrap">
             <a class="logo" href="index.html" aria-label="Gulf Books Publisher home">
@@ -429,6 +656,112 @@
             <div class="w"><img class="mk" src="images/after-service-img.webp" width="1000" height="1053" alt="Mockup of six sample book covers across fiction and inspirational genres" loading="lazy"></div>
         </section>
 
+        <!-- ============ REVIEWS SLIDER ============ -->
+        <section id="verified">
+            <div class="w">
+                <h2>Loved by Authors in GCC</h2>
+
+                <!--
+                    Replace the sample reviews below with real, verified reviews before publishing.
+                    Keep the same card structure. Do not add star ratings or review counts unless
+                    they come from an independent platform and can be linked.
+                -->
+                <div class="swiper reviews-swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="rev-head">
+                                    <div class="rev-avatar" aria-hidden="true">SM</div>
+                                    <div>
+                                        <strong class="rev-name">Sara Al Mansoori</strong>
+                                        <span class="rev-country">United Arab Emirates</span>
+                                    </div>
+                                </div>
+                                <div class="rev-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                <p class="rev-text">“The team explained every step and gave me a written quote before we started. My book was published on Amazon KDP and I kept full rights. The cover design and formatting were exactly what I asked for.”</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="rev-head">
+                                    <div class="rev-avatar" aria-hidden="true">AQ</div>
+                                    <div>
+                                        <strong class="rev-name">Ahmed Al Qahtani</strong>
+                                        <span class="rev-country">Saudi Arabia</span>
+                                    </div>
+                                </div>
+                                <div class="rev-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                <p class="rev-text">“I needed editing and Arabic formatting. The sample edit helped me decide, and the final proof was clean. Communication on WhatsApp was quick and professional.”</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="rev-head">
+                                    <div class="rev-avatar" aria-hidden="true">FA</div>
+                                    <div>
+                                        <strong class="rev-name">Fatima Al Kuwari</strong>
+                                        <span class="rev-country">Qatar</span>
+                                    </div>
+                                </div>
+                                <div class="rev-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                <p class="rev-text" dir="rtl" lang="ar">منذ الاستشارة الأولى وحتى الحصول على النسخ المطبوعة، كان كل شيء واضحاً. عرض السعر المفصّل يعني عدم وجود أي مفاجآت، وكان الجدول الزمني واقعياً.</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="rev-head">
+                                    <div class="rev-avatar" aria-hidden="true">YS</div>
+                                    <div>
+                                        <strong class="rev-name">Yousef Al Sabah</strong>
+                                        <span class="rev-country">Kuwait</span>
+                                    </div>
+                                </div>
+                                <div class="rev-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                <p class="rev-text">“The ghostwriting team understood my story and kept my voice. They signed an NDA and delivered on time. I would use them again for my next book.”</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="rev-head">
+                                    <div class="rev-avatar" aria-hidden="true">NK</div>
+                                    <div>
+                                        <strong class="rev-name">Noor Al Khalifa</strong>
+                                        <span class="rev-country">Bahrain</span>
+                                    </div>
+                                </div>
+                                <div class="rev-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                <p class="rev-text">كتاب الأطفال الخاص بي كان بحاجة إلى رسوم توضيحية وتنسيق دقيق. كان الفريق صبوراً جداً مع المراجعات، وجودة الطباعة النهائية كانت ممتازة.</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="rev-head">
+                                    <div class="rev-avatar" aria-hidden="true">SH</div>
+                                    <div>
+                                        <strong class="rev-name">Salim Al Hinai</strong>
+                                        <span class="rev-country">Oman</span>
+                                    </div>
+                                </div>
+                                <div class="rev-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                <p class="rev-text">“The audiobook production and author website were handled well. They explained the platform rules and did not promise unrealistic sales, which I appreciated.”</p>
+                            </article>
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <!-- ============ /REVIEWS SLIDER ============ -->
+
         <section class="band">
             <div class="w">
                 <h2>Genres We Publish with Our Book Publishing Services Across GCC Nations</h2>
@@ -459,6 +792,132 @@
 
         <div id="lb" role="dialog" aria-label="Cover preview"><img alt=""></div>
 
+        <!-- ============ MEET THE TEAM (UPDATED: 9 MEMBERS) ============ -->
+        <section id="team">
+            <div class="w">
+                <h2>Meet the Team</h2>
+                <p>Real people, real roles. Here are the project managers, editors, designers and support leads who work on author projects every day. Replace these sample profiles with your verified team members and real photos before publishing.</p>
+
+                <div class="swiper team-swiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- 1. UAE Male (kandura) -->
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="images/Ahmed Al Mansoori.webp" alt="Ahmed Al Mansoori" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Ahmed Al Mansoori</h3>
+                                <p class="team-role">Managing Director</p>
+                                <p class="team-bio">Ahmed leads Gulf Books Publisher and works closely with authors on strategy, pricing and timelines. He speaks Arabic and English and is based at our Sharjah office.</p>
+                            </article>
+                        </div>
+
+                        <!-- 2. UAE Female (hijab) -->
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="images/Fatima Al Qasimi.webp" alt="Fatima Al Qasimi" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Fatima Al Qasimi</h3>
+                                <p class="team-role">Project Manager</p>
+                                <p class="team-bio">Fatima coordinates every stage of a book project, from the first quote to final approval, and keeps authors updated on WhatsApp and email.</p>
+                            </article>
+                        </div>
+
+                        <!-- 3. Indian Female -->
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="images/Priya Sharma.webp" alt="Priya Sharma" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Priya Sharma</h3>
+                                <p class="team-role">Lead Designer</p>
+                                <p class="team-bio">Priya designs book covers and interiors for print and eBook, including children’s book illustrations and layout formatting.</p>
+                            </article>
+                        </div>
+
+                        <!-- 4. Indian Male -->
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="images/Arjun Mehra.webp" alt="Arjun Mehra" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Arjun Mehra</h3>
+                                <p class="team-role">English Editor</p>
+                                <p class="team-bio">Arjun works on English developmental editing, copy-editing and proofreading, and helps authors prepare clean files for Amazon KDP.</p>
+                            </article>
+                        </div>
+
+                        <!-- 5. Indian Male (dark suit) -->
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="images/Vikram Singh.webp" alt="Vikram Singh" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Vikram Singh</h3>
+                                <p class="team-role">Customer Success Lead</p>
+                                <p class="team-bio">Vikram is the first point of contact for new authors, handles free consultations and makes sure every question is answered before a quote is accepted.</p>
+                            </article>
+                        </div>
+
+                        <!-- 6. Jordanian -->
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="images/Omar Al-Khatib.webp" alt="Omar Al-Khatib" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Omar Al-Khatib</h3>
+                                <p class="team-role">Senior Arabic Editor</p>
+                                <p class="team-bio">Omar handles Arabic editing and proofreading for fiction and non-fiction, with a focus on natural, readable Gulf Arabic.</p>
+                            </article>
+                        </div>
+
+                        <!-- 7. African -->
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="images/Samuel Adeyemi.webp" alt="Samuel Adeyemi" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Samuel Adeyemi</h3>
+                                <p class="team-role">Marketing Lead</p>
+                                <p class="team-bio">Samuel builds launch plans, Amazon ad campaigns and author websites that help books reach readers across the Gulf and beyond.</p>
+                            </article>
+                        </div>
+
+                        <!-- 8. Turkish -->
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="images/Emre Yilmaz.webp" alt="Emre Yilmaz" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Emre Yilmaz</h3>
+                                <p class="team-role">Audiobook Producer</p>
+                                <p class="team-bio">Emre oversees narration, editing and mastering for audiobook projects, delivering clean files ready for every major audiobook platform.</p>
+                            </article>
+                        </div>
+
+                        <!-- 9. Pakistani -->
+                        <div class="swiper-slide">
+                            <article class="team-card">
+                                <div class="team-img">
+                                    <img src="images/Saad Sheikh.webp" alt="Saad Sheikh" loading="lazy">
+                                </div>
+                                <h3 class="team-name">Saad Sheikh</h3>
+                                <p class="team-role">Operations Manager</p>
+                                <p class="team-bio">Saad manages print coordination, ISBN registration and delivery schedules, making sure each book ships on time and to the right standard.</p>
+                            </article>
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <!-- ============ /MEET THE TEAM ============ -->
+
         <section>
             <div class="w">
                 <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/how-section-img.webp" width="1000" height="563" alt="Author at a desk looking at the Dubai skyline with icons for writing, design, publishing, printing and distribution" loading="lazy">
@@ -485,12 +944,65 @@
             </div>
         </aside>
 
-        <section style="padding:36px 0">
+        <section class="platform-section" style="padding:36px 0">
             <div class="w">
                 <h2>Platforms We Publish To</h2>
                 <p>Your book is set up on the retailers and print networks readers already use.</p>
-                <div class="mq">
-                    <div class="mt" id="mt"></div>
+
+                <div class="platform-marquee">
+                    <div class="platform-track">
+
+                        <div class="platform-item">
+                            <img src="images/IngramSpark.webp" alt="IngramSpark">
+                        </div>
+
+                        <div class="platform-item">
+                            <img src="images/amazon-kindle.webp" alt="Amazon Kindle">
+                        </div>
+
+                        <div class="platform-item">
+                            <img src="images/Rakuten-Kobo-logo.webp" alt="Rakuten Kobo">
+                        </div>
+
+                        <div class="platform-item">
+                            <img src="images/Google-Books.webp" alt="Google Books">
+                        </div>
+
+                        <div class="platform-item">
+                            <img src="images/Barnes&Noble.webp" alt="Barnes and Noble">
+                        </div>
+
+                        <div class="platform-item">
+                            <img src="images/Lulu-logo.webp" alt="Lulu">
+                        </div>
+
+                        <!-- Duplicate for seamless infinite loop -->
+
+                        <div class="platform-item">
+                            <img src="images/IngramSpark.webp" alt="IngramSpark">
+                        </div>
+
+                        <div class="platform-item">
+                            <img src="images/amazon-kindle.webp" alt="Amazon Kindle">
+                        </div>
+
+                        <div class="platform-item">
+                            <img src="images/Rakuten-Kobo-logo.webp" alt="Rakuten Kobo">
+                        </div>
+
+                        <div class="platform-item">
+                            <img src="images/Google-Books.webp" alt="Google Books">
+                        </div>
+
+                        <div class="platform-item">
+                            <img src="images/Barnes&Noble.webp" alt="Barnes and Noble">
+                        </div>
+
+                        <div class="platform-item">
+                            <img src="images/Lulu-logo.webp" alt="Lulu">
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -546,7 +1058,7 @@
                         <h3>Saudi Arabia: Arabic-First, Print-Ready</h3>
                         <p>Looking for a book publisher Saudi Arabia authors can work with from Riyadh, Jeddah or Dammam? We lead with Arabic editing and print on demand, guide you through the deposit number and legal deposit at King Fahd National Library,
                             and plan your launch around the Riyadh International Book Fair.</p>
-                        <a href="book-publishing-and-printing-saudi-arabia.html"> Publish in Saudi Arabia →</a>
+                        <a href="book-publishing-and-printing-uae.html">Publish in UAE →</a>
                     </div>
                     <div class="card">
                         <span class="fl" data-flag="Qatar"></span>
@@ -562,7 +1074,7 @@
                     </div>
                     <div class="card">
                         <span class="fl" data-flag="Bahrain"></span>
-                        <h3>Children’s and Educational Titles: Book Publisher Bahrain</h3>
+                        <h3>Book Publisher Services in Bahrain - Arabic & English</h3>
                         <p>We support authors in Manama and across the Kingdom, and we explain Bahrain’s legal deposit requirements before you go to print so nothing surprises you after launch.</p>
                         <a href="book-publishing-and-printing-bahrain.html"> Publish in Bahrain →</a>
                     </div>
@@ -580,9 +1092,9 @@
             <div class="w">
                 <img class="mk" style="max-width:860px;margin:0 auto 28px" src="images/home-global-img.webp" width="1000" height="563" alt="Author working on a laptop with the Gulf Books Publisher logo and a world map connecting countries to the Gulf" loading="lazy">
                 <h2>Global Publishing Services for Authors Looking to Launch Their Books in Gulf</h2>
-                <p>You do not have to live in the Gulf to publish with a Gulf-based publishing house. Authors in other regions Like Jordan, Egypt, Nigeria, Bangladesh, Iraq, India work with work with Gulf Books Publisher to publish their books professionally
-                    and to reach readers in the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman. Everything is handled online, with video, phone or WhatsApp consultations, secure manuscript upload and the same itemised quote as every other author.
-                    You keep your rights and approve every stage.</p>
+                <p>You do not have to live in the Gulf to publish with a Gulf-based publishing house. Authors in other regions like Jordan, Egypt, Nigeria, Bangladesh, Iraq, India work with Gulf Books Publisher to publish their books professionally and to
+                    reach readers in the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman. Everything is handled online, with video, phone or WhatsApp consultations, secure manuscript upload and the same itemised quote as every other author. You keep
+                    your rights and approve every stage.</p>
                 <!-- <ul class="chips" id="oc">
                     <li><span class="fl" data-flag="Jordan"></span>Jordan</li>
                     <li><span class="fl" data-flag="India"></span>India</li>
@@ -638,7 +1150,7 @@
                             <dd>Via WhatsApp, Phone or by Appointment.</dd>
                         </dl>
                     </div>
-                    <div class="card mp"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14425.816014515953!2d55.45373833726502!3d25.322542121723192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f26195b7e6b%3A0xc0f6d4eb509bdf75!2sSPC%20Free%20Zone%20-%20Business%20Setup%20In%20Sharjah%2C%20UAE!5e0!3m2!1sen!2s!4v1794000666819!5m2!1sen!2s"
+                    <div class="card mp"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1623.8191541331462!2d55.45723872346153!3d25.318810978388065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f2fd7bc75cf%3A0x5b387f909de65241!2sSharjah%20Book%20Authority!5e0!3m2!1sen!2s!4v1794048473770!5m2!1sen!2s"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
                 </div>
             </div>
@@ -998,6 +1510,185 @@
                 document.addEventListener('DOMContentLoaded', boot);
             } else {
                 boot();
+            }
+        })();
+    </script>
+
+    <!-- ==== FIX: Populate empty dropdowns + country-code buttons in #qv and #pu ==== -->
+    <script>
+        (function() {
+            'use strict';
+
+            var CC = [
+                ['UAE', 'ae', '+971'],
+                ['Saudi Arabia', 'sa', '+966'],
+                ['Qatar', 'qa', '+974'],
+                ['Kuwait', 'kw', '+965'],
+                ['Bahrain', 'bh', '+973'],
+                ['Oman', 'om', '+968'],
+                ['Jordan', 'jo', '+962'],
+                ['India', 'in', '+91'],
+                ['Egypt', 'eg', '+20'],
+                ['Nigeria', 'ng', '+234'],
+                ['Bangladesh', 'bd', '+880'],
+                ['Iraq', 'iq', '+964']
+            ];
+
+            var COUNTRY_LIST = ['UAE', 'Saudi Arabia', 'Qatar', 'Kuwait', 'Bahrain', 'Oman', 'Jordan', 'India', 'Egypt', 'Nigeria', 'Bangladesh', 'Iraq', 'Other country'];
+            var GENRE_LIST = ['Fiction', 'Non-fiction', 'Memoir & Biography', 'Poetry', 'Children\u2019s Book', 'Business & Corporate', 'Religious & Islamic', 'Academic', 'Self-help', 'Other'];
+            var WORDCOUNT_LIST = ['Under 10,000', '10,000 \u2013 30,000', '30,000 \u2013 50,000', '50,000 \u2013 80,000', '80,000 \u2013 120,000', 'Over 120,000', 'Not sure yet'];
+            var STATUS_LIST = ['Just an idea', 'First draft', 'Complete draft', 'Needs editing', 'Ready to publish'];
+
+            function flagImg(iso, name) {
+                return '<img class="flag-img" src="https://flagcdn.com/w40/' + iso + '.png" alt="' + name + '" loading="lazy">';
+            }
+
+            function initCountryCode(btnId, listId) {
+                var btn = document.getElementById(btnId);
+                var list = document.getElementById(listId);
+                if (!btn || !list) return;
+                if (btn.getAttribute('data-cc-ready') === '1') return;
+                if (btn.innerHTML.trim().length > 0) return;
+                btn.setAttribute('data-cc-ready', '1');
+
+                list.innerHTML = CC.map(function(c, i) {
+                    return '<li role="option" data-i="' + i + '">' +
+                        flagImg(c[1], c[0]) +
+                        '<span>' + c[0] + '</span><b>' + c[2] + '</b></li>';
+                }).join('');
+
+                function setCc(i) {
+                    btn.innerHTML = flagImg(CC[i][1], CC[i][0]) +
+                        '<span>' + CC[i][2] + '</span><i></i>';
+                    btn.setAttribute('data-code', CC[i][2]);
+                    list.hidden = true;
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+                setCc(0);
+
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var willOpen = list.hidden;
+                    list.hidden = !willOpen;
+                    btn.setAttribute('aria-expanded', String(willOpen));
+                });
+
+                list.addEventListener('click', function(e) {
+                    var li = e.target.closest('li');
+                    if (li) setCc(+li.dataset.i);
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!list.hidden && !e.target.closest('.cc')) {
+                        list.hidden = true;
+                        btn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
+            function fillSelect(id, placeholder, items) {
+                var sel = document.getElementById(id);
+                if (!sel) return;
+                if (sel.options.length > 0) return;
+                var html = '<option value="">' + placeholder + '</option>';
+                for (var i = 0; i < items.length; i++) {
+                    html += '<option value="' + items[i] + '">' + items[i] + '</option>';
+                }
+                sel.innerHTML = html;
+            }
+
+            function bootFix() {
+                /* Quote view form (#qv > #qq) */
+                initCountryCode('qcb', 'qcl');
+                fillSelect('qc', 'Select country', COUNTRY_LIST);
+                fillSelect('qg', 'Select genre', GENRE_LIST);
+                fillSelect('qw', 'Word count', WORDCOUNT_LIST);
+                fillSelect('qm', 'Manuscript status', STATUS_LIST);
+
+                /* Hero form (#qf) selects, only if still empty */
+                fillSelect('c', 'Select country', COUNTRY_LIST);
+                fillSelect('g', 'Select genre', GENRE_LIST);
+
+                /* Popup form (#pu > #pf) */
+                initCountryCode('ccb', 'ccl');
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', bootFix);
+            } else {
+                bootFix();
+            }
+        })();
+    </script>
+
+    <!-- Swiper JS (reviews + team sliders) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        (function() {
+            if (typeof Swiper === 'undefined') return;
+
+            /* ---------- Reviews slider ---------- */
+            var revEl = document.querySelector('.reviews-swiper');
+            if (revEl) {
+                new Swiper('.reviews-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 24,
+                    loop: true,
+                    grabCursor: true,
+                    navigation: {
+                        nextEl: '.reviews-swiper .swiper-button-next',
+                        prevEl: '.reviews-swiper .swiper-button-prev'
+                    },
+                    pagination: {
+                        el: '.reviews-swiper .swiper-pagination',
+                        clickable: true
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2
+                        },
+                        1024: {
+                            slidesPerView: 3
+                        }
+                    },
+                    a11y: {
+                        enabled: true
+                    }
+                });
+            }
+
+            /* ---------- Team slider ---------- */
+            var teamEl = document.querySelector('.team-swiper');
+            if (teamEl) {
+                new Swiper('.team-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 24,
+                    loop: true,
+                    grabCursor: true,
+                    navigation: {
+                        nextEl: '.team-swiper .swiper-button-next',
+                        prevEl: '.team-swiper .swiper-button-prev'
+                    },
+                    pagination: {
+                        el: '.team-swiper .swiper-pagination',
+                        clickable: true
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2
+                        },
+                        1024: {
+                            slidesPerView: 3
+                        },
+                        1280: {
+                            slidesPerView: 4
+                        }
+                    },
+                    a11y: {
+                        enabled: true
+                    }
+                });
             }
         })();
     </script>

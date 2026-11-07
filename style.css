@@ -1865,6 +1865,8 @@ a {
     box-shadow: none;
 }
 
+
+/* 
 .fl svg,
 .fl img {
     object-fit: contain;
@@ -1878,6 +1880,7 @@ a {
     height: 22px;
     width: 22px;
 }
+ */
 
 
 /* ===== REVIEWS SWIPER ===== */
@@ -2013,4 +2016,66 @@ a {
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
+}
+
+.platform-marquee {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.platform-track {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    width: max-content;
+    animation: platformScroll 25s linear infinite;
+}
+
+.platform-item {
+    width: 190px;
+    height: 105px;
+    flex-shrink: 0;
+    border: 1px solid #999;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.platform-item img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+@keyframes platformScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 11px));
+    }
+}
+
+@media(max-width:600px) {
+    .platform-item {
+        width: 150px;
+        height: 85px;
+        padding: 12px;
+    }
+    .platform-track {
+        gap: 15px;
+        animation-duration: 20s;
+    }
+}
+
+.team-name {
+    font-size: 25px !important;
 }
